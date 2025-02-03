@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clouds</title>
+  <style>
+    :root {
+      --pritam: 8rem;
+    }
+
+    body {
+      margin: 0;
+      background: blue;
+      overflow: hidden;
+    }
+
+    .cloud {
+      position: relative;
+      /*
+      height: 240px;
+      width: 90px;
+      transform: translateX(-50%);
+      */
+      animation: slide 2s 1s forwards;
+    }
+
+    @keyframes slide {
+      100% {
+        transform: translate(0)
+      }
+    }
+
+    .top-cloud,
+    .bottom-cloud {
+      /*
+      width: 100%;
+      */
+      height: 33%;
+
+      background: rgba(255, 255, 255, 0.7);
+      position: absolute;
+      left: 0;
+      border-radius: var(--pritam);
+    }
+
+    .bottom-cloud {
+      width: 70%;
+      /*
+      left: 25%;
+      */
+    }
+
+    .mid-cloud {
+      background: red;
+      background: transparent;
+      width: 100%;
+      height: 34%;
+      position: absolute;
+      top: 33%;
+    }
+
+    .mid-cloud-content {
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.7);
+      position: relative;
+      border-radius: var(--pritam);
+    }
+
+    .mcc-s {
+      position: absolute;
+      width: 45%;
+      height: 100%;
+      left: -5%;
+      background: orange;
+      background: blue;
+      z-index: 2;
+      backdrop-filter: blur(60px);
+      border-radius: var(--pritam);
+
+    }
+
+    .mcc-m {
+      position: absolute;
+      width: 55%;
+      height: 100%;
+      left: 40%;
+      background: orange;
+      background: rgba(255, 255, 255, 0.7);
+      background: transparent;
+      border-radius: var(--pritam);
+
+    }
+
+    .mcc-e {
+      position: absolute;
+      width: 35%;
+      height: 100%;
+      right: 0%;
+      background: orange;
+      background: blue;
+      border-radius: var(--pritam);
+
+    }
+
+    .top-cloud {
+      top: 0;
+    }
+
+    .bottom-cloud {
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+  <div class="cloud">
+    <div class="top-cloud"></div>
+    <div class="mid-cloud">
+      <div class="mid-cloud-content">
+        <div class="mcc-s"></div>
+        <div class="mcc-m"></div>
+        <div class="mcc-e"></div>
+      </div>
+    </div>
+    <div class="bottom-cloud"></div>
+  </div>
+  -->
+  <script>
+    let getRandomNumber = (start, end) => {
+      let randomNumber = Math.random() * (end - start) + start;
+      return Math.round(randomNumber)
+
+    }
+
+
+
+    function createCloud(param = {
+      height: 60,
+      width: 180,
+      marginTop: 0,
+      translateX: 50,
+      top:1,
+      left:1
+    }) {
+      let {
+        height,
+        width,
+        marginTop,
+        translateX,
+        top,
+        left
+      } = param
+      // Create main container
+      const cloud = document.createElement('div');
+      cloud.classList.add('cloud');
+      cloud.style.height = height + "px"
+      cloud.style.width = width + "px"
+      cloud.style.marginTop = marginTop + "px"
+      cloud.style.top = top + "vh"
+      cloud.style.left = left + "vw"
+      cloud.style.transform = "translateX(" + translateX + "%"
+      cloud.style.animationDuration = Math.round(Math.random * 10) + "s";
+
+
+      // top cloud
+      const topCloud = document.createElement('div');
+      topCloud.classList.add('top-cloud');
+      topCloud.style.width = getRandomNumber(80, 150) + "%";
+
+      // bottom cloud
+      const bottomCloud = document.createElement('div');
+      bottomCloud.classList.add('bottom-cloud');
+      bottomCloud.style.width = getRandomNumber(80, 150) + "%";
+
+
+      // mid cloud
+      const midCloud = document.createElement('div');
+      midCloud.classList.add('mid-cloud');
+
+
+      // Create mid cloud content
+      const midCloudContent = document.createElement('div');
+      midCloudContent.classList.add('mid-cloud-content');
+
+      // Create mid cloud content sections
+      const mccS = document.createElement('div');
+      mccS.classList.add('mcc-s');
+
+      const mccM = document.createElement('div');
+      mccM.classList.add('mcc-m');
+
+      const mccE = document.createElement('div');
+      mccE.classList.add('mcc-e');
+
+      // Append elements to mid-cloud-content
+      midCloudContent.appendChild(mccS);
+      midCloudContent.appendChild(mccM);
+      midCloudContent.appendChild(mccE);
+
+      // Append mid-cloud-content to mid-cloud
+      midCloud.appendChild(midCloudContent);
+
+
+      // Append all elements to cloud
+      cloud.appendChild(topCloud);
+      cloud.appendChild(midCloud);
+      cloud.appendChild(bottomCloud);
+
+      // Append to document body or another container
+      document.body.appendChild(cloud);
+    }
+
+    // Call the function to create and add the cloud
+    let cloud1 = {
+      height: getRandomNumber(30, 70),
+      width: getRandomNumber(80, 150),
+      marginTop: 5,
+      translateX: getRandomNumber(-200, 200),
+      top: 4,
+      left: 6,
+    }
+    let cloud2 = {
+      height: getRandomNumber(30, 70),
+      width: getRandomNumber(80, 150),
+      marginTop: 5,
+      translateX: getRandomNumber(-200, 200),
+      top: 6,
+      left: 20,
+    }
+    let cloud3 = {
+      height: getRandomNumber(30, 70),
+      width: getRandomNumber(80, 150),
+      marginTop: 5,
+      translateX: getRandomNumber(-200, 200),
+      top: 20,
+      left: 75,
+    }
+
+    createCloud(cloud1)
+    createCloud(cloud2)
+    createCloud(cloud3)
+  </script>
+
+</body>
+
+</html>

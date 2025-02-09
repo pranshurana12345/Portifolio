@@ -12,6 +12,7 @@
 
      :root {
        --cloud-color-1: rgba(255, 255, 255, 0.7);
+       --cloud-color-2: rgba(0, 0, 0, 0.2);
        --pritam: 80rem;
        --star-height: 2vh;
        --your-height: 12vh;
@@ -59,9 +60,10 @@
 
    <style id="cloud">
      /* cloud start */
-     .cloud {
+     .cloud,
+     .cloud-2 {
        position: relative;
-       /*       */
+       /*             */
        height: 70px;
        width: 200px;
        transform: translateX(-50%);
@@ -80,23 +82,29 @@
      .top-cloud,
      .bottom-cloud {
        /*       */
-
        width: 100%;
        height: 33%;
-
        background: var(--cloud-color-1);
-
        position: absolute;
        left: 0;
        border-radius: var(--pritam);
      }
+     
+    .cloud-2 .top-cloud,
+     .cloud-2 .bottom-cloud{
+         background: var(--cloud-color-2);
+     }
 
      .bottom-cloud {
        background: transparent;
-
      }
+     
+     .cloud-2      .bottom-cloud {
+              background: transparent;
 
-     .bottom-cloud-child {
+}
+
+      .bottom-cloud-child {
        width: 80%;
        margin: auto;
        height: 100%;
@@ -107,8 +115,12 @@
        left: 25%;
        */
      }
+     
+    .cloud-2 .bottom-cloud-child {
+       background: var(--cloud-color-2);
 
-     .mid-cloud {
+}
+   .mid-cloud {
        background: transparent;
        /*
        width: 100%;
@@ -120,15 +132,20 @@
        left: 50%;
        transform: translateX(-50%);
      }
+     
 
-     .svg-box {
+      .svg-box {
        width: 0%;
        aspect-ratio: 1;
        background: var(--cloud-color-1);
 
      }
+     .cloud-2 .svg-box{
+              background: var(--cloud-color-2);
 
-     .svg {
+     }
+
+    .svg {
        /*
        width: 100%;
               */
@@ -140,6 +157,11 @@
 
 
        object-fit: contain;
+
+     }
+     
+     .cloud-2 .svg{
+              fill: var(--cloud-color-2);
 
      }
 
@@ -165,6 +187,10 @@
    </style>
 
    <style id="you">
+     :root {
+       --animation-time: 2s
+     }
+
      /* my space start */
      .your-aura {
        /*
@@ -183,7 +209,7 @@
        display: flex;
        align-items: center;
        justify-content: center;
-       animation: you-come 2s 0.5s forwards;
+       animation: you-come calc(var(--animation-time)*2) forwards;
        transform: translateY(100vh);
 
      }
@@ -202,16 +228,35 @@
        border-radius: var(--pritam);
        aspect-ratio: 1;
        background: snow;
-       border: var(--your-aura-height) solid var(--your-aura-color-1);
-       outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
 
-       box-shadow: 0 0 0 calc(var(--your-aura-height) * 2) var(--your-aura-color-3),
-         0 0 0 calc(var(--your-aura-height)*3) var(--your-aura-color-4);
+
        overflow: hidden;
        z-index: 3;
        position: relative;
        box-sizing: content-box;
+       animation: show-border calc(var(--animation-time)*3) var(--animation-time) forwards;
      }
+
+     @keyframes show-border {
+       50% {
+         border: var(--your-aura-height) solid var(--your-aura-color-1);
+       }
+
+       75% {
+         border: var(--your-aura-height) solid var(--your-aura-color-1);
+
+         outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
+       }
+
+       100% {
+         border: var(--your-aura-height) solid var(--your-aura-color-1);
+
+         outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
+         box-shadow: 0 0 0 calc(var(--your-aura-height) * 2) var(--your-aura-color-3),
+           0 0 0 calc(var(--your-aura-height)*3) var(--your-aura-color-4);
+       }
+     }
+
 
      .you::before {
        content: "";
@@ -416,7 +461,8 @@
        --home-1-roof-1-border-width: 5vw;
        --home-1-roof-2-border-width: 1.5vw;
        --home-2-width: 15vw;
-       --home-2-height: 40vw;
+       --home-2-height: 35vw;
+       --home-2-roof-1-border-width: 10vw;
 
      }
 
@@ -484,19 +530,23 @@
      .home-2__roof-1 {
        width: 0;
        height: 0;
-       border-left: 50px solid transparent;
-       border-right: 50px solid transparent;
-       border-bottom: 100px solid black;
+       border-left: var(--home-2-roof-1-border-width) solid transparent;
+       border-right: var(--home-2-roof-1-border-width) solid transparent;
+       border-bottom: calc(var(--home-2-roof-1-border-width)*2) solid black;
      }
 
 
      .home-2__roof-2 {
        border-style: solid;
        border-color: transparent transparent black transparent;
-       border-width: 0 10px 25px 10px;
-       height: 0px;
-       width: var(--home-2-width);
+       /*
+       border-width: 0 calc(var(--home-2-roof-1-border-width)) calc(var(--home-2-roof-1-border-width)) 10px;
+       */
+       height: var(--home-1-roof-1-border-width);
+
+       width: calc(var(--home-2-roof-1-border-width)*2);
        position: relative;
+       background: black;
      }
 
      .home-2__wall {
@@ -504,15 +554,13 @@
        position: relative;
        width: var(--home-2-width);
        height: var(--home-2-height);
-
      }
 
      .home-2__base {
-       border-style: solid;
-       border-color: transparent transparent black transparent;
-       border-width: 0 10px 25px 10px;
-       height: 0px;
-       width: 100px;
+       width: calc(var(--home-2-width) + var(--home-1-roof-2-border-width));
+       height: calc(var(--home-2-height) / 3);
+
+       background: black;
        position: relative;
      }
 
@@ -630,7 +678,8 @@
      marginTop: 0,
      translateX: 50,
      top: 1,
-     left: 1
+     left: 1,
+     className
    }) {
      let {
        height,
@@ -638,13 +687,12 @@
        marginTop,
        translateX,
        top,
-       left
+       left,
+       className = "cloud"
      } = param
      // Create main container
      const cloud = document.createElement('div');
-
-
-     cloud.classList.add('cloud');
+     cloud.classList.add(className);
 
 
      cloud.style.height = height + "px"
@@ -726,7 +774,7 @@
    // Call the function to create and add the cloud
    let cloud1 = {
      height: getRandomNumber(30, 70),
-     width: getRandomNumber(80, 150),
+     width: getRandomNumber(90, 110),
      marginTop: 5,
      translateX: getRandomNumber(-200, 200),
      top: -40,
@@ -734,7 +782,7 @@
    }
    let cloud2 = {
      height: getRandomNumber(30, 70),
-     width: getRandomNumber(80, 150),
+     width: getRandomNumber(90, 120),
      marginTop: 5,
      translateX: getRandomNumber(-200, 200),
      top: -26,
@@ -742,12 +790,12 @@
    }
    let cloud3 = {
      height: getRandomNumber(30, 70),
-     width: getRandomNumber(80, 150),
+     width: getRandomNumber(90, 100),
      marginTop: 5,
      translateX: getRandomNumber(-200, 200),
      top: -20,
      left: 75,
-
+     className: "cloud-2"
    }
    /*     */
 

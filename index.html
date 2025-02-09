@@ -1,111 +1,673 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <style>
-    main {
-      overflow: hidden;
-      width: 100%;
-      height: 800px;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-    }
-
-    .hero:after {
-      content: "";
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      position: absolute;
-      z-index: 7;
-      backdrop-filter: blur(6px);
-
-    }
-
-    .hero>img {
-      position: absolute;
-    }
-
-    .h-100 {
-      height: 100vh;
-    }
-
-    #ground {
-      top: 70px;
-    }
-
-    #sky {
-      z-index: -2;
-    }
-
-    #pritam {
-      z-index: 2;
-    }
-  </style>
-</head>
-
-<body>
-  <main>
-
-    <div class="hero">
-      <img src="./images/mountain.png" alt="mountain.png" id="mountain">
-      <img src="./images/trees.png" alt="trees.png" id="trees">
-      <img src="./images/cloud.png" alt="cloud.png" id="cloud">
-      <img src="./images/sky.png" alt="sky.png" id="sky">
-      <img src="./images/ground.png" alt="ground.png" id="ground">
-      <img src="./images/pritam-2.png" alt="pritam.png" id="pritam">
-    </div>
-  </main>
-
-  <div class="h-100"></div>
-  <div class="h-100"></div>
-</body>
-<script>
-  let mountain = document.getElementById('mountain')
-  let trees = document.getElementById('trees')
-  let ground = document.getElementById('ground')
-  let pritam = document.getElementById('pritam')
-  let cloud = document.getElementById('cloud')
-  window.addEventListener('scroll', () => {
-    let y = window.scrollY
-    if (y < 50) {
-      mountain.style.top = y + "px"
-
-    }
-    let a = (0.04 * y)
-    if (a > 1) {
-      cloud.style.scale = a
-    }
-    if (a > 1 && a < 1.2) {
-      // ground.style.scale = a
-      // pritam.style.scale = a
-
-    }
-
-    if (a > 1 && a < 1.4) {}
-
-    //trees.style.scale = 1 + (y / 1000)
-    pritam.style.scale = 1 + (y / 700)
-    ground.style.scale = 1 + (y / 700)
-
-    cloud.style.top = (y * 1.2) + 'px'
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clouds</title>
+   <style>
+     :root {
+       --pritam: 80rem;
+       --star-height: 2vh;
+       --your-height: 12vh;
+       --your-aura-height: 10vh;
+       --your-aura-color-1: #5CB5BB;
+       --your-aura-color-2: #4AA3A9;
+       --your-aura-color-3: #33708C;
+       --your-aura-color-4: #244F71;
+       --cuteness-color: #F0F2E5;
+     }
 
 
-    console.log({ a })
+     body {
+       margin: 0;
+       background: blue;
+       /*overflow: hidden;*/
+     }
 
-  })
-</script>
+     /* cloud start */
+     .cloud {
+       position: relative;
+       /*
+       height: 240px;
+       width: 90px;
+       transform: translateX(-50%);
+       */
+       animation: slide-cloud 2s 1s forwards;
+     }
 
-</html>
+     @keyframes slide-cloud {
+       100% {
+         transform: translate(0)
+       }
+     }
+
+     .top-cloud,
+     .bottom-cloud {
+       /*
+       width: 100%;
+       */
+       height: 33%;
+
+       background: rgba(255, 255, 255, 0.7);
+       position: absolute;
+       left: 0;
+       border-radius: var(--pritam);
+     }
+
+     .bottom-cloud {
+       width: 70%;
+       /*
+       left: 25%;
+       */
+     }
+
+     .mid-cloud {
+       background: transparent;
+       width: 100%;
+       height: 34%;
+       position: absolute;
+       top: 33%;
+     }
+
+     .mid-cloud-content {
+       height: 100%;
+       width: 100%;
+       margin: auto;
+       background: rgba(255, 255, 255, 0.7);
+       position: relative;
+       border-radius: var(--pritam);
+     }
+
+     .mcc-s {
+       position: absolute;
+       width: 45%;
+       height: 100%;
+       left: -5%;
+       background: orange;
+       background: blue;
+       z-index: 2;
+       backdrop-filter: blur(60px);
+       border-radius: var(--pritam);
+     }
+
+     .mcc-m {
+       position: absolute;
+       width: 55%;
+       height: 100%;
+       left: 40%;
+       background: orange;
+       background: rgba(255, 255, 255, 0.7);
+       background: transparent;
+       border-radius: var(--pritam);
+     }
+
+     .mcc-e {
+       position: absolute;
+       width: 35%;
+       height: 100%;
+       right: 0%;
+       background: orange;
+       background: blue;
+       border-radius: var(--pritam);
+
+     }
+
+     .top-cloud {
+       top: 0;
+
+     }
+
+     .bottom-cloud {
+       bottom: 0;
+     }
+
+     /* cloud end */
+
+     /* my space start */
+     .your-aura {
+       /*
+       border: 2rem solid orange;
+       top: 5vh;
+       right: -20vh;
+       border-radius: var(--pritam);
+       width: contents;
+       */
+       position: relative;
+       top: calc((var(--your-aura-height) - var(--your-height)) * 1);
+       right: calc((var(--your-aura-height) + var(--your-height)) * -1);
+       height: calc (var(--your-height) * 2);
+       border-radius: var(--pritam);
+       aspect-ratio: 1;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       animation: you-come 2s 0.5s forwards;
+       transform: translateY(100vh);
+
+     }
+
+     @keyframes you-come {
+       100% {
+         transform: translate(0)
+       }
+     }
+
+     .you {
+       /*        height: var(--your-height);
+*/
+       width: var(--your-height);
+       border-radius: var(--pritam);
+       aspect-ratio: 1;
+       background: snow;
+       border: var(--your-aura-height) solid var(--your-aura-color-1);
+       outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
+
+       box-shadow: 0 0 0 calc(var(--your-aura-height) * 2) var(--your-aura-color-3),
+         0 0 0 calc(var(--your-aura-height)*3) var(--your-aura-color-4);
+       overflow: hidden;
+       position: relative;
+     }
+
+     .you::before {
+       content: "";
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 8;
+       border-radius: inherit;
+       height: calc(var(--your-height) + var(--your-aura-height) + var(--your-aura-height));
+       aspect-ratio: 1;
+       background: radial-gradient(var(--your-aura-color-2), var(--your-aura-color-1));
+       padding: var(--your-aura-height);
+       -webkit-mask:
+         linear-gradient(white 0 0) content-box,
+         linear-gradient(white 0 0);
+       -webkit-mask-composite: xor;
+       mask-composite: exclude;
+     }
+
+     .cuteness {
+       border-radius: var(--pritam);
+       height: calc(var(--your-height) / 4);
+       aspect-ratio: 1;
+       background: var(--cuteness-color);
+       position: absolute;
+
+     }
+
+     .cuteness-1 {
+       height: calc(var(--your-height) / 4);
+       top: calc(var(--your-height) / 4);
+       left: calc(var(--your-height) / 6);
+     }
+
+     .cuteness-2 {
+       height: calc(var(--your-height) / 6);
+
+       top: calc(var(--your-height) / 10);
+       left: calc(var(--your-height) / 2);
+     }
+
+     .cuteness-3 {
+       height: calc(var(--your-height) / 8);
+
+       bottom: calc(var(--your-height) / 4);
+       left: calc(var(--your-height) / 2);
+     }
+
+
+     /* my space end */
+
+     /*  */
+
+
+     .star- {
+       aspect-ratio: 1;
+       position: absolute;
+       background: #000b;
+       display: inline-flex;
+       transition: all 1s ease 0s;
+       clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
+     }
+
+     .circle {
+       aspect-ratio: 1;
+       position: absolute;
+       background: #000b;
+       border-radius: var(--pritam);
+     }
+
+     .base {
+       position: absolute;
+       bottom: 0vh;
+       z-index: 2;
+
+     }
+
+     .ground {
+       width: 200%;
+       height: 50vh;
+       left: -25vh;
+       bottom: -15vh;
+       position: relative;
+       border-radius: 50%;
+       overflow: hidden;
+       
+
+       background: var(--your-aura-color-4);
+     }
+
+     .ground-1 {
+       background: orange;
+       height: 40vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 1;
+       background: var(--your-aura-color-3);
+
+     }
+
+     .ground-2 {
+       background: #FF6C6C;
+       height: 30vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 1;
+       background: var(--your-aura-color-2);
+
+     }
+
+     .ground-3 {
+       background: #6E1F1F;
+       height: 20vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 3;
+       background: var(--your-aura-color-1);
+
+     }
+
+     @media (min-width:400px) {
+       :root {
+         /* --star-height: 0.2vh; */
+         --your-aura-height: 20vh;
+         --your-height: 24vh;
+
+         /*    --your-height: 12vh; */
+       }
+
+       .your-aura {
+         top: calc((var(--your-aura-height) - var(--your-height)) * -1);
+       }
+     }
+
+     .relative {
+       position: relative;
+     }
+
+
+     .flex {
+       display: flex;
+     }
+     
+     .homes{
+       width: 400%;
+            bottom: -20vh;
+            right: -15vw;
+       position: relative;
+       display: flex;
+margin: auto;
+       
+     }
+
+     .home {
+       display: flex;
+       align-items: center;
+       justify-content: end;
+       flex-direction: column;
+       position: relative;
+       z-index: 2;
+
+     }
+
+     .roof-1 {
+       border-style: solid;
+       border-color: transparent transparent black transparent;
+       border-width: 0 20px 15px 20px;
+       height: 0;
+       width: 150px;
+       box-sizing: content-box;
+       position: relative;
+     }
+
+     .roof-2 {
+       border-style: solid;
+       border-color: transparent transparent black transparent;
+       border-width: 0 10px 25px 10px;
+       height: 0;
+       width: 190px;
+       position: relative;
+     }
+
+     .wall {
+       height: 70px;
+       width: 180px;
+       box-sizing: content-box;
+       position: relative;
+       background: black;
+       overflow: hidden;
+
+     }
+
+
+     .home-2 {
+       display: flex;
+       align-items: center;
+       justify-content: end;
+       flex-direction: column;
+       position: relative;
+       left: -10vw;
+     }
+
+
+     .windows {
+       position: relative;
+
+       display: flex;
+       gap: 1rem;
+       padding: 1rem;
+       justify-content: space-around;
+       width: 100%;
+       overflow: hidden;
+     }
+
+     .window {
+       background: yellow;
+       box-shadow: 0rem 0rem 1rem yellow;
+       width: 2rem;
+       height: 2rem;
+       aspect-ratio: 1;
+       border-radius: 0.1rem;
+
+     }
+
+
+     .home-2__roof-1 {
+       width: 0;
+       height: 0;
+       border-left: 50px solid transparent;
+       border-right: 50px solid transparent;
+       border-bottom: 100px solid black;
+     }
+
+
+     .home-2__roof-2 {
+       border-style: solid;
+       border-color: transparent transparent black transparent;
+       border-width: 0 10px 25px 10px;
+       height: 0px;
+       width: 100px;
+       position: relative;
+     }
+
+     .home-2__wall {
+       background: black;
+       position: relative;
+       width: 100px;
+       height: 100px;
+
+     }
+
+     .home-2__base {
+       border-style: solid;
+       border-color: transparent transparent black transparent;
+       border-width: 0 10px 25px 10px;
+       height: 0px;
+       width: 100px;
+       position: relative;
+     }
+
+
+     .window-circle {
+       background: yellow;
+       margin: 1rem auto;
+       box-shadow: 0rem 0rem 1rem yellow;
+       width: 2rem;
+       height: 2rem;
+       border-radius: var(--pritam);
+     }
+   </style>
+ </head>
+
+ <body>
+   <div class="your-aura" title="your-aura">
+
+     <main class="you" title="you">
+       <div class="cuteness cuteness-1" title="cuteness"></div>
+       <div class="cuteness cuteness-2" title="cuteness"></div>
+       <div class="cuteness cuteness-3" title="cuteness"></div>
+     </main>
+   </div>
+
+   <!--
+  -->
+   <main class="base">
+
+     <div class="flex">
+       <div class="homes">
+         
+       <div class="home">
+         <div class="roof-1"></div>
+         <div class="roof-2"></div>
+         <div class="wall">
+           <div class="windows">
+             <div class="window"></div>
+             <div class="window"></div>
+             <div class="window"></div>
+           </div>
+         </div>
+       </div>
+
+       <div class="home-2">
+         <div class="home-2__roof-1"></div>
+         <div class="home-2__roof-2"></div>
+         <div class="home-2__wall">
+           <div class="window-circle"></div>
+
+         </div>
+         <div class="home-2__base"></div>
+       </div>
+     </div>
+       </div>
+
+     <div class="ground">
+       <div class="relative">
+         <div class="ground-1"></div>
+         <div class="ground-3"></div>
+       </div>
+     </div>
+   </main>
+
+   <!--
+   <div class="cloud">
+     <div class="top-cloud"></div>
+     <div class="mid-cloud">
+       <div class="mid-cloud-content">
+         <div class="mcc-s"></div>
+         <div class="mcc-m"></div>
+         <div class="mcc-e"></div>
+       </div>
+     </div>
+     <div class="bottom-cloud"></div>
+   </div>
+   -->
+
+
+   <script>
+     /* cloud start */
+
+     let getRandomNumber = (start, end) => {
+       let randomNumber = Math.random() * (end - start) + start;
+       return Math.round(randomNumber)
+
+     }
+
+     /* star start */
+
+     let createStar = () => {
+       let star = document.createElement('div')
+       let starSvg = `
+       <svg width="100%" height="100%" viewBox="0 0 100 100">
+   <path d="M50 5 L65 35 L95 40 L75 65 L80 95 L50 80 L20 95 L25 65 L5 40 L35 35 Z"
+     fill="#000b" stroke="black" stroke-width="5" stroke-linejoin="round"/>
+ </svg>
+       `
+       star.innerHTML = starSvg
+       star.style.height = getRandomNumber(1, 20) + "px"
+       star.style.top = getRandomNumber(0, 100) + "vh"
+       star.style.left = getRandomNumber(0, 100) + "vw"
+       //   star.classList.add(element)
+       star.style.position = 'absolute';
+       document.body.appendChild(star)
+     }
+
+     let createCircle = () => {
+       let circle = document.createElement('div')
+       circle.style.height = getRandomNumber(1, 20) + "px"
+       circle.style.top = getRandomNumber(0, 100) + "vh"
+
+       circle.style.left = getRandomNumber(0, 100) + "vw"
+       circle.classList.add("circle")
+       circle.style.position = 'absolute';
+       document.body.appendChild(circle)
+     }
+
+     for (let p = 0; p <= 8; p++) {
+       createStar()
+     }
+     for (let p = 0; p <= 8; p++) {
+       createCircle()
+     }
+
+     /* star end */
+
+     function createCloud(param = {
+       height: 60,
+       width: 180,
+       marginTop: 0,
+       translateX: 50,
+       top: 1,
+       left: 1
+     }) {
+       let {
+         height,
+         width,
+         marginTop,
+         translateX,
+         top,
+         left
+       } = param
+       // Create main container
+       const cloud = document.createElement('div');
+       cloud.classList.add('cloud');
+       cloud.style.height = height + "px"
+       cloud.style.width = width + "px"
+       cloud.style.marginTop = marginTop + "px"
+       cloud.style.top = top + "vh"
+       cloud.style.left = left + "vw"
+       cloud.style.transform = "translateX(" + translateX + "%"
+       cloud.style.animationDuration = Math.round(Math.random * 10) + "s";
+
+
+       // top cloud
+       const topCloud = document.createElement('div');
+       topCloud.classList.add('top-cloud');
+       topCloud.style.width = getRandomNumber(80, 150) + "%";
+
+       // bottom cloud
+       const bottomCloud = document.createElement('div');
+       bottomCloud.classList.add('bottom-cloud');
+       bottomCloud.style.width = getRandomNumber(80, 150) + "%";
+
+
+       // mid cloud
+       const midCloud = document.createElement('div');
+       midCloud.classList.add('mid-cloud');
+
+
+       // Create mid cloud content
+       const midCloudContent = document.createElement('div');
+       midCloudContent.classList.add('mid-cloud-content');
+
+       // Create mid cloud content sections
+       const mccS = document.createElement('div');
+       mccS.classList.add('mcc-s');
+
+       const mccM = document.createElement('div');
+       mccM.classList.add('mcc-m');
+
+       const mccE = document.createElement('div');
+       mccE.classList.add('mcc-e');
+
+       // Append elements to mid-cloud-content
+       midCloudContent.appendChild(mccS);
+       midCloudContent.appendChild(mccM);
+       midCloudContent.appendChild(mccE);
+
+       // Append mid-cloud-content to mid-cloud
+       midCloud.appendChild(midCloudContent);
+
+
+       // Append all elements to cloud
+       cloud.appendChild(topCloud);
+       cloud.appendChild(midCloud);
+       cloud.appendChild(bottomCloud);
+
+       // Append to document body or another container
+       document.body.appendChild(cloud);
+     }
+
+     // Call the function to create and add the cloud
+     let cloud1 = {
+       height: getRandomNumber(30, 70),
+       width: getRandomNumber(80, 150),
+       marginTop: 5,
+       translateX: getRandomNumber(-200, 200),
+       top: -40,
+       left: 6,
+     }
+     let cloud2 = {
+       height: getRandomNumber(30, 70),
+       width: getRandomNumber(80, 150),
+       marginTop: 5,
+       translateX: getRandomNumber(-200, 200),
+       top: -26,
+       left: 20,
+     }
+     let cloud3 = {
+       height: getRandomNumber(30, 70),
+       width: getRandomNumber(80, 150),
+       marginTop: 5,
+       translateX: getRandomNumber(-200, 200),
+       top: -20,
+       left: 75,
+     }
+
+     createCloud(cloud1)
+     createCloud(cloud2)
+     createCloud(cloud3)
+
+     /* cloud end */
+   </script>
+
+ </body>
+
+ </html>

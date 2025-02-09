@@ -4,8 +4,8 @@
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Clouds</title>
-   <style>
+   <title>Portfolio 2.0</title>
+   <style id="root-css">
      * {
        box-sizing: border-box;
      }
@@ -21,15 +21,43 @@
        --your-aura-color-3: #33708C;
        --your-aura-color-4: #244F71;
        --cuteness-color: #F0F2E5;
+       --start-z-index: 2;
+       --ground-z-index: 6;
+       --body-color: #132B3D;
      }
 
 
      body {
        margin: 0;
-       background: blue;
-       /*overflow: hidden;*/
+       padding: 0;
+       background: var(--body-color);
+       /*
+       */
+       z-index: 79;
+     }
+   </style>
+
+   <style id="reusable-css">
+     .overflow-hidden {
+       overflow: hidden;
+
      }
 
+     .relative {
+       position: relative;
+     }
+
+
+     .flex {
+       display: flex;
+     }
+
+     .h-100vh {
+       height: 100vh;
+     }
+   </style>
+
+   <style id="cloud">
      /* cloud start */
      .cloud {
        position: relative;
@@ -90,12 +118,11 @@
        position: absolute;
        top: 33%;
        left: 50%;
-       margin: auto;
-
+       transform: translateX(-50%);
      }
 
      .svg-box {
-       width: 100%;
+       width: 0%;
        aspect-ratio: 1;
        background: var(--cloud-color-1);
 
@@ -108,7 +135,7 @@
        aspect-ratio: 1;
        height: 100%;
        fill: var(--cloud-color-1);
-       
+
        display: block;
 
 
@@ -135,7 +162,9 @@
      }
 
      /* cloud end */
+   </style>
 
+   <style id="you">
      /* my space start */
      .your-aura {
        /*
@@ -172,7 +201,7 @@
        width: var(--your-height);
        border-radius: var(--pritam);
        aspect-ratio: 1;
-       background: red;
+       background: snow;
        border: var(--your-aura-height) solid var(--your-aura-color-1);
        outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
 
@@ -181,6 +210,7 @@
        overflow: hidden;
        z-index: 3;
        position: relative;
+       box-sizing: content-box;
      }
 
      .you::before {
@@ -231,84 +261,6 @@
        left: calc(var(--your-height) / 2);
      }
 
-
-     /* my space end */
-
-     /*  */
-
-
-     .star {
-       aspect-ratio: 1;
-       position: absolute;
-       background: #000b;
-       display: inline-flex;
-       transition: all 1s ease 0s;
-       clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
-     }
-
-     .circle {
-       aspect-ratio: 1;
-       position: absolute;
-       background: #000b;
-       border-radius: var(--pritam);
-     }
-
-     .base {
-       position: absolute;
-       bottom: 0vh;
-       z-index: 2;
-
-     }
-
-     .ground {
-       width: 200%;
-       height: 50vh;
-       left: -25vh;
-       bottom: -15vh;
-       position: relative;
-       border-radius: 50%;
-       overflow: hidden;
-
-
-       background: var(--your-aura-color-4);
-     }
-
-     .ground-1 {
-       background: orange;
-       height: 40vh;
-       width: 100%;
-       border-radius: 50%;
-       position: absolute;
-       top: -10vh;
-       z-index: 1;
-       background: var(--your-aura-color-3);
-
-     }
-
-     .ground-2 {
-       background: #FF6C6C;
-       height: 30vh;
-       width: 100%;
-       border-radius: 50%;
-       position: absolute;
-       top: -10vh;
-       z-index: 1;
-       background: var(--your-aura-color-2);
-
-     }
-
-     .ground-3 {
-       background: #6E1F1F;
-       height: 20vh;
-       width: 100%;
-       border-radius: 50%;
-       position: absolute;
-       top: -10vh;
-       z-index: 3;
-       background: var(--your-aura-color-1);
-
-     }
-
      @media (min-width:400px) {
        :root {
          /* --star-height: 0.2vh; */
@@ -323,14 +275,120 @@
        }
      }
 
-     .relative {
+     /* my space end */
+   </style>
+
+   <style id="stars">
+     /*  */
+
+
+     .star-five {
+       aspect-ratio: 1;
+       position: absolute;
+       background: snow;
+       display: inline-flex;
+       transition: all 1s ease 0s;
+       clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
+       z-index: var(--start-z-index);
+
+     }
+
+
+     .star-four {
+       aspect-ratio: 1;
+       position: absolute;
+       display: inline-flex;
+       transition: all 1s ease 0s;
+       clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%,
+           0% 50%, 40% 40%);
+       background: snow;
+       z-index: var(--start-z-index);
+     }
+
+
+     .circle {
+       aspect-ratio: 1;
+       position: absolute;
+       background: snow;
+       border-radius: var(--pritam);
+       z-index: var(--start-z-index);
+       animation: starglow 2s 1s infinite;
+       /*
+
+       */
+       box-shadow: 0rem 0rem 0rem white;
+
+     }
+
+
+     @keyframes starglow {
+       0% {
+         box-shadow: 0rem 0rem 0rem white;
+       }
+
+       100% {
+         box-shadow: 0rem 0rem 2rem white;
+       }
+     }
+   </style>
+
+   <style id="main-style">
+     #main {
        position: relative;
      }
 
-
-     .flex {
-       display: flex;
+     .base {
+       position: absolute;
+       bottom: 0vh;
+       z-index: var(--ground-z-index);
      }
+
+
+     .ground {
+       width: 300%;
+       height: 50vh;
+       left: -25vh;
+       bottom: -17vh;
+       position: relative;
+       border-radius: 50%;
+       overflow: hidden;
+       background: var(--your-aura-color-4);
+     }
+
+
+     .ground-1 {
+       height: 40vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 1;
+       background: var(--your-aura-color-3);
+
+     }
+
+     .ground-2 {
+       height: 30vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 1;
+       background: var(--your-aura-color-2);
+
+     }
+
+     .ground-3 {
+       height: 20vh;
+       width: 100%;
+       border-radius: 50%;
+       position: absolute;
+       top: -10vh;
+       z-index: 3;
+       background: var(--your-aura-color-1);
+
+     }
+
 
      .homes {
        width: 400%;
@@ -349,15 +407,27 @@
        flex-direction: column;
        position: relative;
        z-index: 2;
+     }
+
+     :root {
+       --home-1-height: 20vw;
+       --home-1-width: 45vw;
+       --home-1-roof-1-width: 40vw;
+       --home-1-roof-1-border-width: 5vw;
+       --home-1-roof-2-border-width: 1.5vw;
+       --home-2-width: 15vw;
+       --home-2-height: 40vw;
 
      }
 
      .roof-1 {
        border-style: solid;
        border-color: transparent transparent black transparent;
-       border-width: 0 20px 15px 20px;
-       height: 0;
-       width: 150px;
+       border-width: 0 var(--home-1-roof-1-border-width) var(--home-1-roof-1-border-width) var(--home-1-roof-1-border-width);
+       /* 20 */
+       height: 0px;
+       width: var(--home-1-roof-1-width);
+       /*150*/
        box-sizing: content-box;
        position: relative;
      }
@@ -365,20 +435,18 @@
      .roof-2 {
        border-style: solid;
        border-color: transparent transparent black transparent;
-       border-width: 0 10px 25px 10px;
-       height: 0;
-       width: 190px;
+       border-width: 0 var(--home-1-roof-2-border-width) calc(var(--home-1-roof-2-border-width) * 5) var(--home-1-roof-2-border-width);
+       height: 0px;
+       width: calc(var(--home-1-roof-1-width) + (var(--home-1-roof-1-border-width) *2) + (var(--home-1-roof-2-border-width) *2));
        position: relative;
      }
 
      .wall {
-       height: 70px;
-       width: 180px;
-       box-sizing: content-box;
+       width: var(--home-1-width);
+       height: var(--home-1-height);
        position: relative;
        background: black;
        overflow: hidden;
-
      }
 
 
@@ -394,14 +462,13 @@
 
      .windows {
        position: relative;
-
-       display: flex;
        gap: 1rem;
        padding: 1rem;
        justify-content: space-around;
        width: 100%;
-       overflow: hidden;
+       display: flex;
      }
+
 
      .window {
        background: yellow;
@@ -428,15 +495,15 @@
        border-color: transparent transparent black transparent;
        border-width: 0 10px 25px 10px;
        height: 0px;
-       width: 100px;
+       width: var(--home-2-width);
        position: relative;
      }
 
      .home-2__wall {
        background: black;
        position: relative;
-       width: 100px;
-       height: 100px;
+       width: var(--home-2-width);
+       height: var(--home-2-height);
 
      }
 
@@ -462,56 +529,56 @@
  </head>
 
  <body>
-   <div class="your-aura" title="your-aura">
+   <main id="main" class="overflow-hidden h-100vh">
 
-     <main class="you" title="you">
-       <div class="cuteness cuteness-1" title="cuteness"></div>
-       <div class="cuteness cuteness-2" title="cuteness"></div>
-       <div class="cuteness cuteness-3" title="cuteness"></div>
-     </main>
-   </div>
+     <div class="your-aura" title="your-aura">
 
-   <!-- 
+       <div class="you" title="you">
+         <div class="cuteness cuteness-1" title="cuteness"></div>
+         <div class="cuteness cuteness-2" title="cuteness"></div>
+         <div class="cuteness cuteness-3" title="cuteness"></div>
+       </div>
+     </div>
+
+     <!-- 
    -->
 
-   <main class="base">
+     <div class="base">
+       <div class="flex">
+         <div class="homes">
+           <div class="home">
+             <div class="roof-1"></div>
+             <div class="roof-2"></div>
+             <div class="wall">
+               <div class="windows">
+                 <div class="window"></div>
+                 <div class="window"></div>
+                 <div class="window"></div>
+               </div>
+             </div>
+           </div>
 
-     <div class="flex">
-       <div class="homes">
-         
-       <div class="home">
-         <div class="roof-1"></div>
-         <div class="roof-2"></div>
-         <div class="wall">
-           <div class="windows">
-             <div class="window"></div>
-             <div class="window"></div>
-             <div class="window"></div>
+           <div class="home-2">
+             <div class="home-2__roof-1"></div>
+             <div class="home-2__roof-2"></div>
+             <div class="home-2__wall">
+               <div class="window-circle"></div>
+
+             </div>
+             <div class="home-2__base"></div>
            </div>
          </div>
        </div>
 
-       <div class="home-2">
-         <div class="home-2__roof-1"></div>
-         <div class="home-2__roof-2"></div>
-         <div class="home-2__wall">
-           <div class="window-circle"></div>
-
+       <div class="ground">
+         <div class="relative">
+           <div class="ground-1"></div>
+           <div class="ground-3"></div>
          </div>
-         <div class="home-2__base"></div>
        </div>
      </div>
-       </div>
 
-     <div class="ground">
-       <div class="relative">
-         <div class="ground-1"></div>
-         <div class="ground-3"></div>
-       </div>
-     </div>
-   </main>
-
-   <!--  
+     <!--  
 
    <div class="cloud">
      <div class="top-cloud"></div>
@@ -541,115 +608,81 @@
      </div>
    </div>
    -->
+   </main>
 
 
-   <script>
-     /* cloud start */
-
-     let getRandomNumber = (start, end) => {
-       let randomNumber = Math.random() * (end - start) + start;
-       return Math.round(randomNumber)
-
-     }
-
-     /* star start */
-
-     let createStar = () => {
-       let star = document.createElement('div')
-       let starSvg = `
-       <svg width="100%" height="100%" viewBox="0 0 100 100">
-   <path d="M50 5 L65 35 L95 40 L75 65 L80 95 L50 80 L20 95 L25 65 L5 40 L35 35 Z"
-     fill="#000b" stroke="black" stroke-width="5" stroke-linejoin="round"/>
- </svg>
-       `
-       star.innerHTML = starSvg
-       star.style.height = getRandomNumber(1, 20) + "px"
-       star.style.top = getRandomNumber(0, 100) + "vh"
-       star.style.left = getRandomNumber(0, 100) + "vw"
-       //   star.classList.add(element)
-       star.style.position = 'absolute';
-       document.body.appendChild(star)
-     }
-
-     let createCircle = () => {
-       let circle = document.createElement('div')
-       circle.style.height = getRandomNumber(1, 20) + "px"
-       circle.style.top = getRandomNumber(0, 100) + "vh"
-
-       circle.style.left = getRandomNumber(0, 100) + "vw"
-       circle.classList.add("circle")
-       circle.style.position = 'absolute';
-       document.body.appendChild(circle)
-     }
-
-     for (let p = 0; p <= 8; p++) {
-       createStar()
-     }
-     for (let p = 0; p <= 8; p++) {
-       createCircle()
-     }
-
-     /* star end */
-
-     function createCloud(param = {
-       height: 60,
-       width: 180,
-       marginTop: 0,
-       translateX: 50,
-       top: 1,
-       left: 1
-     }) {
-       let {
-         height,
-         width,
-         marginTop,
-         translateX,
-         top,
-         left
-       } = param
-       // Create main container
-       const cloud = document.createElement('div');
-
-       
-       cloud.classList.add('cloud');
-
-       
-       cloud.style.height = height + "px"
-       cloud.style.width = width + "px"
-       cloud.style.marginTop = marginTop + "px"
-       cloud.style.top = top + "vh"
-       cloud.style.left = left + "vw"
-       cloud.style.transform = "translateX(" + translateX + "%"
-       cloud.style.animationDuration = Math.round(Math.random * 10) + "s";
+ </body>
 
 
-       // top cloud
-       const topCloud = document.createElement('div');
-       topCloud.classList.add('top-cloud');
-       topCloud.style.width = getRandomNumber(80, 150) + "%";
+ <script>
+   /* cloud start */
 
-       // bottom cloud
-       const bottomCloud = document.createElement('div');
-       bottomCloud.classList.add('bottom-cloud');
-       bottomCloud.style.width = getRandomNumber(80, 150) + "%";
-      const bottomCloudChild = document.createElement('div');
-       bottomCloudChild.classList.add('bottom-cloud-child');
-bottomCloud.appendChild(bottomCloudChild)
+   let getRandomNumber = (start, end) => {
+     let randomNumber = Math.random() * (end - start) + start;
+     return Math.round(randomNumber)
+
+   }
+
+
+   function createCloud(param = {
+     height: 60,
+     width: 180,
+     marginTop: 0,
+     translateX: 50,
+     top: 1,
+     left: 1
+   }) {
+     let {
+       height,
+       width,
+       marginTop,
+       translateX,
+       top,
+       left
+     } = param
+     // Create main container
+     const cloud = document.createElement('div');
+
+
+     cloud.classList.add('cloud');
+
+
+     cloud.style.height = height + "px"
+     cloud.style.width = width + "px"
+     cloud.style.marginTop = marginTop + "px"
+     cloud.style.top = top + "vh"
+     cloud.style.left = left + "vw"
+     cloud.style.transform = "translateX(" + translateX + "%"
+     cloud.style.animationDuration = Math.round(Math.random * 10) + "s";
+
+
+     // top cloud
+     const topCloud = document.createElement('div');
+     topCloud.classList.add('top-cloud');
+     topCloud.style.width = getRandomNumber(80, 150) + "%";
+
+     // bottom cloud
+     const bottomCloud = document.createElement('div');
+     bottomCloud.classList.add('bottom-cloud');
+     bottomCloud.style.width = getRandomNumber(80, 150) + "%";
+     const bottomCloudChild = document.createElement('div');
+     bottomCloudChild.classList.add('bottom-cloud-child');
+     bottomCloud.appendChild(bottomCloudChild)
 
 
 
-       // mid cloud
-       const midCloud = document.createElement('div');
-       midCloud.classList.add('mid-cloud');
+     // mid cloud
+     const midCloud = document.createElement('div');
+     midCloud.classList.add('mid-cloud');
 
 
-       // Create mid cloud content
-       const midCloudContent = document.createElement('div');
-       midCloudContent.classList.add('mid-cloud-content');
+     // Create mid cloud content
+     const midCloudContent = document.createElement('div');
+     midCloudContent.classList.add('mid-cloud-content');
 
-       // Create mid cloud content sections
-       const leftSvg = document.createElement('div');
-      leftSvg.innerHTML= `
+     // Create mid cloud content sections
+     const leftSvg = document.createElement('div');
+     leftSvg.innerHTML = `
            <svg class="svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
              <path fill-rule="evenodd" clip-rule="evenodd" d="M140 140H0V139.501C30.9817 135.351 55 105.817 55 70C55 34.1828 30.9817 4.64861 0 0.498825V0H140V140Z" />
            </svg>
@@ -658,77 +691,150 @@ bottomCloud.appendChild(bottomCloudChild)
 
 
 
-       const rightSvg = document.createElement('div');
-rightSvg.innerHTML = `
+     const rightSvg = document.createElement('div');
+     rightSvg.innerHTML = `
     <svg class="svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M0 140H140L140 139.501C109.018 135.351 85 105.817 85 70C85 34.1828 109.018 4.64861 140 0.49882L140 0H0V140Z" />
     </svg>
 `
-       const svgBox = document.createElement('div');
+     const svgBox = document.createElement('div');
 
 
-       svgBox.classList.add('svg-box');
+     svgBox.classList.add('svg-box');
 
 
 
-       // Append elements to mid-cloud-content
-       midCloudContent.appendChild(leftSvg);
-       midCloudContent.appendChild(svgBox);
-       midCloudContent.appendChild(rightSvg);
+     // Append elements to mid-cloud-content
+     midCloudContent.appendChild(leftSvg);
+     midCloudContent.appendChild(svgBox);
+     midCloudContent.appendChild(rightSvg);
 
-       // Append mid-cloud-content to mid-cloud
-       midCloud.appendChild(midCloudContent);
-
-
-       // Append all elements to cloud
-       cloud.appendChild(topCloud);
-       cloud.appendChild(midCloud);
-       cloud.appendChild(bottomCloud);
-
-       // Append to document body or another container
-       
-       document.body.appendChild(cloud);
-     }
-
-     // Call the function to create and add the cloud
-     let cloud1 = {
-       height: getRandomNumber(30, 70),
-       width: getRandomNumber(80, 150),
-       marginTop: 5,
-       translateX: getRandomNumber(-200, 200),
-       top: -40,
-       left: 6,
-     }
-     let cloud2 = {
-       height: getRandomNumber(30, 70),
-       width: getRandomNumber(80, 150),
-       marginTop: 5,
-       translateX: getRandomNumber(-200, 200),
-       top: -26,
-       left: 20,
-     }
-     let cloud3 = {
-       height: getRandomNumber(30, 70),
-       width: getRandomNumber(80, 150),
-       marginTop: 5,
-       translateX: getRandomNumber(-200, 200),
-       top: -20,
-       left: 75,
-       
-     }
-            /*     */
+     // Append mid-cloud-content to mid-cloud
+     midCloud.appendChild(midCloudContent);
 
 
+     // Append all elements to cloud
+     cloud.appendChild(topCloud);
+     cloud.appendChild(midCloud);
+     cloud.appendChild(bottomCloud);
+
+     // Append to document body or another container
+     let main = document.getElementById("main")
+     main.appendChild(cloud);
+   }
+
+   // Call the function to create and add the cloud
+   let cloud1 = {
+     height: getRandomNumber(30, 70),
+     width: getRandomNumber(80, 150),
+     marginTop: 5,
+     translateX: getRandomNumber(-200, 200),
+     top: -40,
+     left: 6,
+   }
+   let cloud2 = {
+     height: getRandomNumber(30, 70),
+     width: getRandomNumber(80, 150),
+     marginTop: 5,
+     translateX: getRandomNumber(-200, 200),
+     top: -26,
+     left: 20,
+   }
+   let cloud3 = {
+     height: getRandomNumber(30, 70),
+     width: getRandomNumber(80, 150),
+     marginTop: 5,
+     translateX: getRandomNumber(-200, 200),
+     top: -20,
+     left: 75,
+
+   }
+   /*     */
+
+
+   setTimeout(() => {
 
      createCloud(cloud1)
      createCloud(cloud2)
      createCloud(cloud3)
+   }, 0)
 
-     /*
-     cloud end
-     */
-   </script>
+   /*
+   cloud end
+   */
+ </script>
 
- </body>
+
+ <script>
+   /* star start */
+
+   let main = document.getElementById("main")
+
+   let createType1Star = () => {
+     let star = document.createElement('div')
+     star.classList.add("star-four")
+
+     let starSvg = `
+       <svg width="100%" height="100%" viewBox="0 0 100 100">
+   <path d="M50 5 L65 35 L95 40 L75 65 L80 95 L50 80 L20 95 L25 65 L5 40 L35 35 Z"
+     fill="snow" stroke="white" stroke-width="5" stroke-linejoin="round"/>
+ </svg>
+       `
+     star.innerHTML = starSvg
+     star.style.height = getRandomNumber(1, 8) + "px"
+     star.style.top = getRandomNumber(0, 100) + "vh"
+     star.style.left = getRandomNumber(0, 100) + "vw"
+
+     main.appendChild(star)
+   }
+   let createType2Star = () => {
+     let star = document.createElement('div')
+     star.classList.add("star-five")
+
+     let starSvg = `
+       <svg width="100%" height="100%" viewBox="0 0 100 100">
+   <path d="M50 5 L65 35 L95 40 L75 65 L80 95 L50 80 L20 95 L25 65 L5 40 L35 35 Z"
+     fill="snow" stroke="white" stroke-width="5" stroke-linejoin="round"/>
+ </svg>
+       `
+     star.innerHTML = starSvg
+     star.style.height = getRandomNumber(1, 8) + "px"
+     star.style.top = getRandomNumber(0, 100) + "vh"
+     star.style.left = getRandomNumber(0, 100) + "vw"
+
+     main.appendChild(star)
+   }
+
+   let createCircle = () => {
+     let circle = document.createElement('div')
+     circle.classList.add("circle")
+
+     circle.style.height = getRandomNumber(1, 8) + "px"
+     circle.style.top = getRandomNumber(0, 100) + "vh"
+     circle.style.left = getRandomNumber(0, 100) + "vw"
+     main.appendChild(circle)
+   }
+
+   for (let p = 0; p <= 4; p++) {
+     setTimeout(() => {
+       createType1Star()
+     }, 0)
+
+   }
+   for (let p = 0; p <= 4; p++) {
+     setTimeout(() => {
+       createType2Star()
+     }, 0)
+
+   }
+   for (let p = 0; p <= 30; p++) {
+     setTimeout(() => {
+       createCircle()
+     }, 0)
+
+   }
+
+   /* star end */
+ </script>
 
  </html>

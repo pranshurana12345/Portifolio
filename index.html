@@ -390,21 +390,21 @@
 
   <style id="main-style">
     :root {
-      --home-1-height: 8vw;
-      --home-1-width: 22vw;
-      --home-1-roof-1-width: 20vw;
-      --home-1-roof-1-border-width: 2.5vw;
+      --home-1-height: 6vw;
+      --home-1-width: 18vw;
+      --home-1-roof-1-width: 16vw;
+      --home-1-roof-1-border-width: 1.5vw;
       --home-1-roof-2-border-width: 0.5vw;
-      --home-1-window-size: 1rem;
-      --home-2-width: 10vw;
-      --home-2-height: 20vw;
-      --home-2-roof-1-border-width: 7vw;
-      --home-2-roof-2-height: 4vh;
-      --ground-height: 55vh;
-      --ground-1-height: 35vh;
-      --ground-2-height: 15vh;
-      --ground-3-height: 20vh;
-      --ground-left: -25vh;
+      --home-1-window-size: 0.5rem;
+      --home-2-width: 8vw;
+      --home-2-height: 14vw;
+      --home-2-roof-1-border-width: 5vw;
+      --home-2-roof-2-height: 3vh;
+      --ground-height: 45vh;
+      --ground-1-height: 25vh;
+      --ground-2-height: 10vh;
+      --ground-3-height: 15vh;
+      --ground-left: -220%;
       --ground-bottom: -20vh;
 
     }
@@ -416,12 +416,15 @@
     .base {
       position: absolute;
       bottom: 0vh;
+      padding: 1rem;
+
       z-index: var(--ground-z-index);
     }
 
 
     .ground {
-      width: 350%;
+      width: 450%;
+      padding: 1rem;
       height: var(--ground-height);
       left: var(--ground-left);
       bottom: var(--ground-bottom);
@@ -457,7 +460,6 @@
 
     .ground-3 {
       height: var(--ground-3-height);
-
       width: 100%;
       border-radius: 50%;
       position: absolute;
@@ -474,6 +476,7 @@
       position: relative;
       display: flex;
       margin: auto;
+
     }
 
     .home {
@@ -524,14 +527,13 @@
       justify-content: end;
       flex-direction: column;
       position: relative;
-      left: calc(var(--home-1-window-size) * -1)
+      left: calc(var(--home-1-window-size) * -1);
+
     }
 
 
     .windows {
       position: relative;
-      gap: 1rem;
-      padding: 1rem;
       justify-content: space-around;
       width: 100%;
       display: flex;
@@ -612,32 +614,28 @@
         width: 400%;
         bottom: -26vh;
         right: -4vw;
-        background: orchid;
-        padding: 1rem;
       }
 
 
       .home-2 {
         left: -3vw;
       }
-
-
     }
   </style>
 
   <style id="style-tree">
     :root {
-      --branch-height: 12vh;
-      --branch-width: 4vw;
+      --branch-height: 7vh;
+      --branch-width: 2.5vw;
+      --leaf-width: 0.7rem;
 
     }
 
-    .ground {
-    }
+    .ground {}
+
+    /*
 
     .tree {
-      /*
-              */
 
       bottom: calc(var(--ground-height) + var(--ground-bottom) + 3vh);
 
@@ -648,17 +646,34 @@
       position: relative;
       display: flex;
       justify-content: center;
+      background: green;
+    }
+              */
+
+    .tree {
+      position: relative;
+      display: flex;
+      align-items: end;
+      left: calc(var(--home-1-window-size) + var(--home-2-width));
+
     }
 
     .branches {
       position: relative;
       display: flex;
+      width: var(--branch-width);
+      height: var(--branch-height);
     }
 
     .branch {
       background: black;
+      /*
+
       height: var(--branch-height);
       width: var(--branch-width);
+               */
+      width: 100%;
+      height: 100%;
       position: absolute;
     }
 
@@ -686,8 +701,14 @@
 
     .leaves {
       height: var(--branch-height);
-      top: calc(var(--branch-height) * -1);
-      width: 100%;
+      bottom: calc(var(--branch-height));
+      width: calc(var(--branch-width) *8);
+
+      /*
+    left is half of its width
+   */
+      left: calc(var(--branch-width) * -4);
+
       position: absolute;
     }
 
@@ -700,7 +721,7 @@
 
     .leaf {
       background: black;
-      width: 10%;
+      width: var(--leaf-width);
       aspect-ratio: 1;
       border-radius: var(--pritam);
       top: 10%;
@@ -721,14 +742,26 @@
   <style id="style-me">
     :root {
       --me-height: 20vh;
+      --message-popup-animation-duration: 3000;
     }
 
     .me {
-      position: absolute;
+      position: relative;
       bottom: 0;
-      left: calc(var(--home-1-roof-1-width) * 4.5);
-      bottom: calc(var(--me-height) * -1.2);
+      left: calc(var(--home-1-roof-1-width) + var(--home-2-width));
+      top: calc(var(--me-height) / 2);
+      width: 100%;
+      /*
 
+      bottom: calc(var(--ground-height) * -1);
+      bottom: 0;
+      */
+    }
+
+    .message-box {
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
 
@@ -736,43 +769,54 @@
 
 
     .overflow-hidden {
+      /*
+
+      overflow: visible;
+            */
+
     }
 
     .img-box {
-      /*
-            */
-
       position: relative;
       height: calc(var(--me-height));
       z-index: 60;
       aspect-ratio: 1;
     }
 
-    .message-box {
+    .message {
       position: relative;
+      /*
       bottom: calc(var(--me-height) * -0.5);
+
+      */
+      right: calc(var(--me-height) * 0.7);
+
       padding: 0.4rem 0.8rem;
       border-radius: 0.4rem;
-      right: calc(var(--me-height) * 0.7);
       z-index: 70;
       font-size: 0.7rem;
       font-weight: 600;
-      background: var(--cloud-color-2);
+      background: var(--cloud-color-1);
 
       transform-origin: bottom;
       transform: rotateX(90deg);
-
-      animation: message-popup 2s forwards;
+      animation: message-popup forwards;
+      animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
 
     }
 
+    .me:hover .message {
+      transform: rotateX(0deg);
+      transition: calc(var(--message-popup-animation-duration) * 0.1ms);
 
-    .message-box:after {
+    }
+
+    .message:after {
       position: absolute;
       content: "";
       height: 20%;
       aspect-ratio: 1;
-      background: var(--cloud-color-2);
+      background: var(--cloud-color-1);
 
       right: 6%;
       bottom: -20%;
@@ -781,13 +825,18 @@
     }
 
     @keyframes message-popup {
-
       50% {
+        transform: rotateX(0deg);
+      }
+
+      90% {
+        transform: rotateX(0deg);
+        opacity: 1;
       }
 
       100% {
         transform: rotateX(0deg);
-
+        opacity: 0;
       }
     }
 
@@ -796,6 +845,19 @@
       height: 100%;
       width: 100%;
     }
+
+    .flex {}
+
+    .base {
+      /*
+
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      */
+    }
+
+    .homes {}
   </style>
 </head>
 
@@ -837,25 +899,46 @@
             </div>
             <div class="home-2__base"></div>
           </div>
-        </div>
 
-      </div>
 
-      <div class="ground overflow-hidden">
-        <div class="relative">
-          <div class="ground-1"></div>
-          <div class="ground-2"></div>
-          <div class="ground-3"></div>
-        </div>
-        <div class="relative">
+          <div class="tree">
+            <div class="branches">
+              <div class="branch branch-1"></div>
+              <div class="branch branch-2"></div>
+              <div class="branch branch-3"></div>
+              <div class="branch branch-4"></div>
+            </div>
+            <div class="leaves" id="leaves">
+              <div id="leaf-box">
+                <!--
+                        Js will populate it
+                      <div class="leaf">
+                        
+                      </div>
+                      
+                      -->
+              </div>
+
+            </div>
+          </div>
+
+
+
+
           <div class="me">
             <div class="message-box">
-              👋 Hey, I’m Pritam, a software developer who loves blending logic with creativity ✨
-
+              <div class="message" id="message">
+                👋 Hey, I’m Pritam,
+                <br />
+                a software developer <br />
+                who loves blending
+                <br />
+                logic with creativity ✨
+              </div>
             </div>
 
             <div class="img-box">
-              <img src="./images/pritam-1.png" />
+              <img src="./images/pritam-6.png" />
             </div>
           </div>
 
@@ -889,31 +972,27 @@
 -->
 
 
+
+
         </div>
+
       </div>
 
 
-      <div class="tree">
 
-        <div class="branches">
-          <div class="branch branch-1"></div>
-          <div class="branch branch-2"></div>
-          <div class="branch branch-3"></div>
-          <div class="branch branch-4"></div>
-        </div>
-        <div class="leaves" id="leaves">
-          <div id="leaf-box">
-            <!--
-                        Js will populate it
-                      <div class="leaf">
-                        
-                      </div>
-                      
-                      -->
-          </div>
 
+
+
+      <div class="ground overflow-hidden">
+        <div class="relative">
+          <div class="ground-1"></div>
+          <div class="ground-2"></div>
+          <div class="ground-3"></div>
         </div>
+
       </div>
+
+
 
     </div>
 
@@ -953,6 +1032,19 @@
 
 
 </body>
+
+<script id="script-me">
+  let root = document.documentElement;
+  let messagePopupAnimationDuration = getComputedStyle(root).getPropertyValue('--message-popup-animation-duration');
+
+
+  let message = document.getElementById("message")
+
+  setTimeout(() => {
+      message.style.animation = "none"
+    },
+    messagePopupAnimationDuration)
+</script>
 
 
 <script id="create-cloud-type-1">

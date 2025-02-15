@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>Portfolio 2.0</title>
 
   <style id="root-css">
@@ -60,10 +61,9 @@
       --cloud-color-2: rgba(0, 0, 0, 0.2);
     }
 
-    /* cloud start */
     .cloud,
     .cloud-2 {
-      position: relative;
+      position: absolute;
       /*             */
       height: 70px;
       width: 200px;
@@ -211,10 +211,9 @@
        border-radius: var(--pritam);
        width: contents;
        */
-      position: relative;
-      top: calc(var(--your-height) * -2);
-
-      right: calc(var(--your-aura-height) * -3);
+      position: absolute;
+      top: calc(var(--your-height));
+      right: calc(var(--your-aura-height));
       height: calc (var(--your-height) * 2);
       border-radius: var(--pritam);
       aspect-ratio: 1;
@@ -240,29 +239,28 @@
       border-radius: var(--pritam);
       aspect-ratio: 1;
       background: snow;
-
-
       overflow: hidden;
       z-index: 3;
       position: relative;
       box-sizing: content-box;
+      /* border: calc(var(--your-aura-height)) solid var(--body-color); */
       animation: show-border calc(var(--animation-time)*3) var(--animation-time) forwards;
     }
 
     @keyframes show-border {
       50% {
+        /* width: calc(var(--your-height) + var(--your-aura-height)); */
+
         border: var(--your-aura-height) solid var(--your-aura-color-1);
       }
 
       75% {
         border: var(--your-aura-height) solid var(--your-aura-color-1);
-
         outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
       }
 
       100% {
         border: var(--your-aura-height) solid var(--your-aura-color-1);
-
         outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
         box-shadow: 0 0 0 calc(var(--your-aura-height) * 2) var(--your-aura-color-3),
           0 0 0 calc(var(--your-aura-height)*3) var(--your-aura-color-4);
@@ -320,15 +318,17 @@
 
     @media (min-width:700px) {
       :root {
-        --your-aura-height: 14vh;
-        --your-height: 12vh;
+        --your-aura-height: 10vh;
+        --your-height: 10vh;
       }
 
+      /*
       .your-aura {
         top: calc(var(--your-height) * -8);
         right: calc(var(--your-height) * -6);
 
-      }
+      } */
+
     }
 
     /* my space end */
@@ -368,12 +368,7 @@
       background: snow;
       border-radius: var(--pritam);
       z-index: var(--start-z-index);
-      animation: starglow 2s 1s infinite;
-      /*
-
-       */
-      box-shadow: 0rem 0rem 0rem white;
-
+      animation: starglow 2s ease infinite;
     }
 
 
@@ -391,7 +386,6 @@
   <style id="main-style">
     :root {
       --home-1-height: 6vw;
-      --home-1-width: 18vw;
       --home-1-roof-1-width: 16vw;
       --home-1-roof-1-border-width: 1.5vw;
       --home-1-roof-2-border-width: 0.5vw;
@@ -417,13 +411,12 @@
       position: absolute;
       bottom: 0vh;
       padding: 1rem;
-
       z-index: var(--ground-z-index);
     }
 
 
     .ground {
-      width: 450%;
+      width: 500%;
       padding: 1rem;
       height: var(--ground-height);
       left: var(--ground-left);
@@ -436,7 +429,6 @@
 
 
     .ground-1 {
-
       height: var(--ground-1-height);
       width: 100%;
       border-radius: 50%;
@@ -511,7 +503,8 @@
     }
 
     .wall {
-      width: var(--home-1-width);
+      width:
+        calc(var(--home-1-roof-1-width) + var(--home-1-roof-1-border-width));
       height: var(--home-1-height);
       position: relative;
       background: black;
@@ -601,24 +594,17 @@
 
     @media (min-width:700px) {
       :root {
-        --home-1-height: 7vw;
-        --home-1-width: 22vw;
-        --home-1-roof-1-width: 14vw;
-        --home-2-height: 12vw;
-        --home-2-roof-1-border-width: 5vw;
-        --home-2-width: 8vw;
-
+        --home-1-height: 3vw;
+        --home-1-roof-1-width: 10vw;
+        --home-2-height: 8vw;
+        --home-2-roof-1-border-width: 4vw;
+        --home-2-width: 6vw;
       }
+    }
 
-      .homes {
-        width: 400%;
-        bottom: -26vh;
-        right: -4vw;
-      }
-
-
-      .home-2 {
-        left: -3vw;
+    @media (min-width:900px) {
+      :root {
+        --home-1-window-size: 0.8rem;
       }
     }
   </style>
@@ -629,6 +615,13 @@
       --branch-width: 2.5vw;
       --leaf-width: 0.7rem;
 
+    }
+
+    @media (min-width:700px) {
+      :root {
+        --branch-height: 9vh;
+        --branch-width: 1.5vw;
+      }
     }
 
     .ground {}
@@ -862,13 +855,19 @@
 </head>
 
 <body>
-  <main id="main" class="overflow-hidden h-100vh">
+  <main id="main"
+        class="overflow-hidden h-100vh">
 
-    <div class="your-aura" title="your-aura">
-      <div class="you" title="you">
-        <div class="cuteness cuteness-1" title="cuteness"></div>
-        <div class="cuteness cuteness-2" title="cuteness"></div>
-        <div class="cuteness cuteness-3" title="cuteness"></div>
+    <div class="your-aura"
+         title="your-aura">
+      <div class="you"
+           title="you">
+        <div class="cuteness cuteness-1"
+             title="cuteness"></div>
+        <div class="cuteness cuteness-2"
+             title="cuteness"></div>
+        <div class="cuteness cuteness-3"
+             title="cuteness"></div>
       </div>
     </div>
 
@@ -908,7 +907,8 @@
               <div class="branch branch-3"></div>
               <div class="branch branch-4"></div>
             </div>
-            <div class="leaves" id="leaves">
+            <div class="leaves"
+                 id="leaves">
               <div id="leaf-box">
                 <!--
                         Js will populate it
@@ -927,7 +927,8 @@
 
           <div class="me">
             <div class="message-box">
-              <div class="message" id="message">
+              <div class="message"
+                   id="message">
                 👋 Hey, I’m Pritam,
                 <br />
                 a software developer <br />
@@ -938,7 +939,9 @@
             </div>
 
             <div class="img-box">
-              <img src="./images/pritam-6.png" />
+              <img src="./images/pritam-6.png"
+                   title="Pritam Debnath"
+                   alt="Pritam Debnath" />
             </div>
           </div>
 
@@ -1041,8 +1044,8 @@
   let message = document.getElementById("message")
 
   setTimeout(() => {
-      message.style.animation = "none"
-    },
+    message.style.animation = "none"
+  },
     messagePopupAnimationDuration)
 </script>
 
@@ -1158,7 +1161,7 @@
     width: getRandomNumber(90, 110),
     marginTop: 5,
     translateX: getRandomNumber(-200, 200),
-    top: -50,
+    top: 15,
     left: 6,
   }
   let cloud2 = {
@@ -1166,15 +1169,15 @@
     width: getRandomNumber(90, 120),
     marginTop: 5,
     translateX: getRandomNumber(-200, 200),
-    top: -46,
+    top: 26,
     left: 20,
   }
   let cloud3 = {
-    height: getRandomNumber(30, 60),
-    width: getRandomNumber(90, 100),
+    height: getRandomNumber(40, 60),
+    width: getRandomNumber(100, 150),
     marginTop: 5,
     translateX: getRandomNumber(-200, 200),
-    top: -30,
+    top: 30,
     left: 75,
     className: "cloud-2"
   }

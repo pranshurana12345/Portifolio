@@ -267,7 +267,7 @@
       }
     }
 
-
+    /* 
     .you::before {
       content: "";
       position: absolute;
@@ -285,7 +285,7 @@
         linear-gradient(white 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
-    }
+    } */
 
     .cuteness {
       border-radius: var(--pritam);
@@ -744,17 +744,16 @@
       left: calc(var(--home-1-roof-1-width) + var(--home-2-width));
       top: calc(var(--me-height) / 2);
       width: 100%;
-      /*
-
-      bottom: calc(var(--ground-height) * -1);
-      bottom: 0;
-      */
+      display: flex;
+      align-items: end;
     }
+
+
 
     .message-box {
       position: absolute;
       left: 0;
-      top: 0;
+      bottom: calc(var(--me-height) / 2);
     }
 
 
@@ -839,18 +838,23 @@
       width: 100%;
     }
 
-    .flex {}
 
-    .base {
-      /*
+    @media (min-width:700px) {
+      :root {
+        --me-height: 30vh;
+      }
 
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      */
+      .me {
+        left: calc((var(--home-1-roof-1-width) + var(--home-2-width)) * 2);
+      }
+
+      .message-box {
+        left: calc(var(--me-height) / 2.5);
+        width: 72%;
+        position: absolute;
+        bottom: calc(var(--me-height) / 2);
+      }
     }
-
-    .homes {}
   </style>
 </head>
 
@@ -1079,6 +1083,11 @@
     // Create main container
     const cloud = document.createElement('div');
     cloud.classList.add(className);
+
+    if (window.innerWidth > 700) {
+      height = height * 1.2
+      width = width * 1.2
+    }
 
 
     cloud.style.height = height + "px"

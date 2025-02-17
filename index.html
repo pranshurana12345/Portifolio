@@ -204,17 +204,10 @@
 
     /* my space start */
     .your-aura {
-      /*
-       border: 2rem solid orange;
-       top: 5vh;
-       right: -20vh;
-       border-radius: var(--pritam);
-       width: contents;
-       */
       position: absolute;
-      top: calc(var(--your-height));
-      right: calc(var(--your-aura-height));
-      height: calc (var(--your-height) * 2);
+      top: calc(var(--your-height) * -2);
+      right: calc(var(--your-aura-height)* -2);
+      height: calc(var(--your-aura-height)*10);
       border-radius: var(--pritam);
       aspect-ratio: 1;
       display: flex;
@@ -794,7 +787,7 @@
       transform: rotateX(90deg);
       animation: message-popup forwards;
       animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
-
+      transition: calc(var(--message-popup-animation-duration) * 0.1ms);
     }
 
     .me:hover .message {

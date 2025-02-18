@@ -6,855 +6,52 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
   <title>Portfolio 2.0</title>
+  <meta name="author"
+        content="Pritam Debnath"
+        title="Pritam Debnath">
+  <meta name="author-linkedin"
+        content="https://www.linkedin.com/in/pritam-debnath-762019239/"
+        title="https://www.linkedin.com/in/pritam-debnath-762019239/">
 
-  <style id="root-css">
-    * {
-      box-sizing: border-box;
-    }
+  <!-- link to fav icon -->
+  <link rel="icon"
+        type="image/png"
+        href="./assets/fav-icon.ico"
+        sizes="16x16" />
 
-    :root {
+  <!-- link to css file start-->
 
-      --pritam: 80rem;
-      --star-height: 2vh;
-      --start-z-index: 2;
-      --ground-z-index: 6;
-      --body-color: #132B3D;
-    }
+  <link rel="stylesheet"
+        href="./assets/css/root.style.css" />
 
+  <link rel="stylesheet"
+        href="./assets/css/reuseable.style.css" />
 
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--body-color);
-      /*
-       */
-      z-index: 79;
-    }
-  </style>
+  <link rel="stylesheet"
+        href="./assets/css/cloud.style.css" />
 
-  <style id="reusable-css">
-    .overflow-hidden {
-      /*     
-      */
+  <link rel="stylesheet"
+        href="./assets/css/your.style.css" />
 
-      overflow: hidden;
+  <link rel="stylesheet"
+        href="./assets/css/star.style.css" />
 
-    }
+  <link rel="stylesheet"
+        href="./assets/css/home-and-ground.style.css" />
 
-    .relative {
-      position: relative;
-    }
+  <link rel="stylesheet"
+        href="./assets/css/my.style.css" />
 
+  <link rel="stylesheet"
+        href="./assets/css/tree.style.css" />
 
-    .flex {
-      display: flex;
-    }
+  <!-- link to css file end-->
 
-    .h-100vh {
-      height: 100vh;
-    }
-  </style>
-
-  <style id="cloud">
-    :root {
-      --cloud-color-1: rgba(255, 255, 255, 0.7);
-      --cloud-color-2: rgba(0, 0, 0, 0.2);
-    }
-
-    .cloud,
-    .cloud-2 {
-      position: absolute;
-      /*             */
-      height: 70px;
-      width: 200px;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: slide-cloud 2s 1s forwards;
-    }
-
-
-    @keyframes slide-cloud {
-      100% {
-        transform: translate(0)
-      }
-    }
-
-    .top-cloud,
-    .bottom-cloud {
-      /*       */
-      width: 100%;
-      height: 33%;
-      background: var(--cloud-color-1);
-      position: absolute;
-      left: 0;
-      border-radius: var(--pritam);
-    }
-
-    .cloud-2 .top-cloud,
-    .cloud-2 .bottom-cloud {
-      background: var(--cloud-color-2);
-    }
-
-    .bottom-cloud {
-      background: transparent;
-    }
-
-    .cloud-2 .bottom-cloud {
-      background: transparent;
-
-    }
-
-    .bottom-cloud-child {
-      width: 80%;
-      margin: auto;
-      height: 100%;
-      border-radius: var(--pritam);
-      background: var(--cloud-color-1);
-
-      /*
-       left: 25%;
-       */
-    }
-
-    .cloud-2 .bottom-cloud-child {
-      background: var(--cloud-color-2);
-
-    }
-
-    .mid-cloud {
-      background: transparent;
-      /*
-       width: 100%;
-              */
-      aspect-ratio: 1;
-      height: 34%;
-      position: absolute;
-      top: 33%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-
-    .svg-box {
-      width: 0%;
-      aspect-ratio: 1;
-      background: var(--cloud-color-1);
-
-    }
-
-    .cloud-2 .svg-box {
-      background: var(--cloud-color-2);
-
-    }
-
-    .svg {
-      /*
-       width: 100%;
-              */
-      aspect-ratio: 1;
-      height: 100%;
-      fill: var(--cloud-color-1);
-
-      display: block;
-
-
-      object-fit: contain;
-
-    }
-
-    .cloud-2 .svg {
-      fill: var(--cloud-color-2);
-
-    }
-
-    .mid-cloud-content {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      margin: auto;
-
-    }
-
-
-    .top-cloud {
-      top: 0;
-
-    }
-
-    .bottom-cloud {
-      bottom: 0;
-    }
-
-    /* cloud end */
-  </style>
-
-  <style id="you">
-    :root {
-      --animation-time: 2s;
-      --your-height: 8vh;
-      --your-aura-height: 6vh;
-      --your-aura-color-1: #5CB5BB;
-      --your-aura-color-2: #4AA3A9;
-      --your-aura-color-3: #33708C;
-      --your-aura-color-4: #244F71;
-      --cuteness-color: #F0F2E5;
-    }
-
-    /* my space start */
-    .your-aura {
-      position: absolute;
-      top: calc(var(--your-height) * -2);
-      right: calc(var(--your-aura-height)* -2);
-      height: calc(var(--your-aura-height)*10);
-      border-radius: var(--pritam);
-      aspect-ratio: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: you-come calc(var(--animation-time)*2) forwards;
-      transform: translateY(100vh);
-
-    }
-
-    @keyframes you-come {
-      100% {
-        transform: translate(0)
-      }
-    }
-
-    .you {
-      /*     
-       height: var(--your-height);
-*/
-      width: var(--your-height);
-      border-radius: var(--pritam);
-      aspect-ratio: 1;
-      background: snow;
-      overflow: hidden;
-      z-index: 3;
-      position: relative;
-      box-sizing: content-box;
-      /* border: calc(var(--your-aura-height)) solid var(--body-color); */
-      animation: show-border calc(var(--animation-time)*3) var(--animation-time) forwards;
-    }
-
-    @keyframes show-border {
-      50% {
-        /* width: calc(var(--your-height) + var(--your-aura-height)); */
-
-        border: var(--your-aura-height) solid var(--your-aura-color-1);
-      }
-
-      75% {
-        border: var(--your-aura-height) solid var(--your-aura-color-1);
-        outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
-      }
-
-      100% {
-        border: var(--your-aura-height) solid var(--your-aura-color-1);
-        outline: calc(var(--your-aura-height)) solid var(--your-aura-color-2);
-        box-shadow: 0 0 0 calc(var(--your-aura-height) * 2) var(--your-aura-color-3),
-          0 0 0 calc(var(--your-aura-height)*3) var(--your-aura-color-4);
-      }
-    }
-
-    /* 
-    .you::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 8;
-      border-radius: inherit;
-      height: calc(var(--your-height) + var(--your-aura-height) + var(--your-aura-height));
-      aspect-ratio: 1;
-      background: radial-gradient(var(--your-aura-color-2), var(--your-aura-color-1));
-      padding: var(--your-aura-height);
-      -webkit-mask:
-        linear-gradient(white 0 0) content-box,
-        linear-gradient(white 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-    } */
-
-    .cuteness {
-      border-radius: var(--pritam);
-      height: calc(var(--your-height) / 4);
-      aspect-ratio: 1;
-      background: var(--cuteness-color);
-      position: absolute;
-
-    }
-
-    .cuteness-1 {
-      height: calc(var(--your-height) / 4);
-      top: calc(var(--your-height) / 4);
-      left: calc(var(--your-height) / 6);
-    }
-
-    .cuteness-2 {
-      height: calc(var(--your-height) / 6);
-
-      top: calc(var(--your-height) / 10);
-      left: calc(var(--your-height) / 2);
-    }
-
-    .cuteness-3 {
-      height: calc(var(--your-height) / 8);
-
-      bottom: calc(var(--your-height) / 4);
-      left: calc(var(--your-height) / 2);
-    }
-
-    @media (min-width:700px) {
-      :root {
-        --your-aura-height: 10vh;
-        --your-height: 10vh;
-      }
-
-      /*
-      .your-aura {
-        top: calc(var(--your-height) * -8);
-        right: calc(var(--your-height) * -6);
-
-      } */
-
-    }
-
-    /* my space end */
-  </style>
-
-  <style id="stars">
-    /*  */
-
-
-    .star-five {
-      aspect-ratio: 1;
-      position: absolute;
-      background: snow;
-      display: inline-flex;
-      transition: all 1s ease 0s;
-      clip-path: polygon(50% 0%, 66% 32%, 100% 38%, 78% 64%, 83% 100%, 50% 83%, 17% 100%, 22% 64%, 0 38%, 34% 32%);
-      z-index: var(--start-z-index);
-
-    }
-
-
-    .star-four {
-      aspect-ratio: 1;
-      position: absolute;
-      display: inline-flex;
-      transition: all 1s ease 0s;
-      clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%,
-          0% 50%, 40% 40%);
-      background: snow;
-      z-index: var(--start-z-index);
-    }
-
-
-    .circle {
-      aspect-ratio: 1;
-      position: absolute;
-      background: snow;
-      border-radius: var(--pritam);
-      z-index: var(--start-z-index);
-      animation: starglow 2s ease infinite;
-    }
-
-
-    @keyframes starglow {
-      0% {
-        box-shadow: 0rem 0rem 0rem white;
-      }
-
-      100% {
-        box-shadow: 0rem 0rem 2rem white;
-      }
-    }
-  </style>
-
-  <style id="main-style">
-    :root {
-      --home-1-height: 6vw;
-      --home-1-roof-1-width: 16vw;
-      --home-1-roof-1-border-width: 1.5vw;
-      --home-1-roof-2-border-width: 0.5vw;
-      --home-1-window-size: 0.5rem;
-      --home-2-width: 8vw;
-      --home-2-height: 14vw;
-      --home-2-roof-1-border-width: 5vw;
-      --home-2-roof-2-height: 3vh;
-      --ground-height: 45vh;
-      --ground-1-height: 25vh;
-      --ground-2-height: 10vh;
-      --ground-3-height: 15vh;
-      --ground-left: -220%;
-      --ground-bottom: -20vh;
-
-    }
-
-    #main {
-      position: relative;
-    }
-
-    .base {
-      position: absolute;
-      bottom: 0vh;
-      padding: 1rem;
-      z-index: var(--ground-z-index);
-    }
-
-
-    .ground {
-      width: 500%;
-      padding: 1rem;
-      height: var(--ground-height);
-      left: var(--ground-left);
-      bottom: var(--ground-bottom);
-      position: relative;
-      z-index: var(--ground-z-index);
-      border-radius: 50%;
-      background: var(--your-aura-color-4);
-    }
-
-
-    .ground-1 {
-      height: var(--ground-1-height);
-      width: 100%;
-      border-radius: 50%;
-      position: absolute;
-      top: -10vh;
-      z-index: 1;
-      background: var(--your-aura-color-3);
-    }
-
-    .ground-2 {
-      height: var(--ground-2-height);
-
-      width: 100%;
-      border-radius: 50%;
-      position: absolute;
-      top: -0vh;
-      z-index: 1;
-      background: var(--your-aura-color-2);
-
-    }
-
-    .ground-3 {
-      height: var(--ground-3-height);
-      width: 100%;
-      border-radius: 50%;
-      position: absolute;
-      top: -10vh;
-      z-index: 3;
-      background: var(--your-aura-color-1);
-
-    }
-
-
-    .homes {
-      bottom: calc(var(--ground-bottom) - 0.8vh);
-      left: 2vw;
-      position: relative;
-      display: flex;
-      margin: auto;
-
-    }
-
-    .home {
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      flex-direction: column;
-      position: relative;
-      z-index: 2;
-    }
-
-
-
-
-    .roof-1 {
-      border-style: solid;
-      border-color: transparent transparent black transparent;
-      border-width: 0 var(--home-1-roof-1-border-width) var(--home-1-roof-1-border-width) var(--home-1-roof-1-border-width);
-      height: 0px;
-      width: var(--home-1-roof-1-width);
-      box-sizing: content-box;
-      position: relative;
-    }
-
-    .roof-2 {
-      border-style: solid;
-      border-color: transparent transparent black transparent;
-      border-width: 0 var(--home-1-roof-2-border-width) calc(var(--home-1-roof-2-border-width) * 5) var(--home-1-roof-2-border-width);
-      height: 0px;
-      width: calc(var(--home-1-roof-1-width) + (var(--home-1-roof-1-border-width) *2) + (var(--home-1-roof-2-border-width) *2));
-      position: relative;
-    }
-
-    .wall {
-      width:
-        calc(var(--home-1-roof-1-width) + var(--home-1-roof-1-border-width));
-      height: var(--home-1-height);
-      position: relative;
-      background: black;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-
-
-    .home-2 {
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      flex-direction: column;
-      position: relative;
-      left: calc(var(--home-1-window-size) * -1);
-
-    }
-
-
-    .windows {
-      position: relative;
-      justify-content: space-around;
-      width: 100%;
-      display: flex;
-    }
-
-
-    .window {
-      background: yellow;
-      box-shadow: 0rem 0rem 1rem yellow;
-      height: var(--home-1-window-size);
-      aspect-ratio: 1;
-      border-radius: 0.1rem;
-
-    }
-
-
-    .home-2__roof-1 {
-      width: 0;
-      height: 0;
-      border-left: var(--home-2-roof-1-border-width) solid transparent;
-      border-right: var(--home-2-roof-1-border-width) solid transparent;
-      border-bottom: calc(var(--home-2-roof-1-border-width)*2) solid black;
-    }
-
-
-    .home-2__roof-2 {
-      border-style: solid;
-      border-color: transparent transparent black transparent;
-      /*
-       border-width: 0 calc(var(--home-2-roof-1-border-width)) calc(var(--home-2-roof-1-border-width)) 10px;
-       */
-      height: var(--home-2-roof-2-height);
-
-      width: calc(var(--home-2-roof-1-border-width)*2);
-      position: relative;
-      background: black;
-    }
-
-    .home-2__wall {
-      background: black;
-      position: relative;
-      width: var(--home-2-width);
-      height: var(--home-2-height);
-    }
-
-    .home-2__base {
-      width: calc(var(--home-2-width) + var(--home-1-roof-2-border-width));
-      height: calc(var(--home-2-height) / 3);
-
-      background: black;
-      position: relative;
-    }
-
-
-    .window-circle {
-      background: yellow;
-      margin: 1rem auto;
-      box-shadow: 0rem 0rem 0rem yellow;
-      width: var(--home-1-window-size);
-      height: var(--home-1-window-size);
-      border-radius: var(--pritam);
-      animation: starglow 2s 1s infinite;
-
-    }
-
-    @media (min-width:700px) {
-      :root {
-        --home-1-height: 3vw;
-        --home-1-roof-1-width: 10vw;
-        --home-2-height: 8vw;
-        --home-2-roof-1-border-width: 4vw;
-        --home-2-width: 6vw;
-      }
-    }
-
-    @media (min-width:900px) {
-      :root {
-        --home-1-window-size: 0.8rem;
-      }
-    }
-  </style>
-
-  <style id="style-tree">
-    :root {
-      --branch-height: 7vh;
-      --branch-width: 2.5vw;
-      --leaf-width: 0.7rem;
-
-    }
-
-    @media (min-width:700px) {
-      :root {
-        --branch-height: 9vh;
-        --branch-width: 1.5vw;
-      }
-    }
-
-    .ground {}
-
-    /*
-
-    .tree {
-
-      bottom: calc(var(--ground-height) + var(--ground-bottom) + 3vh);
-
-      right: calc(var(--home-1-roof-1-width) * -2.5);
-
-      display: flex;
-      margin: auto;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      background: green;
-    }
-              */
-
-    .tree {
-      position: relative;
-      display: flex;
-      align-items: end;
-      left: calc(var(--home-1-window-size) + var(--home-2-width));
-
-    }
-
-    .branches {
-      position: relative;
-      display: flex;
-      width: var(--branch-width);
-      height: var(--branch-height);
-    }
-
-    .branch {
-      background: black;
-      /*
-
-      height: var(--branch-height);
-      width: var(--branch-width);
-               */
-      width: 100%;
-      height: 100%;
-      position: absolute;
-    }
-
-    .branch-1 {
-
-      clip-path: polygon(0 0, 5% 0, 100% 100%, 0% 100%);
-    }
-
-    .branch-2 {
-      clip-path: polygon(95% 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    .branch-3 {
-      clip-path: polygon(0 0, 5% 0, 40% 100%, 0% 100%);
-      transform: rotate(-20deg);
-      height: calc(var(--branch-height) / 2);
-
-    }
-
-    .branch-4 {
-      clip-path: polygon(95% 0, 100% 0, 100% 90%, 50% 90%);
-      transform: rotate(20deg);
-      height: calc(var(--branch-height) / 2);
-    }
-
-    .leaves {
-      height: var(--branch-height);
-      bottom: calc(var(--branch-height));
-      width: calc(var(--branch-width) *8);
-
-      /*
-    left is half of its width
-   */
-      left: calc(var(--branch-width) * -4);
-
-      position: absolute;
-    }
-
-    #leaf-box {
-      position: relative;
-      width: 100%;
-      height: 100%;
-
-    }
-
-    .leaf {
-      background: black;
-      width: var(--leaf-width);
-      aspect-ratio: 1;
-      border-radius: var(--pritam);
-      top: 10%;
-      position: absolute;
-      animation: fall 4s 1s forwards;
-    }
-
-    @keyframes fall {
-
-      100% {
-        transform: translateY(18vh);
-        opacity: 0;
-
-      }
-    }
-  </style>
-
-  <style id="style-me">
-    :root {
-      --me-height: 20vh;
-      --message-popup-animation-duration: 3000;
-    }
-
-    .me {
-      position: relative;
-      bottom: 0;
-      left: calc(var(--home-1-roof-1-width) + var(--home-2-width));
-      top: calc(var(--me-height) / 2);
-      width: 100%;
-      display: flex;
-      align-items: end;
-    }
-
-
-
-    .message-box {
-      position: absolute;
-      left: 0;
-      bottom: calc(var(--me-height) / 2);
-    }
-
-
-
-
-
-    .overflow-hidden {
-      /*
-
-      overflow: visible;
-            */
-
-    }
-
-    .img-box {
-      position: relative;
-      height: calc(var(--me-height));
-      z-index: 60;
-      aspect-ratio: 1;
-    }
-
-    .message {
-      position: relative;
-      /*
-      bottom: calc(var(--me-height) * -0.5);
-
-      */
-      right: calc(var(--me-height) * 0.7);
-
-      padding: 0.4rem 0.8rem;
-      border-radius: 0.4rem;
-      z-index: 70;
-      font-size: 0.7rem;
-      font-weight: 600;
-      background: var(--cloud-color-1);
-
-      transform-origin: bottom;
-      transform: rotateX(90deg);
-      animation: message-popup forwards;
-      animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
-      transition: calc(var(--message-popup-animation-duration) * 0.1ms);
-    }
-
-    .me:hover .message {
-      transform: rotateX(0deg);
-      transition: calc(var(--message-popup-animation-duration) * 0.1ms);
-
-    }
-
-    .message:after {
-      position: absolute;
-      content: "";
-      height: 20%;
-      aspect-ratio: 1;
-      background: var(--cloud-color-1);
-
-      right: 6%;
-      bottom: -20%;
-      clip-path: polygon(0 0, 100% 0, 86% 100%, 86% 100%);
-
-    }
-
-    @keyframes message-popup {
-      50% {
-        transform: rotateX(0deg);
-      }
-
-      90% {
-        transform: rotateX(0deg);
-        opacity: 1;
-      }
-
-      100% {
-        transform: rotateX(0deg);
-        opacity: 0;
-      }
-    }
-
-    img {
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
-
-
-    @media (min-width:700px) {
-      :root {
-        --me-height: 30vh;
-      }
-
-      .me {
-        left: calc((var(--home-1-roof-1-width) + var(--home-2-width)) * 2);
-      }
-
-      .message-box {
-        left: calc(var(--me-height) / 2.5);
-        width: 72%;
-        position: absolute;
-        bottom: calc(var(--me-height) / 2);
-      }
-    }
-  </style>
 </head>
 
 <body>
   <main id="main"
         class="overflow-hidden h-100vh">
-
     <div class="your-aura"
          title="your-aura">
       <div class="you"
@@ -868,8 +65,6 @@
       </div>
     </div>
 
-    <!-- 
-   -->
 
     <div class="base ">
       <div class="flex ">
@@ -896,7 +91,6 @@
             <div class="home-2__base"></div>
           </div>
 
-
           <div class="tree">
             <div class="branches">
               <div class="branch branch-1"></div>
@@ -915,11 +109,8 @@
                       
                       -->
               </div>
-
             </div>
           </div>
-
-
 
 
           <div class="me">
@@ -942,45 +133,8 @@
             </div>
           </div>
 
-          <!--
-     <div class="cloud">
-     <div class="top-cloud"></div>
-     <div class="mid-cloud">
-       <div class="mid-cloud-content">
-        
-         <div>
-           <svg class="svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-             <path fill-rule="evenodd" clip-rule="evenodd" d="M140 140H0V139.501C30.9817 135.351 55 105.817 55 70C55 34.1828 30.9817 4.64861 0 0.498825V0H140V140Z" />
-           </svg>
-         </div>
-
-         <div class="svg-box"></div>
-
-         <div>
-           <svg class="svg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 140H140L140 139.501C109.018 135.351 85 105.817 85 70C85 34.1828 109.018 4.64861 140 0.49882L140 0H0V140Z" />
-           </svg>
-         </div>
-
-       </div>
-     </div>
-
-     <div class="bottom-cloud">
-       <div class="bottom-cloud-child"></div>
-     </div>
-   </div>
--->
-
-
-
-
         </div>
-
       </div>
-
-
-
-
 
 
       <div class="ground overflow-hidden">
@@ -992,11 +146,14 @@
 
       </div>
 
-
-
     </div>
 
-    <!--  
+  </main>
+
+
+</body>
+
+<!--  
 
    <div class="cloud">
      <div class="top-cloud"></div>
@@ -1026,12 +183,7 @@
      </div>
    </div>
    
-
    -->
-  </main>
-
-
-</body>
 
 <script id="script-me">
   let root = document.documentElement;

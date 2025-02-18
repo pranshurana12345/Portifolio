@@ -1,0 +1,15 @@
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-100vh {
+  height: 100vh;
+}

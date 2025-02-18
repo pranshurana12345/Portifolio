@@ -1,0 +1,108 @@
+:root {
+    --me-height: 20vh;
+    --message-popup-animation-duration: 3000;
+}
+
+.me {
+    position: relative;
+    bottom: 0;
+    left: calc(var(--home-1-roof-1-width) + var(--home-2-width));
+    top: calc(var(--me-height) / 2);
+    width: 100%;
+    display: flex;
+    align-items: end;
+}
+
+
+
+.message-box {
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--me-height) / 2);
+}
+
+
+
+.img-box {
+    position: relative;
+    height: calc(var(--me-height));
+    z-index: 60;
+    aspect-ratio: 1;
+}
+
+.message {
+    position: relative;
+    /*
+  bottom: calc(var(--me-height) * -0.5);
+
+  */
+    right: calc(var(--me-height) * 0.7);
+
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    z-index: 70;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--cloud-color-1);
+
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+    animation: message-popup forwards;
+    animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
+    transition: calc(var(--message-popup-animation-duration) * 0.1ms);
+}
+
+.me:hover .message {
+    transform: rotateX(0deg);
+    transition: calc(var(--message-popup-animation-duration) * 0.1ms);
+
+}
+
+.message:after {
+    position: absolute;
+    content: "";
+    height: 20%;
+    aspect-ratio: 1;
+    background: var(--cloud-color-1);
+
+    right: 6%;
+    bottom: -20%;
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 86% 100%);
+
+}
+
+@keyframes message-popup {
+    50% {
+        transform: rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+@media (min-width:700px) {
+    :root {
+        --me-height: 30vh;
+    }
+
+    .me {
+        left: calc((var(--home-1-roof-1-width) + var(--home-2-width)) * 2);
+    }
+
+    .message-box {
+        left: calc(var(--me-height) / 2.5);
+        width: 72%;
+        position: absolute;
+        bottom: calc(var(--me-height) / 2);
+    }
+}

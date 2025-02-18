@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --pritam: 80rem;
+  --star-height: 2vh;
+  --start-z-index: 2;
+  --ground-z-index: 6;
+  --body-color: #132B3D;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--body-color);
+  z-index: 79;
+}
+
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

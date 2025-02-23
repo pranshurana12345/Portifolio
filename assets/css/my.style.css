@@ -12,6 +12,7 @@
     display: flex;
     align-items: end;
     font-family: "Gabriela", serif;
+    color: snow;
 }
 
 
@@ -38,15 +39,17 @@
     right: calc(var(--me-height) * 0.7);
     padding: 0.4rem 0.8rem;
     border-radius: 0.4rem;
-    z-index: 70;
+    z-index: 40;
     font-size: 0.7rem;
-    font-weight: 600;
-    background: var(--cloud-color-1);
+    font-weight: 500;
+    background: var(--cloud-color-2);
     transform-origin: bottom;
     transform: rotateX(90deg);
     animation: message-popup forwards;
     animation-duration: calc(var(--message-popup-animation-duration) * 1ms);
     transition: calc(var(--message-popup-animation-duration) * 0.1ms);
+    border: 1px solid var(--cloud-color-1);
+    /*   border-bottom: none */
 }
 
 .me:hover .message {
@@ -60,11 +63,14 @@
     content: "";
     height: 20%;
     aspect-ratio: 1;
-    background: var(--cloud-color-1);
-
-    right: 6%;
-    bottom: -20%;
-    clip-path: polygon(0 0, 100% 0, 86% 100%, 86% 100%);
+    background: var(--cloud-color-2);
+    border: 1px solid var(--cloud-color-1);
+    right: 4%;
+    bottom: -10%;
+    z-index: 50;
+    transform: rotate(133deg);
+    backdrop-filter: blur(90px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
 
 }
 

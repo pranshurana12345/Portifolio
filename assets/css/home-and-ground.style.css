@@ -25,22 +25,13 @@
 }
 
 
-.ground {
-  width: 500%;
-  padding: 1rem;
-  height: var(--ground-height);
-  left: var(--ground-left);
-  bottom: var(--ground-bottom);
-  position: relative;
-  z-index: var(--ground-z-index);
-  border-radius: 50%;
-  background: var(--your-aura-color-4);
-}
+
 
 .ground {
-  width: 550%;
+  width: 500%;
   height: var(--ground-height);
   left: var(--ground-left);
+  left: -250%;
   bottom: var(--ground-bottom);
   position: relative;
   z-index: var(--ground-z-index);
@@ -55,6 +46,7 @@
   width: 100%;
   display: flex;
   align-items: center;
+  border-radius: 50%;
 }
 
 .ground__child__child {

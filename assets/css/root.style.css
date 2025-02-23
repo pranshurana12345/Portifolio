@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
+  transition: all 0.2s;
 }
+
 
 :root {
   --pritam: 80rem;
@@ -14,9 +16,14 @@ body {
   margin: 0;
   padding: 0;
   background: var(--body-color);
-  z-index: 79;
+  color: snow;
 }
 
+h2,
+h3 {
+  margin: 0;
+  padding: 1.5rem 0;
+}
 
 img {
   display: block;

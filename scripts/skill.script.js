@@ -61,15 +61,26 @@ let addSkill = ({
   }
   skill.classList.add("skill");
 
-  skill.addEventListener('mouseover', function() {
-    skill.style.background = `linear-gradient(var(--skill-bg-color) 0 0) padding-box, 
-                              linear-gradient(to right, ${color}, var(--skill-border-color)) border-box`;
-  });
+  //// Handle events
+  
+  let handleMove = ()=>{
+       skill.style.background = `linear-gradient(var(--skill-bg-color) 0 0) padding-box, 
+                                 linear-gradient(to right, ${color}, var(--skill-border-color)) border-box`;
+ }
+ let handleOut = () => {
+       skill.style.background = `linear-gradient(var(--skill-bg-color) 0 0) padding-box, 
+                                 linear-gradient(to right, var(--skill-border-color), var(--skill-border-color)) border-box`;
+ }
 
-  skill.addEventListener('mouseout', function() {
-    skill.style.background = `linear-gradient(var(--skill-bg-color) 0 0) padding-box, 
-                              linear-gradient(to right, var(--skill-border-color), var(--skill-border-color)) border-box`;
-  });
+  skill.addEventListener('mouseover', handleMove);
+  skill.addEventListener('mouseout', handleOut);
+
+  skill.addEventListener('touchmove', handleMove);
+  skill.addEventListener('touchend', handleOut);
+
+
+
+
 
 
   //// Add icon

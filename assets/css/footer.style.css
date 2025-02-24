@@ -1,37 +1,59 @@
 :root {
-    --fall-duration: 5s;
+    --fall-duration: 18s;
 }
 
 footer {
     display: flex;
-    border: 2px solid skyblue;
-    border-radius: 0.5rem;
-    padding: 1rem 2rem;
-    position: relative;
-    overflow: hidden;
+    background: var(--skills-section-bg);
+
+    padding: 0rem 1rem;
     align-items: center;
     justify-content: center;
-    background: black;
     color: snow;
     font-family: "Gabriela", serif;
     z-index: 1;
 
 }
 
-footer div {
+.footer-container {
+    display: flex;
+    justify-content: center;
+    border: 2px solid skyblue;
+    border-radius: 0.5rem;
+    background: black;
+    padding: 1rem 2rem;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.footer-container-child {
+    display: flex;
+}
+
+footer div {
     z-index: 2;
+}
+
+footer .img-box {
+    display: flex;
+    align-items: center;
+    justify-self: end;
 }
 
 
 
 footer .text-box {
-    padding-left: 0.5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .pri {
     border-radius: 51% 49% 46% 54% / 31% 27% 73% 69%;
-
+    max-width: 200px;
 }
 
 .pri:hover {
@@ -74,6 +96,6 @@ i {
 
 @keyframes star-fall {
     100% {
-        transform: translateY(100vh) translateX(-100vh) rotate(45deg);
+        transform: translateY(80vh) translateX(-120vh) rotate(45deg);
     }
 }

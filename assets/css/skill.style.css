@@ -4,6 +4,8 @@
     --skill-text-color: #4AA3A9;
     --skill-text-color: smoke;
     --skill-bg-color: #171719;
+    --skill-padding-y: 0.3rem;
+    --skill-padding-x: 0.8rem;
     --add-skill-time: 1000;
     --skills-section-bg: #000A7C;
     --skills-section-bg: rgba(0, 0, 0, 0.774);
@@ -43,9 +45,11 @@
 
     font-family: "Delius", serif;
     color: var(--skill-text-color);
-    display: block;
+    display: flex;
+    align-items: center;
     width: 0px;
-    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    padding: var(--skill-padding-y) var(--skill-padding-x);
     width: fit-content;
     transform: scaleX(1);
     transform-origin: left;

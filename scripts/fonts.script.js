@@ -15,6 +15,5 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Call loadFonts() when needed (e.g., after some delay, on user interaction, or when visible)
-    setTimeout(loadFonts, 2000); // Example: Load after 2 seconds
+    setTimeout(loadFonts, 0)
   });

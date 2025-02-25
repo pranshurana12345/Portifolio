@@ -17,6 +17,7 @@ body {
   padding: 0;
   background: var(--body-color);
   color: snow;
+  font-family: "Delius", serif;
 }
 
 h2,

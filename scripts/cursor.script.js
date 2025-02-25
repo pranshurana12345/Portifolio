@@ -2,7 +2,10 @@ const cursor = document.querySelector('.cursor');
 
 
 function moveCursor(x, y) {
-  cursor.style.transform = `translate(${x - 25}px, ${y - 25}px)`;
+  setTimeout(() => {
+
+    cursor.style.transform = `translate(${x - 25}px, ${y - 25}px)`;
+  }, 0)
 }
 
 

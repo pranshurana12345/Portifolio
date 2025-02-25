@@ -7,16 +7,11 @@
     --skill-padding-y: 0.3rem;
     --skill-padding-x: 0.8rem;
     --add-skill-time: 1000;
-    --skills-section-bg: #000A7C;
-    --skills-section-bg: rgba(0, 0, 0, 0.774);
 }
 
 #skill-section {
-    background: var(--skills-section-bg);
-    backdrop-filter: blur(5px);
     position: relative;
     padding: 0 1rem;
-    z-index: 2;
 }
 
 .skill-container {}

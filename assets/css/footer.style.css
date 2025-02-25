@@ -4,13 +4,12 @@
 
 footer {
     display: flex;
-    background: var(--skills-section-bg);
-
-    padding: 0rem 1rem;
+    padding: 1rem;
     align-items: center;
     justify-content: center;
     color: snow;
     font-family: "Gabriela", serif;
+    position: relative;
     z-index: 1;
 
 }
@@ -24,8 +23,8 @@ footer {
     padding: 1rem 2rem;
     width: 100%;
     position: relative;
+    z-index: 2;
     overflow: hidden;
-
 }
 
 .footer-container-child {
@@ -46,9 +45,18 @@ footer .img-box {
 
 footer .text-box {
     padding-left: 2rem;
-    font-size: 2rem;
     display: flex;
     align-items: center;
+    font-size: 1rem;
+}
+
+
+@media (min-width:700px) {
+    footer .text-box {
+        font-size: 2rem;
+
+
+    }
 }
 
 .pri {

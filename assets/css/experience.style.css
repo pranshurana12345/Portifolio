@@ -5,7 +5,6 @@
      --ex-card-color: black;
      --ex-border-color: red;
      --ex-border-style: dashed;
-
  }
 
  .ex-card {
@@ -116,4 +115,98 @@
      height: var(--ex-border-padding);
      width: 0px;
      margin: auto;
+ }
+
+
+
+
+
+
+
+
+ .company-container {
+     position: relative;
+     background: black;
+     padding: var(--ex-border-padding);
+     border:
+         calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
+     border-radius: calc(var(--ex-border-padding) - var(--ex-border-radius));
+     background: black;
+     z-index: 2;
+ }
+
+ .join-card-company-container {
+     position: absolute;
+     z-index: 1;
+     border: calc(var(--ex-border-width) * 0.5) var(--ex-border-style) var(--ex-border-color);
+     width: 50%;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+
+ .ex-card:nth-child(odd) .join-card-company-container {
+     right: 0;
+ }
+
+ .ex-card:nth-child(even) .join-card-company-container {
+     left: 0;
+ }
+
+ .company-box {
+     display: flex;
+     align-items: center;
+ }
+
+ .company-box p {
+     width: 100%;
+     padding-left: 1rem;
+ }
+
+ .company-img {
+     max-width: 24px;
+     aspect-ratio: 1;
+     border-radius: 4rem;
+ }
+
+ .company-role-box {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .company-role {
+     display: flex;
+     align-items: center;
+ }
+
+ .company-role p {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ .svg-container {
+     position: relative;
+     display: flex;
+     padding: 1rem;
+     height: 100%;
+ }
+
+ .role-vertical-line {
+     width: 0rem;
+     height: 100%;
+     position: absolute;
+     right: 0;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     border:
+         calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
+ }
+
+ .last-role-vertical-line {
+     bottom: 100%;
+ }
+
+ .first-role-vertical-line {
+     top: 100%;
  }

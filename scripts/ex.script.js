@@ -4,6 +4,15 @@ const companies = [
 ];
 
 
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("animate-company-container"); // Add animation class
+            observer.unobserve(entry.target); // Stop observing once animated
+        }
+    });
+}, { threshold: 0.2, rootMargin: "50px 0px" }); // Slight margin for smoother triggering
+
 
 const exCards = document.getElementById("ex-cards");
 
@@ -13,6 +22,7 @@ companies.forEach(company => {
 
     const companyContainer = document.createElement("div");
     companyContainer.className = "company-container";
+    observer.observe(companyContainer);
 
     const joinCardCompanyContainer = document.createElement("div");
     joinCardCompanyContainer.className = "join-card-company-container"

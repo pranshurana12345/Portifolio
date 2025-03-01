@@ -2,6 +2,7 @@
      --ex-border-radius: 2rem;
      --ex-border-width: 0.2rem;
      --ex-border-padding: 3rem;
+     --ex-space: 0.5rem;
      --ex-card-color: black;
      --ex-border-color: red;
      --ex-border-style: dashed;
@@ -119,6 +120,23 @@
      border-radius: calc(var(--ex-border-padding) - var(--ex-border-radius));
      background: black;
      z-index: 2;
+     transform: scale(0.5);
+ }
+
+ .animate-company-container {
+     animation: company-container-slide 2s forwards;
+ }
+
+ @keyframes company-container-slide {
+     100% {
+         transform: scale(1);
+
+     }
+ }
+
+ .company-container a {
+     text-decoration: none;
+     color: snow;
  }
 
  .join-card-company-container {
@@ -138,6 +156,14 @@
      left: 0;
  }
 
+ .ex-card:nth-child(odd) .company-container {
+     transform-origin: right;
+ }
+
+ .ex-card:nth-child(even) .company-container {
+     transform-origin: left;
+ }
+
  .company-box {
      display: flex;
      align-items: center;
@@ -145,7 +171,7 @@
 
  .company-box p {
      width: 100%;
-     padding-left: 1rem;
+     padding-left: calc(var(--ex-space) * 2);
  }
 
  .company-img {
@@ -162,6 +188,8 @@
  .company-role {
      display: flex;
      align-items: center;
+     padding: calc(var(--ex-space) * 1);
+
  }
 
  .company-role p {
@@ -169,10 +197,21 @@
      padding: 0px;
  }
 
+ .role-name {
+     padding: var(--ex-space) 0 !important;
+     margin: 0;
+ }
+
+ .role-length {
+     padding: var(--ex-space) 0 !important;
+     color: lightgray;
+ }
+
+
  .svg-container {
      position: relative;
      display: flex;
-     padding: 1rem;
+     padding: calc(var(--ex-space) * 3);
      height: 100%;
  }
 

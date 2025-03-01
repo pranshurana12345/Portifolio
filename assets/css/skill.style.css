@@ -57,6 +57,18 @@
     border: 1px solid transparent;
 }
 
+.skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    aspect-ratio: 1;
+    border: 1px solid var(--skill-border-color);
+    border-radius: var(--pritam);
+    margin-left: calc(var(--skill-padding-y) * -1);
+    background-color: var(--skill-bg-color);
+}
+
 .break-skill {
     display: block;
     width: 100%;

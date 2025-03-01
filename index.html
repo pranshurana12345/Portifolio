@@ -201,8 +201,8 @@
         <div class="company-container animate-company-container">
           <div class="company-box">
             <img class="company-img"
-                 src="./images/pri.jpg" />
-            <h3> <a href="https://www.linkedin.com/company/goplusio/about/"
+                 src="../assets/images/company-go-plus-logo.jpeg" />
+            <h3 class="company-name"> <a href="https://www.linkedin.com/company/goplusio/about/"
                  target="_blank"
                  rel="noopener noreferrer">
                 GoPlus
@@ -225,7 +225,7 @@
                 <span class="role-vertical-line first-role-vertical-line">
                 </span>
               </div>
-              <div>
+              <div class="role-box">
                 <h4 class="role-name">Junior Frontend Developer</h4>
                 <p class="role-type">Fulltime</p>
                 <p class="role-length">Feb 2024 - Nov 2025 • 10 months</p>
@@ -247,7 +247,8 @@
                 <span class="role-vertical-line last-role-vertical-line ">
                 </span>
               </div>
-              <div>
+
+              <div class="role-box">
                 <h4 class="role-name">SDE - intern</h4>
                 <p class="role-type">Internship</p>
                 <p class="role-length">Mar 2023 - Feb 2024 • 10 months</p>
@@ -256,119 +257,239 @@
           </div>
           <div class="company-accured-skill-box">
             <p>Accrued tech skills</p>
-            <button disabled>React</button>
-            <button disabled>Angular</button>
+
+            <div class="flex align-items-center">
+
+              <a class="skill-icon"
+                 href="https://angular.dev/"
+                 target="_blank">
+
+                <span style="display: flex; align-items: center; aspect-ratio:1;">
+
+                  <svg id="angular-icon"
+                       width="16"
+                       height="16"
+                       viewBox="0 0 16 16"
+                       fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <g id="devicon:angularjs"
+                       clip-path="url(#clip0_14_9)">
+                      <!-- <path id="Vector"
+                     d="M7.97625 0.12825L0.569122 2.735L1.7395 12.4396L7.98412 15.8717L14.2609 12.3933L15.4309 2.68888L7.97625 0.12825Z"
+                     fill="#B3B3B3" /> -->
+                      <path id="Vector_2"
+                            d="M14.692 3.24975L7.95901 0.953629V15.0518L13.6016 11.9289L14.692 3.24975Z"
+                            fill="#A6120D" />
+                      <path id="Vector_3"
+                            d="M1.40012 3.29113L2.40337 11.9704L7.95887 15.0518V0.953377L1.40012 3.29113Z"
+                            fill="#DD1B16" />
+                      <path id="Vector_4"
+                            d="M9.81237 8.45875L7.95899 9.3255H6.00549L5.08712 11.6222L3.37924 11.654L7.95899 1.4655L9.81237 8.45875ZM9.63312 8.02238L7.97124 4.73225L6.60799 7.96575H7.95887L9.63312 8.02238Z"
+                            fill="#F2F2F2" />
+                      <path id="Vector_5"
+                            d="M7.95886 1.4655L7.97111 4.73225L9.51799 7.96825H7.96224L7.95886 9.32337L10.11 9.3255L11.1152 11.6543L12.7495 11.6845L7.95886 1.4655Z"
+                            fill="#B3B3B3" />
+                    </g>
+                    <!-- <defs>
+               <clipPath id="clip0_14_9">
+                 <rect width="16"
+                       height="16"
+                       fill="white" />
+               </clipPath>
+             </defs> -->
+                  </svg>
+
+                </span>
+
+              </a>
+
+
+              <a class="skill-icon"
+                 href="https://angular.dev/"
+                 target="_blank">
+
+
+                <svg width="16"
+                     height="16"
+                     viewBox="0 0 16 16"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <g id="devicon:bootstrap">
+                    <path id="Vector"
+                          d="M1.87311 3.464C1.84349 2.61213 2.50711 1.82663 3.40424 1.82663H12.5967C13.4939 1.82663 14.1575 2.61213 14.1279 3.464C14.0994 4.28225 14.1364 5.34225 14.4031 6.2065C14.6707 7.0735 15.122 7.62138 15.8611 7.69188V8.49025C15.122 8.56075 14.6707 9.10863 14.4031 9.97563C14.1364 10.8399 14.0994 11.8999 14.1279 12.7181C14.1575 13.57 13.4939 14.3554 12.5967 14.3554H3.40424C2.50711 14.3554 1.84349 13.5699 1.87311 12.7181C1.90161 11.8999 1.86461 10.8399 1.59774 9.97563C1.33024 9.10875 0.877736 8.56075 0.138611 8.49025V7.69188C0.877736 7.6215 1.33024 7.0735 1.59774 6.2065C1.86461 5.34225 1.90149 4.28225 1.87311 3.464Z"
+                          fill="url(#paint0_linear_15_28)" />
+                    <g id="Vector_2"
+                       filter="url(#filter0_d_15_28)">
+                      <path d="M8.38874 11.467C9.84111 11.467 10.7163 10.7559 10.7163 9.58297C10.7163 8.69635 10.0918 8.05447 9.16459 7.95286V7.91592C9.84584 7.80509 10.3804 7.17246 10.3804 6.46594C10.3804 5.45926 9.58565 4.8035 8.37455 4.8035H5.64957V11.467H8.38874ZM6.70928 5.64857H8.11909C8.88549 5.64857 9.32071 5.99028 9.32071 6.60907C9.32071 7.26943 8.81453 7.63884 7.89674 7.63884H6.70928V5.64857ZM6.70928 10.622V8.42849H8.10961C9.11254 8.42849 9.63294 8.7979 9.63294 9.5183C9.63294 10.2387 9.12676 10.622 8.17111 10.622H6.70928Z"
+                            fill="url(#paint1_linear_15_28)" />
+                    </g>
+                  </g>
+                  <defs>
+                    <filter id="filter0_d_15_28"
+                            x="5.15825"
+                            y="4.43501"
+                            width="6.04938"
+                            height="7.64617"
+                            filterUnits="userSpaceOnUse"
+                            color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0"
+                               result="BackgroundImageFix" />
+                      <feColorMatrix in="SourceAlpha"
+                                     type="matrix"
+                                     values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                     result="hardAlpha" />
+                      <feOffset dy="0.12283" />
+                      <feGaussianBlur stdDeviation="0.24566" />
+                      <feColorMatrix type="matrix"
+                                     values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                      <feBlend mode="normal"
+                               in2="BackgroundImageFix"
+                               result="effect1_dropShadow_15_28" />
+                      <feBlend mode="normal"
+                               in="SourceGraphic"
+                               in2="effect1_dropShadow_15_28"
+                               result="shape" />
+                    </filter>
+                    <linearGradient id="paint0_linear_15_28"
+                                    x1="2.47493"
+                                    y1="2.15821"
+                                    x2="16.2135"
+                                    y2="13.064"
+                                    gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#9013FE" />
+                      <stop offset="1"
+                            stop-color="#6610F2" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_15_28"
+                                    x1="6.12897"
+                                    y1="5.242"
+                                    x2="9.19972"
+                                    y2="10.4356"
+                                    gradientUnits="userSpaceOnUse">
+                      <stop stop-color="white" />
+                      <stop offset="1"
+                            stop-color="#F1E5FC" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
+
+              </a>
+
+
+            </div>
           </div>
         </div>
-
       </div>
 
-
     </div>
 
 
-    <div class="ex-box">
-      <div class="ex-vertical-line"></div>
-    </div>
-  </section>
+</div>
 
 
-  <div class="bg-black-blur">
+<div class="ex-box">
+  <div class="ex-vertical-line"></div>
+</div>
+</section>
 
-    <section id="skill-section">
-      <h2>Skills</h2>
-      <div class="skill-container">
-        <h3>
-          Frontend
-        </h3>
-        <div class="skills"
-             id="frontend-skills">
-          <a class="skill angular"
-             href="https://angular.dev/"
-             target="_blank">
 
-            <span style="display: flex; align-items: center;margin-right: var(--skill-padding-y)">
+<div class="bg-black-blur">
 
-              <svg width="16"
-                   height="16"
-                   viewBox="0 0 16 16"
-                   fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <g id="devicon:angularjs"
-                   clip-path="url(#clip0_14_9)">
-                  <!-- <path id="Vector"
+  <section id="skill-section">
+    <h2>Skills</h2>
+    <div class="skill-container">
+      <h3>
+        Frontend
+      </h3>
+      <div class="skills"
+           id="frontend-skills">
+        <a class="skill angular"
+           href="https://angular.dev/"
+           target="_blank">
+
+          <span style="display: flex; align-items: center;margin-right: var(--skill-padding-y)">
+
+            <svg width="16"
+                 height="16"
+                 viewBox="0 0 16 16"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <g id="devicon:angularjs"
+                 clip-path="url(#clip0_14_9)">
+                <!-- <path id="Vector"
                       d="M7.97625 0.12825L0.569122 2.735L1.7395 12.4396L7.98412 15.8717L14.2609 12.3933L15.4309 2.68888L7.97625 0.12825Z"
                       fill="#B3B3B3" /> -->
-                  <path id="Vector_2"
-                        d="M14.692 3.24975L7.95901 0.953629V15.0518L13.6016 11.9289L14.692 3.24975Z"
-                        fill="#A6120D" />
-                  <path id="Vector_3"
-                        d="M1.40012 3.29113L2.40337 11.9704L7.95887 15.0518V0.953377L1.40012 3.29113Z"
-                        fill="#DD1B16" />
-                  <path id="Vector_4"
-                        d="M9.81237 8.45875L7.95899 9.3255H6.00549L5.08712 11.6222L3.37924 11.654L7.95899 1.4655L9.81237 8.45875ZM9.63312 8.02238L7.97124 4.73225L6.60799 7.96575H7.95887L9.63312 8.02238Z"
-                        fill="#F2F2F2" />
-                  <path id="Vector_5"
-                        d="M7.95886 1.4655L7.97111 4.73225L9.51799 7.96825H7.96224L7.95886 9.32337L10.11 9.3255L11.1152 11.6543L12.7495 11.6845L7.95886 1.4655Z"
-                        fill="#B3B3B3" />
-                </g>
-                <!-- <defs>
+                <path id="Vector_2"
+                      d="M14.692 3.24975L7.95901 0.953629V15.0518L13.6016 11.9289L14.692 3.24975Z"
+                      fill="#A6120D" />
+                <path id="Vector_3"
+                      d="M1.40012 3.29113L2.40337 11.9704L7.95887 15.0518V0.953377L1.40012 3.29113Z"
+                      fill="#DD1B16" />
+                <path id="Vector_4"
+                      d="M9.81237 8.45875L7.95899 9.3255H6.00549L5.08712 11.6222L3.37924 11.654L7.95899 1.4655L9.81237 8.45875ZM9.63312 8.02238L7.97124 4.73225L6.60799 7.96575H7.95887L9.63312 8.02238Z"
+                      fill="#F2F2F2" />
+                <path id="Vector_5"
+                      d="M7.95886 1.4655L7.97111 4.73225L9.51799 7.96825H7.96224L7.95886 9.32337L10.11 9.3255L11.1152 11.6543L12.7495 11.6845L7.95886 1.4655Z"
+                      fill="#B3B3B3" />
+              </g>
+              <!-- <defs>
                 <clipPath id="clip0_14_9">
                   <rect width="16"
                         height="16"
                         fill="white" />
                 </clipPath>
               </defs> -->
-              </svg>
+            </svg>
 
-            </span>
-            <span>
+          </span>
+          <span>
 
-              Angular
-            </span>
-          </a>
+            Angular
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="skill-container">
+      <h3>
+        Backend
+      </h3>
+      <div class="skills"
+           id="backend-skills">
+      </div>
+    </div>
+    <div class="skill-container">
+      <h3>
+        Testing
+      </h3>
+      <div class="skills"
+           id="testing-skills">
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-container-child">
+        <div class="image-box">
+          <img src="./assets/images/pri.jpg"
+               class="pri"
+               alt="Pritam Debnath"
+               title="Pritam Debnath" />
+        </div>
+        <div class="text-box">
+          <span class="white-space-nowrap">Made with</span> <span class="heart">❤️</span><span
+                class="white-space-nowrap"> by Pritam</span>
         </div>
       </div>
-      <div class="skill-container">
-        <h3>
-          Backend
-        </h3>
-        <div class="skills"
-             id="backend-skills">
-        </div>
-      </div>
-      <div class="skill-container">
-        <h3>
-          Testing
-        </h3>
-        <div class="skills"
-             id="testing-skills">
-        </div>
-      </div>
+    </div>
+  </footer>
+</div>
+</body>
 
-    </section>
-
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-container-child">
-          <div class="image-box">
-            <img src="./assets/images/pri.jpg"
-                 class="pri"
-                 alt="Pritam Debnath"
-                 title="Pritam Debnath" />
-          </div>
-          <div class="text-box">
-            <span class="white-space-nowrap">Made with</span> <span class="heart">❤️</span><span
-                  class="white-space-nowrap"> by Pritam</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  </body>
-
-  <!--  
+<!--  
 
    <div class="cloud">
      <div class="top-cloud"></div>
@@ -400,37 +521,37 @@
    
 -->
 
-  <script src="./scripts/reuseable.script.js"></script>
+<script src="./scripts/reuseable.script.js"></script>
 
-  <script src="./scripts/fonts.script.js"></script>
+<script src="./scripts/fonts.script.js"></script>
 
 
-  <script src="./scripts/cursor.script.js"
-          type="module"></script>
+<script src="./scripts/cursor.script.js"
+        type="module"></script>
 
-  <script src="./scripts/my.script.js"
-          type="module"></script>
+<script src="./scripts/my.script.js"
+        type="module"></script>
 
-  <script src="./scripts/cloud.script.js"
-          type="module"></script>
+<script src="./scripts/cloud.script.js"
+        type="module"></script>
 
-  <!--
+<!--
 <script  src="./scripts/cloud-type-2.script.js" type="module"></script>
 -->
 
-  <script src="./scripts/star.script.js"
-          type="module"></script>
+<script src="./scripts/star.script.js"
+        type="module"></script>
 
-  <script src="./scripts/tree.script.js"
-          type="module"></script>
+<script src="./scripts/tree.script.js"
+        type="module"></script>
 
-  <script src="./scripts/skill.script.js"
-          type="module"></script>
+<script src="./scripts/skill.script.js"
+        type="module"></script>
 
-  <script src="./scripts/ex.script.js"
-          type="module"></script>
+<script src="./scripts/ex.script.js"
+        type="module"></script>
 
-  <script src="./scripts/footer.script.js"
-          type="module"></script>
+<script src="./scripts/footer.script.js"
+        type="module"></script>
 
 </html>

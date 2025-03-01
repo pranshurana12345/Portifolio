@@ -164,6 +164,13 @@
      transform-origin: left;
  }
 
+ .company-name {
+     margin: 0;
+     padding: 0 !important;
+     padding-left: calc(var(--ex-space) * 1) !important;
+
+ }
+
  .company-box {
      display: flex;
      align-items: center;
@@ -175,7 +182,8 @@
  }
 
  .company-img {
-     max-width: 24px;
+     max-width: calc(var(--ex-space) * 6);
+     margin-left: calc(var(--ex-space) * 1);
      aspect-ratio: 1;
      border-radius: 4rem;
  }
@@ -188,13 +196,17 @@
  .company-role {
      display: flex;
      align-items: center;
-     padding: calc(var(--ex-space) * 1);
 
  }
 
  .company-role p {
      margin: 0px;
      padding: 0px;
+ }
+
+ .role-box {
+     padding: calc(var(--ex-space) * 1);
+
  }
 
  .role-name {
@@ -234,4 +246,11 @@
 
  .first-role-vertical-line {
      top: 100%;
+ }
+
+
+ .company-accured-skill-box {
+     display: flex;
+     align-items: center;
+     gap: var(--ex-space);
  }

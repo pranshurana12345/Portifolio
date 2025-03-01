@@ -25,20 +25,6 @@
          0px var(--ex-border-style) transparent;
  }
 
- /*
-  
-      .ex-card:nth-child(even)::before {
-        content: "";
-        display: block;
-        width: 10%;
-        height: 35px;
-  
-        background-color: var(--ex-card-color);
-        position: absolute;
-        bottom: -0.2rem;
-        right: 0px;
-      }
-        */
 
  .ex-card:nth-child(even)::after {
      content: "";

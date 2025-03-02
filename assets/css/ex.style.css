@@ -9,6 +9,21 @@
      --ex-border-style: dashed;
  }
 
+ .join-me-and-ex {
+     height: 20dvh;
+     background-image: linear-gradient(var(--your-aura-color-4), var(--ex-card-color));
+ }
+
+ .join-ex-and-skill {
+     height: 20dvh;
+     backdrop-filter: blur(5px);
+     background-image: linear-gradient(var(--ex-card-color), rgba(0, 0, 0, 0.7));
+ }
+
+ .ex-section {
+     background-color: var(--ex-card-color);
+ }
+
  .ex-card {
      color: snow;
      font-size: 0.8rem;
@@ -17,6 +32,7 @@
      border: transparent;
      position: relative;
      background-color: var(--ex-card-color);
+     /* background: linear-gradient(to bottom, black); */
  }
 
  .ex-card:nth-child(even) {

@@ -25,7 +25,7 @@ const companies = [
             { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', className: "span-svg-js" },
             { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-ts" },
             { link: 'https://redux.js.org/', className: "span-svg-redux" },
-            { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-tailwind" },
+            { link: 'https://www.tailwind.com/', className: "span-svg-tailwind" },
 
         ]
     },
@@ -140,15 +140,17 @@ companies.forEach(company => {
     //
     //
     const skillBox = document.createElement("div");
-    skillBox.className = "company-accured-skill-box";
+    skillBox.className = "company-accured-skill-box flex-wrap";
 
     const skillTitle = document.createElement("p");
+    skillTitle.classList.add("white-space-nowrap")
     skillTitle.textContent = "Acquired tech skills";
     skillBox.appendChild(skillTitle);
     //
     const skillIcons = document.createElement("div");
     skillIcons.classList.add('flex')
     skillIcons.classList.add('align-items-center')
+    skillIcons.classList.add('flex-wrap')
 
     company.skills.forEach(s => {
         const skill = document.createElement("a");

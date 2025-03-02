@@ -316,6 +316,8 @@ let spanSvgReact = document.querySelectorAll('.span-svg-react')
 let spanSvgRxjs = document.querySelectorAll('.span-svg-rxjs')
 let spanSvgJs = document.querySelectorAll('.span-svg-js')
 let spanSvgTs = document.querySelectorAll('.span-svg-ts')
+let spanSvgRedux = document.querySelectorAll('.span-svg-redux')
+let spanSvgTailwind = document.querySelectorAll('.span-svg-tailwind')
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -331,6 +333,8 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSvg(spanSvgRxjs, rxjsSvg)
         renderSvg(spanSvgJs, jsSvg)
         renderSvg(spanSvgTs, tsSvg)
+        renderSvg(spanSvgRedux, reduxSvg)
+        renderSvg(spanSvgTailwind, tailwindSvg)
     }, 10)
 
 })

@@ -2,6 +2,7 @@
      --ex-border-radius: 1rem;
      --ex-border-width: 0.2rem;
      --ex-border-padding: 1.5rem;
+     --ex-vertical-line-height: 3rem;
      --ex-space: 0.5rem;
      --ex-card-color: black;
      --ex-border-color: snow;
@@ -89,19 +90,27 @@
      width: 50%;
  }
 
- .ex-box {
-     display: flex;
-     justify-items: center;
-     align-items: center;
-     background: black;
+
+ .ex-vertical-line-box {
+     position: relative;
+     height: var(--ex-vertical-line-height);
+ }
+
+ .ex-vertical-line-svg-box {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
  }
 
  .ex-vertical-line {
      border-right:
          calc(var(--ex-border-width) * 1) var(--ex-border-style) var(--ex-border-color);
-     height: var(--ex-border-padding);
+     height: var(--ex-vertical-line-height);
      width: 0px;
      margin: auto;
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
  }
 
 

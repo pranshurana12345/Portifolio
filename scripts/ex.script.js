@@ -6,8 +6,11 @@ const companies = [
         img_src: "/assets/images/company-omicron-logo.jpg",
         roles: [{
             name: "Frontend Developer", type: "Internship", length: 'Nov 2022 - Jan 2023 · 3 mos'
-        }], skills: [
-            { link: 'https://react.dev/', className: "span-svg-react" }
+        }],
+        skills: [
+            { link: 'https://react.dev/', className: "span-svg-react" },
+            { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', className: "span-svg-js" },
+            { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-ts" },
 
         ]
     },
@@ -16,7 +19,15 @@ const companies = [
         img_src: "/assets/images/company-hsv-digital-logo.jpeg",
         roles: [{
             name: "Frontend Developer", type: "Internship", length: 'Jul 2022 - Oct 2022 · 4 mos'
-        }], skills: ["React", "Angular"]
+        }],
+        skills: [
+            { link: 'https://react.dev/', className: "span-svg-react" },
+            { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', className: "span-svg-js" },
+            { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-ts" },
+            { link: 'https://redux.js.org/', className: "span-svg-redux" },
+            { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-tailwind" },
+
+        ]
     },
 ];
 
@@ -154,8 +165,8 @@ companies.forEach(company => {
         skill.appendChild(spanSvg);
         skillIcons.appendChild(skill)
     });
-
-    // append
+    skillBox.appendChild(skillIcons);
+    //
     companyContainer.appendChild(skillBox);
     card.appendChild(companyContainer);
     exCards.appendChild(card);

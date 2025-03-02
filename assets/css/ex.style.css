@@ -1,16 +1,16 @@
  :root {
-     --ex-border-radius: 2rem;
+     --ex-border-radius: 1rem;
      --ex-border-width: 0.2rem;
-     --ex-border-padding: 3rem;
+     --ex-border-padding: 1.5rem;
      --ex-space: 0.5rem;
      --ex-card-color: black;
-     --ex-border-color: red;
+     --ex-border-color: snow;
      --ex-border-style: dashed;
  }
 
  .ex-card {
      color: snow;
-     font-size: 1.2rem;
+     font-size: 0.8rem;
      border-radius: var(--ex-border-radius);
      padding: var(--ex-border-padding);
      border: transparent;
@@ -97,8 +97,8 @@
  }
 
  .ex-vertical-line {
-     border:
-         calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
+     border-right:
+         calc(var(--ex-border-width) * 1) var(--ex-border-style) var(--ex-border-color);
      height: var(--ex-border-padding);
      width: 0px;
      margin: auto;
@@ -137,12 +137,13 @@
  .company-container a {
      text-decoration: none;
      color: snow;
+     font-size: 1rem;
  }
 
  .join-card-company-container {
      position: absolute;
      z-index: 1;
-     border: calc(var(--ex-border-width) * 0.5) var(--ex-border-style) var(--ex-border-color);
+     border-top: calc(var(--ex-border-width) * 1) var(--ex-border-style) var(--ex-border-color);
      width: 50%;
      top: 50%;
      transform: translateY(-50%);
@@ -220,11 +221,16 @@
  }
 
 
+
  .svg-container {
      position: relative;
      display: flex;
      padding: calc(var(--ex-space) * 3);
      height: 100%;
+ }
+
+ .svg-container>* {
+     fill: var(--ex-border-color);
  }
 
  .role-vertical-line {
@@ -236,7 +242,7 @@
      top: 0;
      bottom: 0;
      margin: auto;
-     border:
+     border-right:
          calc(var(--ex-border-width) * 0.7) var(--ex-border-style) var(--ex-border-color);
  }
 
@@ -253,4 +259,17 @@
      display: flex;
      align-items: center;
      gap: var(--ex-space);
+ }
+
+
+ @media (min-width:700px) {
+     :root {
+         --ex-border-padding: 3rem;
+         --ex-border-radius: 2rem;
+
+     }
+ }
+
+ .span-svg-circle>* {
+     fill: var(--ex-border-color);
  }

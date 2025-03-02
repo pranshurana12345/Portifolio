@@ -1,5 +1,11 @@
+// import { circleSvg } from "./svg.script";
+
 const companies = [
-    { name: "Company A", roles: ["Developer", "Designer"], skills: ["React", "Angular"] },
+    {
+        name: "HSV Degital",
+        img_src: "/assets/images/company-hsv-digital-logo.jpeg",
+        roles: ["Frontend Web Developer"], skills: ["React", "Angular"]
+    },
     { name: "Company B", roles: ["Manager"], skills: ["Vue", "Node.js"] }
 ];
 
@@ -32,7 +38,7 @@ companies.forEach(company => {
 
     const img = document.createElement("img");
     img.className = "company-img";
-    img.src = "./images/pri.jpg";
+    img.src = company.img_src
 
     const companyName = document.createElement("p");
     companyName.textContent = company.name;
@@ -51,22 +57,25 @@ companies.forEach(company => {
         const svgContainer = document.createElement("div");
         svgContainer.className = "svg-container";
 
-        const svg = document.createElement("svg");
-        svg.innerHTML = `
-            <svg id="circle"
-                     xmlns="http://www.w3.org/2000/svg"
-                     width="16"
-                     height="16"
-                     viewBox="0 0 6 7"
-                     fill="none">
-                  <circle cx="3"
-                          cy="3.5"
-                          r="3"
-                          fill="red" />
-            </svg>
-        `
+        const spanSvgCircle = document.createElement("span");
+        spanSvgCircle.classList.add('span-svg-circle')
+        // svg.innerHTML = `
+        //     <svg id="circle"
+        //              xmlns="http://www.w3.org/2000/svg"
+        //              width="16"
+        //              height="16"
+        //              viewBox="0 0 6 7"
+        //              fill="none">
+        //           <circle cx="3"
+        //                   cy="3.5"
+        //                   r="3"
+        //                   fill="red" />
+        //     </svg>
+        // `
 
-        svgContainer.appendChild(svg)
+        // spanSvgCircle.innerHTML = circleSvg
+
+        svgContainer.appendChild(spanSvgCircle)
 
         if (company.roles.length > 1) {
 

@@ -298,6 +298,82 @@ export const tailwindSvg = `
       </svg>
 `
 
+
+export const antDesignSvg = `
+
+        <svg id="ant-desgin" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="logos:ant-design" clip-path="url(#clip0_22_18)">
+        <g id="Group">
+        <path id="Vector" d="M7.30311 0.284059L0.283111 7.29843C0.193395 7.38783 0.122209 7.49406 0.0736364 7.61103C0.0250642 7.728 6.10352e-05 7.85341 6.10352e-05 7.98006C6.10352e-05 8.10671 0.0250642 8.23212 0.0736364 8.34909C0.122209 8.46606 0.193395 8.57229 0.283111 8.66168L7.30311 15.676C7.68055 16.0531 8.29011 16.0531 8.66749 15.676L11.6109 12.735C11.9489 12.3972 11.9489 11.8497 11.6109 11.512C11.2729 11.1743 10.7249 11.1742 10.3869 11.512L8.15555 13.7415C8.06161 13.8354 7.91905 13.8354 7.82511 13.7415L2.21911 8.14012C2.12517 8.04625 2.12517 7.90381 2.21911 7.80993L7.82511 2.2085C7.91905 2.11468 8.06161 2.11468 8.15555 2.2085L10.3869 4.43806C10.7249 4.77581 11.2729 4.77581 11.6109 4.43806C11.9489 4.10031 11.9489 3.55281 11.6109 3.21506L8.6678 0.274434C8.28886 -0.0945657 7.67905 -0.0915657 7.30311 0.284059Z" fill="url(#paint0_linear_22_18)"/>
+        <path id="Vector_2" d="M7.30311 0.28406L0.283111 7.29843C0.193395 7.38783 0.122209 7.49406 0.0736364 7.61103C0.0250642 7.728 6.10352e-05 7.85341 6.10352e-05 7.98006C6.10352e-05 8.10671 0.0250642 8.23212 0.0736364 8.34909C0.122209 8.46606 0.193395 8.57229 0.283111 8.66168L7.30311 15.676C7.68055 16.0531 8.29011 16.0531 8.66749 15.676L11.6109 12.735C11.9489 12.3972 11.9489 11.8497 11.6109 11.512C11.2729 11.1743 10.7249 11.1742 10.3869 11.512L8.15555 13.7415C8.06161 13.8354 7.91905 13.8354 7.82511 13.7415L2.21911 8.14012C2.12517 8.04625 2.12517 7.90381 2.21911 7.80993L7.82511 2.2085C8.05899 2.00687 8.44067 1.5985 9.00105 1.50287C9.41755 1.43191 9.8729 1.58816 10.3671 1.97162L8.66786 0.274372C8.28886 -0.0945653 7.67911 -0.0915653 7.30311 0.28406Z" fill="url(#paint1_linear_22_18)"/>
+        <path id="Vector_3" d="M12.2904 10.8596C12.6284 11.1974 13.1764 11.1974 13.5144 10.8596L15.6856 8.69025C15.7753 8.60086 15.8465 8.49463 15.8951 8.37766C15.9437 8.26069 15.9687 8.13528 15.9687 8.00863C15.9687 7.88198 15.9437 7.75657 15.8951 7.6396C15.8465 7.52263 15.7753 7.4164 15.6856 7.327L13.4956 5.14638C13.1568 4.80907 12.6086 4.80957 12.2704 5.1475C11.9324 5.48525 11.9324 6.03275 12.2704 6.3705L13.7496 7.8485C13.8435 7.94238 13.8435 8.08482 13.7496 8.17869L12.2904 9.63663C11.9524 9.97438 11.9524 10.5219 12.2904 10.8596Z" fill="url(#paint2_linear_22_18)"/>
+        <path id="Vector_4" d="M8.02044 9.909C9.06726 9.909 9.91588 9.06108 9.91588 8.01512C9.91588 6.96916 9.06726 6.12125 8.02044 6.12125C6.97362 6.12125 6.125 6.96916 6.125 8.01512C6.125 9.06108 6.97362 9.909 8.02044 9.909Z" fill="url(#paint3_linear_22_18)"/>
+        </g>
+        </g>
+        <defs>
+        <linearGradient id="paint0_linear_22_18" x1="736.801" y1="6.06199e-06" x2="1403.91" y2="407.395" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#4285EB"/>
+        <stop offset="1" stop-color="#2EC7FF"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_22_18" x1="826.282" y1="-1.02565e-06" x2="496.792" y2="1702.91" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#29CDFF"/>
+        <stop offset="0.3786" stop-color="#148EFF"/>
+        <stop offset="1" stop-color="#0A60FF"/>
+        </linearGradient>
+        <linearGradient id="paint2_linear_22_18" x1="287.422" y1="-75.7944" x2="-141.301" y2="594.681" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FA816E"/>
+        <stop offset="0.41473" stop-color="#F74A5C"/>
+        <stop offset="1" stop-color="#F51D2C"/>
+        </linearGradient>
+        <linearGradient id="paint3_linear_22_18" x1="264.39" y1="-129.067" x2="121.741" y2="441.552" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#FA8E7D"/>
+        <stop offset="0.51264" stop-color="#F74A5C"/>
+        <stop offset="1" stop-color="#F51D2C"/>
+        </linearGradient>
+        <clipPath id="clip0_22_18">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+
+`
+export const netlifySvg =
+    `
+        <svg id='netlifySvg' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="vscode-icons:file-type-light-netlify">
+        <path id="Vector" d="M14.695 6.99L9.01 1.305L8.8 1.095L8.565 1H7.435L7.2 1.1L6.99 1.305L1.305 6.99L1.095 7.2L1 7.435V8.565L1.1 8.8L1.305 9.01L6.99 14.695L7.2 14.905L7.435 15H8.565L8.8 14.9L9.01 14.695L14.695 9.01L14.905 8.8L15 8.565V7.435L14.9 7.2L14.695 6.99Z" fill="#014847"/>
+        <path id="Vector_2" d="M7.495 13.69V10.96L7.565 10.885H8.435L8.505 10.96V13.69L8.435 13.76H7.565L7.495 13.69ZM7.495 5.04001V2.31001L7.565 2.24001H8.435L8.505 2.31001V5.04001L8.435 5.11501H7.565L7.495 5.04001ZM5.2 11.665H5.08L4.48 11.065V10.95L5.28 10.15H5.91L5.995 10.24V10.87L5.195 11.67L5.2 11.665ZM4.48 5.08001V4.96001L5.08 4.36001H5.2L5.995 5.16001V5.79001L5.91 5.87501H5.28L4.48 5.08001ZM2.08 7.49001H5.15L5.22 7.56501V8.43501L5.15 8.50501H2.08L2 8.43501V7.56501L2.075 7.49001H2.08Z" fill="#32E6E2"/>
+        <path id="Vector_3" d="M9.62999 9.81H8.75999L8.68499 9.735V7.705C8.68499 7.34 8.54499 7.06 8.10999 7.055C7.88499 7.045 7.62499 7.055 7.35499 7.065L7.30999 7.105V9.735L7.23999 9.81H6.36999L6.29999 9.735V6.265L6.36999 6.19H8.31999C8.50098 6.18934 8.68031 6.22442 8.84771 6.29322C9.01511 6.36203 9.16728 6.46321 9.29549 6.59095C9.4237 6.7187 9.52543 6.8705 9.59485 7.03765C9.66426 7.2048 9.69999 7.38401 9.69999 7.565V9.735L9.62499 9.81H9.62999Z" fill="white"/>
+        <path id="Vector_4" d="M13.92 8.51H10.85L10.78 8.435V7.565L10.85 7.495H13.92L13.995 7.565V8.435L13.92 8.51Z" fill="#32E6E2"/>
+        </g>
+        </svg>
+
+`
+
+export const directTopRightSvg = `
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id="Vector" d="M1.04995 9.99C0.749948 9.99 0.499948 9.9 0.319948 9.73C0.129948 9.53 0.0399475 9.27 0.0399475 8.94C0.0399475 8.64 0.129948 8.39 0.319948 8.21L6.36995 2.16H4.41995C4.11995 2.16 3.86995 2.06 3.66995 1.86C3.36995 1.56 3.36995 1.41 3.36995 1.11C3.36995 0.820003 3.46995 0.570003 3.67995 0.370003C3.88995 0.170003 4.12995 0.0700041 4.42995 0.0700041H8.90995C9.20995 0.0700041 9.45995 0.170003 9.65995 0.370003C9.95995 0.670003 9.95995 0.820003 9.95995 1.11V5.59C9.95995 5.88 9.85995 6.13 9.65995 6.33C9.45995 6.53 9.20995 6.63 8.90995 6.63C8.61995 6.63 8.36995 6.53 8.17995 6.33C7.98995 6.13 7.88995 5.88 7.88995 5.59V3.66L1.82995 9.74C1.60303 9.90394 1.32988 9.99149 1.04995 9.99Z" 
+    fill=""/>
+    </svg>
+`
+
+export const codeSvg = `
+
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="humbleicons:code">
+        <g id="Group">
+        <path id="Vector" d="M4.66667 5.33333L2 7.99999L4.66667 10.6667" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path id="Vector_2" d="M7 12L9 4" stroke="" stroke-width="2" stroke-linecap="round"/>
+        <path id="Vector_3" d="M11.3333 5.33333L14 7.99999L11.3333 10.6667" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        </g>
+        </svg>
+
+
+`
+
+
+
 const renderSvg = (spanTags, svg) => {
     spanTags.forEach((span) => {
         span.innerHTML = svg
@@ -318,6 +394,10 @@ let spanSvgJs = document.querySelectorAll('.span-svg-js')
 let spanSvgTs = document.querySelectorAll('.span-svg-ts')
 let spanSvgRedux = document.querySelectorAll('.span-svg-redux')
 let spanSvgTailwind = document.querySelectorAll('.span-svg-tailwind')
+let spanSvgAntDesign = document.querySelectorAll('.span-svg-ant-design')
+let spanSvgNetlify = document.querySelectorAll('.span-svg-netlify')
+let spanSvgDirectTopRight = document.querySelectorAll('.span-svg-direct-top-right')
+let spanSvgCode = document.querySelectorAll('.span-svg-code')
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -335,6 +415,10 @@ document.addEventListener("DOMContentLoaded", () => {
         renderSvg(spanSvgTs, tsSvg)
         renderSvg(spanSvgRedux, reduxSvg)
         renderSvg(spanSvgTailwind, tailwindSvg)
+        renderSvg(spanSvgAntDesign, antDesignSvg)
+        renderSvg(spanSvgNetlify, netlifySvg)
+        renderSvg(spanSvgDirectTopRight, directTopRightSvg)
+        renderSvg(spanSvgCode, codeSvg)
     }, 10)
 
 })

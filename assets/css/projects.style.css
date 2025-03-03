@@ -1,0 +1,64 @@
+:root {
+    --project-space: 0.5rem;
+    --project-border-color: #252527;
+    --project-text-color: smoke;
+    --project-bg-color: #171719;
+}
+
+
+.project-card {
+    padding: var(--project-space) calc(var(--project-space)*1.2);
+    background: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.project-card-img {
+    border-radius: 0.5rem;
+
+}
+
+.project-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-skills {
+    display: flex;
+    align-items: center;
+    margin: 0 var(--project-space);
+}
+
+
+.project-skill {
+    position: relative;
+    display: flex;
+    margin-left: calc(var(--project-space) * -1);
+}
+
+.project-card-action {
+    gap: calc(var(--project-space)* 1);
+    display: flex;
+    align-items: center;
+}
+
+.project-redirect-link {
+    display: flex;
+    align-items: center;
+    background: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    padding: var(--project-space) calc(var(--project-space)*1.2);
+    gap: calc(var(--project-space)* 1);
+
+
+}
+
+.project-redirect-link-icon {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+}

@@ -3,7 +3,7 @@
 const companies = [
     {
         name: "Omicron Technologies",
-        img_src: "/assets/images/company-omicron-logo.jpg",
+        img_src: "assets/images/company-omicron-logo.jpg",
         roles: [{
             name: "Frontend Developer", type: "Internship", length: 'Nov 2022 - Jan 2023 · 3 mos'
         }],

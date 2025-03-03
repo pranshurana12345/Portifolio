@@ -73,6 +73,9 @@
         href="./assets/css/skill.style.css" />
 
   <link rel="stylesheet"
+        href="./assets/css/projects.style.css" />
+
+  <link rel="stylesheet"
         href="./assets/css/footer.style.css" />
 
   <!-- link to css file end-->
@@ -161,6 +164,7 @@
 
             <div class="img-box">
               <img src="./assets/images/pritam-6.png"
+                   lazy="true"
                    title="Pritam Debnath"
                    alt="Pritam Debnath" />
             </div>
@@ -336,10 +340,73 @@
 
 
 
-<div class="bg-black-blur">
+
+
+
+
+
+<div class="bg-black-blur"
+     style="padding: 1rem 1rem;">
+  <h2 class="section-h2">Notable Projects</h2>
+
+  <section id="project-section"
+           class="project-section">
+    <div class="project-card">
+      <img src="assets/images/project-fylehq-homepage-clone.png"
+           title="project fylehq homepage clone"
+           alt="project fylehq homepage clone"
+           class="project-card-img" />
+      <div>
+        <h3 class="text-primary">fylehq clone</h3>
+        <p class="text-secondary">This project is a front-end replication of the popular expense management platform,
+          Fyle
+          HQ, designed to provide a sleek and responsive user experience. The clone was built using Ant Design
+          (ng-zorro),
+          a powerful Angular UI library, to ensure modern and consistent styling throughout the application.
+        </p>
+      </div>
+      <div class="project-card-footer">
+        <div class="project-skills">
+          <div class="skill-icon">
+            <span style="display: flex; align-items: center; aspect-ratio:1;"
+                  class="span-svg-angular"> </span>
+          </div>
+          <div class="skill-icon">
+            <span style="display: flex; align-items: center; aspect-ratio:1;"
+                  class="span-svg-ant-design"> </span>
+          </div>
+          <div class="skill-icon">
+            <span style="display: flex; align-items: center; aspect-ratio:1;"
+                  class="span-svg-netlify"> </span>
+          </div>
+        </div>
+        <div class="project-card-action">
+          <a href="https://github.com/PriDebnath/fylehq-clone"
+             target="_blank"
+             class="project-redirect-link text-primary">
+
+            <span class="span-svg-code stroke-primary project-redirect-link-icon"></span>
+            <span>
+              Code
+            </span>
+          </a>
+          <a href="https://fylehq-clone-by-pritam.netlify.app"
+             target="_blank"
+             class="project-redirect-link text-primary">
+            <span>
+              Live
+            </span>
+            <span class="span-svg-direct-top-right stroke-primary project-redirect-link-icon"></span>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-h2">Skills</h2>
 
   <section id="skill-section">
-    <h2>Skills</h2>
     <div class="skill-container">
       <h3>
         Frontend
@@ -429,6 +496,7 @@
     </div>
   </footer>
 </div>
+
 </body>
 
 <!--  

@@ -1,5 +1,4 @@
 :root {
-    --skill-border-color: #4AA3A9;
     --skill-border-color: #252527;
     --skill-text-color: #4AA3A9;
     --skill-text-color: smoke;
@@ -11,21 +10,18 @@
 
 #skill-section {
     position: relative;
-    padding: 0 1rem;
+
 }
 
 .skill-container {}
 
-#skill-section h2 {
-
-    font-size: 1.8rem;
-    padding-bottom: 0;
-    font-weight: 600;
-    font-family: "Delius", serif;
-}
+#skill-section h2 {}
 
 .skill-container h3 {
     font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0.5rem;
     font-weight: 600;
     font-family: "Delius", serif;
 

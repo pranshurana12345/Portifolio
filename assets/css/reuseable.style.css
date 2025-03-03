@@ -50,3 +50,40 @@
 .text-center {
   text-align: center;
 }
+
+.text-primary {
+  color: snow;
+}
+
+.text-secondary {
+  color: grey;
+
+}
+
+
+.fill-primary,
+.fill-primary>* {
+  fill: snow;
+}
+
+.fill-secondary,
+.fill-secondary>* {
+  fill: grey;
+}
+
+.stroke-primary,
+.stroke-primary>* {
+  stroke: snow;
+}
+
+.stroke-secondary,
+.stroke-secondary>* {
+  stroke: grey;
+}
+
+.section-h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Delius", serif;
+  padding-top: 2.5rem;
+}

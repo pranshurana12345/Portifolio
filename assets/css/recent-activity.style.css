@@ -1,0 +1,62 @@
+.prefix-text {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.rc-container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+
+}
+
+.rc-card {
+    width: 150px;
+    height: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: var(--skill-bg-color);
+    background: var(--project-bg-color);
+    border: 1px solid var(--project-border-color);
+    border-radius: 0.5rem;
+    gap: calc(var(--project-space)* 1);
+
+}
+
+.rc-card:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.rc-card-active {
+    /*
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) ;
+                     */
+    transform: scale(2);
+}
+
+
+#rc-content-box {
+    height: calc(100%);
+    overflow: auto;
+}
+
+.rc-text-element {
+    display: block;
+    color: snow;
+    text-align: left;
+    padding: 0.5rem 0;
+    text-decoration: underline;
+
+
+}

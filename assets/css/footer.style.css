@@ -18,6 +18,7 @@ footer {
     display: flex;
     justify-content: center;
     border: 2px solid skyblue;
+    border: 1px solid var(--project-border-color);
     border-radius: 0.5rem;
     background: black;
     padding: 1rem 2rem;

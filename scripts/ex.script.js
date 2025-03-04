@@ -16,7 +16,7 @@ const companies = [
     },
     {
         name: "GroRapid Labs",
-        img_src: "/assets/images/company-hsv-digital-logo.jpeg",
+        img_src: "assets/images/company-hsv-digital-logo.jpeg",
         roles: [{
             name: "Frontend Developer", type: "Internship", length: 'Jul 2022 - Oct 2022 · 4 mos'
         }],

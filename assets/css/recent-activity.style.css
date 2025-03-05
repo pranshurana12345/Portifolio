@@ -55,8 +55,40 @@
     display: block;
     color: snow;
     text-align: left;
-    padding: 0.5rem 0;
-    text-decoration: underline;
+    padding: 0.9rem 0;
+    text-decoration: none;
 
+
+}
+
+.rc-text-element:hover {
+    text-decoration: underline;
+}
+
+
+.drawing-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.writing-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+.drawing-box {
+    padding-bottom: 0.5rem;
+}
+
+.drawing-img {
+    width: 100%;
+    /* Adjust as needed */
+    height: auto;
+    /* Maintains aspect ratio */
+    object-fit: cover;
+    /* Options: contain, cover, fill, none */
+    border-radius: 0.5rem;
 
 }

@@ -57,11 +57,11 @@ function openModal(type, cardId) {
     let card = document.getElementById(cardId)
     card.classList.add("rc-card-active")
     if (type == 'wrote') {
-        if (fetchedBlog == false) {
-            fetchBlog()
-        } else {
-            console.log("Already fetched blogs")
-        }
+        // if (fetchedBlog == false) {
+        fetchBlog()
+        // } else {
+        //     console.log("Already fetched blogs")
+        // }
     } else if (type == 'drew') {
         displayDrawings()
     } else if (type == 'read') {
@@ -118,7 +118,6 @@ function fetchBlog() {
 
 function displayReadings() {
     contentBox.innerHTML = ''
-    contentBox.className = 'writing-container'
     contentBox.className = ' '
     //
 

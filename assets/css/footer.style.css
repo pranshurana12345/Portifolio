@@ -11,7 +11,7 @@ footer {
     font-family: "Gabriela", serif;
     position: relative;
     z-index: 1;
-
+    flex-direction: column;
 }
 
 .footer-container {
@@ -30,6 +30,20 @@ footer {
 
 .footer-container-child {
     display: flex;
+}
+
+.footer-container-copy-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    background: black;
+    width: 100%;
+    border: 1px solid var(--project-border-color);
+
 }
 
 footer div {

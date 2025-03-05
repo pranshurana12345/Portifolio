@@ -1,5 +1,6 @@
 //
 let contentBox = document.getElementById('rc-content-box')
+let closeBtn = document.getElementById('close-btn')
 // wrote
 let fetchedBlog = false
 const rcCardWroteId = "rc-card-wrote"
@@ -17,6 +18,31 @@ const drawings = [
     'assets/images/drawings/her-birthday-gift.png',
     'assets/images/drawings/owl-duo.png',
     'assets/images/drawings/moody-girl.png',
+
+]
+// read
+const rcCardReadId = "rc-card-read"
+const cardRead = document.getElementById(rcCardReadId)
+const readings = [
+    {
+        name: "As a Man Thinketh",
+        by: "James Allen"
+    }
+    ,
+    {
+        name: "Who Moved My Cheese?",
+        by: "Spencer Johnson"
+    }
+    ,
+    {
+        name: "Her eyes",
+        by: "God"
+    }
+    ,
+    {
+        name: "Men Are from Mars, Women Are from Venus",
+        by: "John Gray"
+    }
 
 ]
 
@@ -38,6 +64,8 @@ function openModal(type, cardId) {
         }
     } else if (type == 'drew') {
         displayDrawings()
+    } else if (type == 'read') {
+        displayReadings()
     }
 
 }
@@ -50,6 +78,7 @@ function closeModal() {
         card.classList.remove("rc-card-active")
     }
 }
+closeBtn.addEventListener('click', closeModal)
 
 // Close modal when clicking outside of it
 document.getElementById("modalOverlay").onclick = function (event) {
@@ -85,6 +114,40 @@ function fetchBlog() {
     }).catch((err) => {
         console.log({ err })
     })
+}
+
+function displayReadings() {
+    contentBox.innerHTML = ''
+    contentBox.className = 'writing-container'
+    contentBox.className = ' '
+    //
+
+    //
+    readings.forEach((item, index) => {
+        let contentElementBox = document.createElement('div')
+        let contentElement = document.createElement('span')
+        contentElement.classList.add('rc-text-element')
+        contentElement.style.padding = '0.125rem 0'
+        fadeTypingAnimation(contentElement,
+            item.name
+            , 100);
+
+        //   
+        let contentByElement = document.createElement('span')
+        contentByElement.classList.add('rc-text-by-element')
+        contentByElement.style.padding = '0 0 1.125rem 0'
+        fadeTypingAnimation(contentByElement,
+            item.by
+            , 100);
+        //
+        contentElementBox.appendChild(contentElement)
+        contentElementBox.appendChild(contentByElement)
+
+        contentBox.appendChild(
+            contentElementBox)
+    })
+
+
 }
 
 function displayDrawings() {
@@ -123,10 +186,17 @@ function displayDrawings() {
     })
 
 }
+
+
+// event listener
 cardDrew.addEventListener("click", (e) => {
     openModal("drew", rcCardDrewId)
 })
 
 cardWrote.addEventListener("click", (e) => {
     openModal("wrote", rcCardWroteId)
+})
+
+cardRead.addEventListener("click", (e) => {
+    openModal("read", rcCardReadId)
 })

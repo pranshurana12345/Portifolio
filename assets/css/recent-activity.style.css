@@ -61,6 +61,16 @@
 
 }
 
+.rc-text-by-element {
+    display: block;
+    color: grey;
+    text-align: left;
+    text-decoration: none;
+    padding-bottom: 1rem;
+    font-size: 0.7rem;
+
+}
+
 .rc-text-element:hover {
     text-decoration: underline;
 }

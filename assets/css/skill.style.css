@@ -33,7 +33,6 @@
 }
 
 .skill {
-
     font-family: "Delius", serif;
     color: var(--skill-text-color);
     display: flex;
@@ -42,15 +41,22 @@
     text-decoration: none;
     padding: var(--skill-padding-y) var(--skill-padding-x);
     width: fit-content;
-    transform: scaleX(1);
+    /* transform: scaleX(0.5); */
+    transform: scaleX(0);
+
     transform-origin: left;
-    animation: skill-swipe calc(var(--add-skill-time) * 1ms) forwards;
     margin: 0 1rem 1rem 0;
     overflow: hidden;
     border-radius: 0.5rem;
     background: linear-gradient(var(--skill-bg-color) 0 0) padding-box,
         linear-gradient(to right, var(--skill-border-color), var(--skill-border-color)) border-box;
     border: 1px solid transparent;
+}
+
+.skill-active {
+    /* transform: scaleX(1); */
+    animation: skill-swipe calc(var(--add-skill-time) * 1ms) forwards;
+
 }
 
 .skill-icon {

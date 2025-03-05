@@ -365,6 +365,16 @@ let testingSkills = [
   }
 ];
 
+//
+let observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('skill-active')
+      observer.unobserve(entry.target);
+    }
+  })
+}, { threshold: 0.2, rootMargin: "50px 0px" })
+
 let addSkill = ({
   title,
   color,
@@ -374,6 +384,7 @@ let addSkill = ({
   skillsElement,
   removeAfter }) => {
   let skill = document.createElement('a');
+  observer.observe(skill)
 
   if (link) {
     skill.href = link
@@ -427,36 +438,28 @@ let addSkill = ({
     skillsElement.appendChild(skill);
   }
 
-  setTimeout(() => {
-    skill.style.animation = "none";
-  }, removeAfter);
+  // setTimeout(() => {
+  //   skill.style.animation = "none";
+  // }, removeAfter);
 };
+
+
 
 let observeSkills = (skills, skillsElement) => {
   if (skillsElement && skills) {
-    let observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          skills.forEach((skill, index) => {
-            let delay = 500 * (index + 1); // Adjust delay for animation
-            setTimeout(() => {
-              addSkill({
-                title: skill.title,
-                icon: skill.icon, color: skill.color,
-                link: skill.link,
-                breakSkill: skill.breakSkill,
-                skillsElement: skillsElement,
-                removeAfter: delay
-              });
-            }, delay);
-          });
-
-          observer.disconnect();
-
-        }
-      });
-    }, { threshold: 0.2 });
-    observer.observe(skillsElement);
+    skills.forEach((skill, index) => {
+      let delay = 100 * (index + 1); // Adjust delay for animation
+      setTimeout(() => {
+        addSkill({
+          title: skill.title,
+          icon: skill.icon, color: skill.color,
+          link: skill.link,
+          breakSkill: skill.breakSkill,
+          skillsElement: skillsElement,
+          removeAfter: delay
+        });
+      }, delay);
+    });
   }
 };
 

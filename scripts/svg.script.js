@@ -338,7 +338,7 @@ export const antDesignSvg = `
 
 `
 export const netlifySvg =
-    `
+  `
         <svg id='netlifySvg' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vscode-icons:file-type-light-netlify">
         <path id="Vector" d="M14.695 6.99L9.01 1.305L8.8 1.095L8.565 1H7.435L7.2 1.1L6.99 1.305L1.305 6.99L1.095 7.2L1 7.435V8.565L1.1 8.8L1.305 9.01L6.99 14.695L7.2 14.905L7.435 15H8.565L8.8 14.9L9.01 14.695L14.695 9.01L14.905 8.8L15 8.565V7.435L14.9 7.2L14.695 6.99Z" fill="#014847"/>
@@ -372,12 +372,25 @@ export const codeSvg = `
 
 `
 
+export const instagramSvg = `
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.6s" values="28;0"/></path>v</g></svg>
+
+`
+
+
+export const linkedinSvg = `
+
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4" cy="4" r="2" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.45s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.65s" dur="0.2s" values="24;0"/></path></g></svg>
+
+`
+
 
 
 const renderSvg = (spanTags, svg) => {
-    spanTags.forEach((span) => {
-        span.innerHTML = svg
-    })
+  spanTags.forEach((span) => {
+    span.innerHTML = svg
+  })
 }
 
 
@@ -398,27 +411,29 @@ let spanSvgAntDesign = document.querySelectorAll('.span-svg-ant-design')
 let spanSvgNetlify = document.querySelectorAll('.span-svg-netlify')
 let spanSvgDirectTopRight = document.querySelectorAll('.span-svg-direct-top-right')
 let spanSvgCode = document.querySelectorAll('.span-svg-code')
+let spanSvgInstagram = document.querySelectorAll('.span-svg-instagram')
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-        renderSvg(spanSvgCircles, circleSvg)
-        renderSvg(spanSvgAngular, angularSvg)
-        renderSvg(spanSvgBootstrap, bootstrapSvg)
-        renderSvg(spanSvgJasmine, jasmineSvg)
-        renderSvg(spanSvgCypress, cypressSvg)
-        renderSvg(spanSvgDjango, djangoSvg)
-        renderSvg(spanSvgKarma, karmaSvg)
-        renderSvg(spanSvgReact, reactSvg)
-        renderSvg(spanSvgRxjs, rxjsSvg)
-        renderSvg(spanSvgJs, jsSvg)
-        renderSvg(spanSvgTs, tsSvg)
-        renderSvg(spanSvgRedux, reduxSvg)
-        renderSvg(spanSvgTailwind, tailwindSvg)
-        renderSvg(spanSvgAntDesign, antDesignSvg)
-        renderSvg(spanSvgNetlify, netlifySvg)
-        renderSvg(spanSvgDirectTopRight, directTopRightSvg)
-        renderSvg(spanSvgCode, codeSvg)
-    }, 10)
+  setTimeout(() => {
+    renderSvg(spanSvgCircles, circleSvg)
+    renderSvg(spanSvgAngular, angularSvg)
+    renderSvg(spanSvgBootstrap, bootstrapSvg)
+    renderSvg(spanSvgJasmine, jasmineSvg)
+    renderSvg(spanSvgCypress, cypressSvg)
+    renderSvg(spanSvgDjango, djangoSvg)
+    renderSvg(spanSvgKarma, karmaSvg)
+    renderSvg(spanSvgReact, reactSvg)
+    renderSvg(spanSvgRxjs, rxjsSvg)
+    renderSvg(spanSvgJs, jsSvg)
+    renderSvg(spanSvgTs, tsSvg)
+    renderSvg(spanSvgRedux, reduxSvg)
+    renderSvg(spanSvgTailwind, tailwindSvg)
+    renderSvg(spanSvgAntDesign, antDesignSvg)
+    renderSvg(spanSvgNetlify, netlifySvg)
+    renderSvg(spanSvgDirectTopRight, directTopRightSvg)
+    renderSvg(spanSvgCode, codeSvg)
+    renderSvg(spanSvgInstagram, instagramSvg)
+  }, 10)
 
 })

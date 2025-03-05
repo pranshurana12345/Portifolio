@@ -24,25 +24,74 @@ const drawings = [
 const rcCardReadId = "rc-card-read"
 const cardRead = document.getElementById(rcCardReadId)
 const readings = [
-    {
-        name: "As a Man Thinketh",
-        by: "James Allen"
-    }
-    ,
-    {
-        name: "Who Moved My Cheese?",
-        by: "Spencer Johnson"
-    }
-    ,
+    { 
+        name: "Show Your Work",
+        by: "Austin Kleon"
+    },
+    { 
+        name: "The Four Agreements",
+        by: "DON MIGUEL Rui"
+    },
     {
         name: "Her eyes",
         by: "God"
     }
     ,
     {
+     name : "Can Love Happen Twice?",
+      by : "Ravinder Singh"
+     },
+     {
+     name : "I Too Had a Love Story",
+      by : "Ravinder Singh"
+     },
+    {
+        name: "The Art of Loving",
+        by: "Erich Fromm"
+    },
+    {
+        name: "Master Your Emotions",
+        by: "Thibaut Meurisse"
+    },
+    {
+        name: "Atomic Habits",
+        by: "James Clear"
+    },
+    {
+        name: "As a Man Thinketh",
+        by: "James Allen"
+    }
+    ,
+    {
+        name: "Exactly What to Say",
+        by : "Phil Jones"
+    },
+    {
+        name: "The Gifts of Imperfection",
+        by :"Brené Brown"
+    },
+    {
+        name: "Who Moved My Cheese?",
+        by: "Spencer Johnson"
+    }
+    ,
+    {
+        name: "The Subtle Art of Not Giving a F*ck",
+        by: "Mark Manson"
+    },
+    {
         name: "Men Are from Mars, Women Are from Venus",
         by: "John Gray"
-    }
+    },
+
+    { 
+    name: "THE COMPLETE ADVENTURES OF FELUDA - Vol I",
+    by: "Satyajit Ray"
+},
+{
+ name: "How to Win Friends and Influence People",
+ by: "Dale Carnegie"
+}
 
 ]
 
@@ -136,7 +185,7 @@ function displayReadings() {
         contentByElement.classList.add('rc-text-by-element')
         contentByElement.style.padding = '0 0 1.125rem 0'
         fadeTypingAnimation(contentByElement,
-            item.by
+           "by " + item.by
             , 100);
         //
         contentElementBox.appendChild(contentElement)

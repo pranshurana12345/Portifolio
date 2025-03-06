@@ -88,7 +88,25 @@
   padding-top: 5rem;
 }
 
+
+.grid-col1-md-col2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+
+@media (min-width:900px) {
+  .grid-col1-md-col2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
 .min-width-400px-width-50per {
-  width: 50%;
-  min-width: 400px;
+  width: 100%;
+  /* min-width: 600px; */
 }

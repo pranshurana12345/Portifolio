@@ -15,14 +15,34 @@ const observer = new IntersectionObserver(entries => {
 
 const projects = [
     {
+        imgSrc: "assets/images/project-fylehq-homepage-clone.png",
+        imgTitle: "project fylehq homepage clone",
+        imgAlt: "project fylehq homepage clone",
+        title: "FyleHQ - Clone",
+        description: " This project is a front-end replication          of the popular expense management        platform      Fyle   HQ, designed to provide a sleek and responsive user experience. The clone was built using Ant Design (ng-zorro), a powerful Angular UI library, to ensure modern and consistent styling throughout the application.      ",
+        skills: ["span-svg-angular", "span-svg-ant-design", "span-svg-netlify"],
+        codeLink: "https://github.com/PriDebnath/fylehq-clone",
+        liveLink: "https://fylehq-clone-by-pritam.netlify.app"
+    },
+    {
         imgSrc: "assets/images/project-relu-consultancy-assignment.png",
         imgTitle: "project-relu-consultancy-assignment",
         imgAlt: "project-relu-consultancy-assignment",
         title: "Relu Consultancy - Assignment",
-        description: `This project is about front-end  `,
-        skills: ["span-svg-angular", "span-svg-ant-design", "span-svg-netlify"],
-        codeLink: "https://github.com/PriDebnath/fylehq-clone",
-        liveLink: "https://fylehq-clone-by-pritam.netlify.app"
+        description: `This project is about front-end development assignment I got from  relu consultancy`,
+        skills: ["span-svg-angular", "span-svg-netlify"],
+        codeLink: "https://github.com/PriDebnath/relu-consultancy-assignment",
+        liveLink: "https://relu-consultancy-assignment-by-pri.netlify.app/"
+    },
+    {
+        imgSrc: "assets/images/project-tutedude.png",
+        imgTitle: "project tutedude assignment",
+        imgAlt: "project relu tutedude assignment",
+        title: "Tutedude - Assignment",
+        description: `This project is about front-end development assignment I got from tutedude`,
+        skills: ["span-svg-react", "span-svg-netlify"],
+        codeLink: "https://github.com/PriDebnath/tutedude-assignment",
+        liveLink: "https://tutedudeuibypri.netlify.app/"
     }
 ];
 
@@ -121,3 +141,71 @@ projects.forEach(project => {
     // Append project card to parent element
     parentElement.appendChild(projectCard);
 });
+
+/* 
+  
+               <!--
+        <div class="project-card animate-company-container">
+          <div class="project-card-img-box">
+
+            <img src="assets/images/project-fylehq-homepage-clone.png"
+                 title="project fylehq homepage clone"
+                 alt="project fylehq homepage clone"
+                 class="project-card-img" />
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="text-primary project-name"
+                title="fylehq clone">fylehq clone</h3>
+            <p class="text-secondary project-desc"
+               title="This project is a front-end replication of the popular expense management platform, Fyle HQ, 
+           designed to provide a sleek and responsive user experience. The clone was built using Ant Design 
+           (ng-zorro), a powerful Angular UI library, to ensure modern and consistent styling throughout the application.">
+              This project is a front-end replication
+              of the popular expense management
+              platform,
+              Fyle
+              HQ, designed to provide a sleek and responsive user experience. The clone was built using Ant Design
+              (ng-zorro),
+              a powerful Angular UI library, to ensure modern and consistent styling throughout the application.
+            </p>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-skills animation-project-card-link-slide">
+              <div class="skill-icon">
+                <span style="display: flex; align-items: center; aspect-ratio:1;"
+                      class="span-svg-angular"> </span>
+              </div>
+              <div class="skill-icon">
+                <span style="display: flex; align-items: center; aspect-ratio:1;"
+                      class="span-svg-ant-design"> </span>
+              </div>
+              <div class="skill-icon">
+                <span style="display: flex; align-items: center; aspect-ratio:1;"
+                      class="span-svg-netlify"> </span>
+              </div>
+            </div>
+            <div class="project-card-action animation-project-card-link-slide">
+              <a href="https://github.com/PriDebnath/fylehq-clone"
+                 target="_blank"
+                 class="project-redirect-link project-redirect-link-left text-primary">
+
+                <span class="span-svg-code stroke-primary project-redirect-link-icon"></span>
+                <span>
+                  Code
+                </span>
+              </a>
+              <a href="https://fylehq-clone-by-pritam.netlify.app"
+                 target="_blank"
+                 class="project-redirect-link project-redirect-link-right text-primary">
+                <span>
+                  Live
+                </span>
+                <span class="span-svg-direct-top-right stroke-primary project-redirect-link-icon"></span>
+
+              </a>
+            </div>
+          </div>
+        </div>
+      -->
+*/

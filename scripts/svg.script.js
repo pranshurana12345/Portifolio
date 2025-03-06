@@ -385,7 +385,14 @@ export const linkedinSvg = `
 
 `
 
+export const badgeSvg = `
 
+<svg id='badgeSvg' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 1L12.2965 2.5L14 2.707L12.75 3.8335L13 5.5L11.5 4.5625L10 5.5L10.25 3.8335L9 2.707L10.75 2.5L11.5 1Z" fill="#FFA500"/>
+<path d="M11.3585 6.6245L10.3895 6.3755C10.2158 7.04462 9.84768 7.64725 9.33165 8.10725C8.81562 8.56725 8.17483 8.86399 7.49022 8.95997C6.80562 9.05595 6.10793 8.94688 5.4853 8.64652C4.86266 8.34616 4.34301 7.86801 3.99201 7.27245C3.641 6.6769 3.47438 5.99067 3.5132 5.30047C3.55202 4.61026 3.79454 3.94704 4.21011 3.39461C4.62569 2.84217 5.19567 2.42529 5.84806 2.19665C6.50046 1.96801 7.20598 1.93786 7.8755 2.11L8.125 1.1415C7.14899 0.887626 6.11596 0.96934 5.192 1.37351C4.26804 1.77767 3.50684 2.4808 3.03078 3.36985C2.55472 4.25891 2.39146 5.28222 2.56725 6.27527C2.74304 7.26832 3.24767 8.1734 4 8.845V15L7 13L10 15V8.854C10.6641 8.26219 11.1371 7.48606 11.3585 6.6245ZM9 13.1315L7 11.798L5 13.1315V9.525C5.62047 9.83688 6.3052 9.99955 6.99964 10.0001C7.69408 10.0006 8.37906 9.83894 9 9.528V13.1315Z" fill="#FFFF00"/>
+</svg>
+
+`
 
 const renderSvg = (spanTags, svg) => {
   spanTags.forEach((span) => {
@@ -412,6 +419,7 @@ let spanSvgNetlify = document.querySelectorAll('.span-svg-netlify')
 let spanSvgDirectTopRight = document.querySelectorAll('.span-svg-direct-top-right')
 let spanSvgCode = document.querySelectorAll('.span-svg-code')
 let spanSvgInstagram = document.querySelectorAll('.span-svg-instagram')
+let spanSvgBadge = document.querySelectorAll('.span-svg-badge')
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -434,6 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderSvg(spanSvgDirectTopRight, directTopRightSvg)
     renderSvg(spanSvgCode, codeSvg)
     renderSvg(spanSvgInstagram, instagramSvg)
+    renderSvg(spanSvgBadge, badgeSvg)
   }, 10)
 
 })

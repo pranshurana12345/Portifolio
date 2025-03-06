@@ -108,5 +108,17 @@
 
 .min-width-400px-width-50per {
   width: 100%;
-  /* min-width: 600px; */
+  min-width: 400px;
+}
+
+.width-100vw-lg-width-50vw {
+  width: 100vw;
+}
+
+
+@media (min-width:900px) {
+  .width-100vw-lg-width-50vw {
+    width: 50vw;
+  }
+
 }

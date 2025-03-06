@@ -11,10 +11,15 @@
 
 .project-section {
     /* display: grid;
-    grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 1fr;
+    width: 50vw; */
     display: flex;
+    flex-direction: column;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    /* padding: 1rem; */
+    overflow: hidden;
 }
 
 .project-card {
@@ -22,7 +27,7 @@
     border: 1px solid var(--project-border-color);
     border-radius: 0.5rem;
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
     position: relative;
     /* padding: var(--project-space) calc(var(--project-space)*1.2); */
     /* transform: scale(0.5); */

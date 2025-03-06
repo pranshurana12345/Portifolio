@@ -122,3 +122,7 @@ i {
         transform: translateY(80vh) translateX(-120vh) rotate(45deg);
     }
 }
+
+.social-icon-box {
+    color: snow;
+}

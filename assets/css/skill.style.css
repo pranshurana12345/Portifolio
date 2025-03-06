@@ -32,6 +32,8 @@
     flex-wrap: wrap;
 }
 
+
+
 .skill {
     font-family: "Delius", serif;
     color: var(--skill-text-color);
@@ -95,4 +97,21 @@
     100% {
         transform: scaleX(1);
     }
+}
+
+#certification-section>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.certification-link {
+    text-decoration: none;
+    color: var(--skill-text-color);
+    padding: var(--skill-padding-y) var(--skill-padding-x);
+    border-radius: 0.5rem;
+    border: 1px solid var(--skill-border-color);
+    background: var(--project-bg-color);
+
 }

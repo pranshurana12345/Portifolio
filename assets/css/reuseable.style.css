@@ -87,3 +87,8 @@
   font-family: "Delius", serif;
   padding-top: 5rem;
 }
+
+.min-width-400px-width-50per {
+  width: 50%;
+  min-width: 400px;
+}

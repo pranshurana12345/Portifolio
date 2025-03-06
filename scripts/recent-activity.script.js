@@ -12,7 +12,6 @@ const cardDrew = document.getElementById(rcCardDrewId)
 const drawings = [
     'assets/images/drawings/one-holds-the-flower.png',
     'assets/images/drawings/one-holds-the-feeling.png',
-
     'assets/images/drawings/bird.jpg',
     'assets/images/drawings/bunny.jpg',
     'assets/images/drawings/her-birthday-gift.png',
@@ -24,11 +23,11 @@ const drawings = [
 const rcCardReadId = "rc-card-read"
 const cardRead = document.getElementById(rcCardReadId)
 const readings = [
-    { 
+    {
         name: "Show Your Work",
         by: "Austin Kleon"
     },
-    { 
+    {
         name: "The Four Agreements",
         by: "DON MIGUEL Rui"
     },
@@ -38,13 +37,13 @@ const readings = [
     }
     ,
     {
-     name : "Can Love Happen Twice?",
-      by : "Ravinder Singh"
-     },
-     {
-     name : "I Too Had a Love Story",
-      by : "Ravinder Singh"
-     },
+        name: "Can Love Happen Twice?",
+        by: "Ravinder Singh"
+    },
+    {
+        name: "I Too Had a Love Story",
+        by: "Ravinder Singh"
+    },
     {
         name: "The Art of Loving",
         by: "Erich Fromm"
@@ -64,11 +63,11 @@ const readings = [
     ,
     {
         name: "Exactly What to Say",
-        by : "Phil Jones"
+        by: "Phil Jones"
     },
     {
         name: "The Gifts of Imperfection",
-        by :"Brené Brown"
+        by: "Brené Brown"
     },
     {
         name: "Who Moved My Cheese?",
@@ -84,14 +83,14 @@ const readings = [
         by: "John Gray"
     },
 
-    { 
-    name: "THE COMPLETE ADVENTURES OF FELUDA - Vol I",
-    by: "Satyajit Ray"
-},
-{
- name: "How to Win Friends and Influence People",
- by: "Dale Carnegie"
-}
+    {
+        name: "The Complete Adventures Of Feluda - Vol I",
+        by: "Satyajit Ray"
+    },
+    {
+        name: "How to Win Friends and Influence People",
+        by: "Dale Carnegie"
+    }
 
 ]
 
@@ -185,7 +184,7 @@ function displayReadings() {
         contentByElement.classList.add('rc-text-by-element')
         contentByElement.style.padding = '0 0 1.125rem 0'
         fadeTypingAnimation(contentByElement,
-           "by " + item.by
+            "by " + item.by
             , 100);
         //
         contentElementBox.appendChild(contentElement)

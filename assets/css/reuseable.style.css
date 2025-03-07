@@ -111,6 +111,12 @@
   min-width: 400px;
 }
 
+@media (max-width: 400px) {
+  .min-width-400px-width-50per {
+    min-width: 200px;
+  }
+}
+
 .width-100vw-lg-width-50vw {
   width: 100vw;
 }

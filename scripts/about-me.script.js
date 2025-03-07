@@ -1,9 +1,9 @@
 //
 let aboutMe = `
-I'm a Front-End Developer with over 2 years of fulltime work experience,
+    I'm a Front-End Developer with over 2 years of fulltime work experience,
  specializing in web application development. 
 I'm passionate about crafting engaging user experiences 
-and leveraging cutting-edge technologies to bring ideas to life`
+and leveraging cutting-edge technologies to bring ideas to life.`
 let aboutMeSection = document.getElementById('about-me-section')
 
 const observer = new IntersectionObserver(entries => {

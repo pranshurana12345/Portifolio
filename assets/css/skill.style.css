@@ -112,5 +112,7 @@
     border-radius: 0.5rem;
     border: 1px solid var(--skill-border-color);
     background: var(--project-bg-color);
-
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }

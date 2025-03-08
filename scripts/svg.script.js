@@ -381,7 +381,31 @@ export const instagramSvg = `
 
 export const linkedinSvg = `
 
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4" cy="4" r="2" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="12" stroke-dashoffset="12" d="M4 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.15s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="12" stroke-dashoffset="12" d="M10 10v10"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.45s" dur="0.2s" values="12;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M10 15c0 -2.76 2.24 -5 5 -5c2.76 0 5 2.24 5 5v5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.65s" dur="0.2s" values="24;0"/></path></g></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+
+        <!-- Outer Square Border -->
+        <path stroke-width="2" stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z">
+          <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0" />
+        </path>
+
+        <!-- Animated "i" Shape -->
+        <path stroke-width="1.5" stroke-dasharray="12" stroke-dashoffset="12" d="M8 10v6">
+          <animate attributeName="stroke-dashoffset" from="12" to="0" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- Animated "n" Shape -->
+        <path stroke-width="1.5" stroke-dasharray="24" stroke-dashoffset="24" d="M11 10v6m0-4c.5-.5 1-1 2-1s2 .5 2 2v3">
+          <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.5s" fill="freeze" />
+        </path>
+
+        <!-- Small Top Left Circle (Animated) -->
+        <circle cx="8" cy="7" r="1" fill="currentColor">
+          <animate attributeName="r" from="0" to="1" dur="1s" fill="freeze" />
+        </circle>
+
+      </g>
+    </svg>
 
 `
 

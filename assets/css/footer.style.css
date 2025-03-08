@@ -43,7 +43,7 @@ footer {
     background: black;
     width: 100%;
     border: 1px solid var(--project-border-color);
-
+    gap: 0.5rem;
 }
 
 footer div {
@@ -55,7 +55,6 @@ footer .img-box {
     align-items: center;
     justify-self: end;
 }
-
 
 
 footer .text-box {

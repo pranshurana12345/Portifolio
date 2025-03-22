@@ -1,4 +1,5 @@
-# This Area Is Under Construction
+## Live 🔴
+#### https://pridebnath.github.io/portfolio-v2/
 
-Still you can check it here
-https://pridebnath.github.io/portfolio-v2/
+ <a href="https://pridebnath.github.io/portfolio-v2/"><img src="assets/images/portfolio-v2-mobile-demo.jpg" />
+</a>

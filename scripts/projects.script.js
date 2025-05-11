@@ -15,34 +15,32 @@ const observer = new IntersectionObserver(entries => {
 
 const projects = [
     {
-        imgSrc: "assets/images/project-fylehq-homepage-clone.png",
-        imgTitle: "project fylehq homepage clone",
-        imgAlt: "project fylehq homepage clone",
-        title: "FyleHQ - Clone",
-        description: " This project is a front-end replication          of the popular expense management        platform      Fyle   HQ, designed to provide a sleek and responsive user experience. The clone was built using Ant Design (ng-zorro), a powerful Angular UI library, to ensure modern and consistent styling throughout the application.      ",
+        imgSrc: "irl2.png",
+        imgTitle: "Initia Community Meetupe",
+        imgAlt: "Initia Community Meetup",
+        title: "' Interwoven with Nature ' -  Initia India Community Meetup ",
+        description: " Organized and led a local IRL event to introduce new users to the Initia ecosystem, helped them  onboarding, and foster meaningful community connections through interactive sessions and discussions.  ",
         skills: ["span-svg-angular", "span-svg-ant-design", "span-svg-netlify"],
-        codeLink: "https://github.com/PriDebnath/fylehq-clone",
-        liveLink: "https://fylehq-clone-by-pritam.netlify.app"
+        liveLink: "https://x.com/Pranshu_rana_/status/1886674313115525222/video/1"
     },
     {
-        imgSrc: "assets/images/project-relu-consultancy-assignment.png",
-        imgTitle: "project-relu-consultancy-assignment",
-        imgAlt: "project-relu-consultancy-assignment",
-        title: "Relu Consultancy - Assignment",
-        description: `This project is about front-end development assignment I got from  relu consultancy`,
+        imgSrc: "info.jpg",
+        imgTitle: "Infographics",
+        imgAlt: "Infographics",
+        title: "Infographics on initia Ecosystem ",
+        description: `Designed a beginner-friendly visual ghelping users understand the ecosystem at a glance.`,
         skills: ["span-svg-angular", "span-svg-netlify"],
-        codeLink: "https://github.com/PriDebnath/relu-consultancy-assignment",
-        liveLink: "https://relu-consultancy-assignment-by-pri.netlify.app/"
+        
+        liveLink: "https://x.com/Pranshu_rana_/status/1891778669099745706"
     },
     {
-        imgSrc: "assets/images/project-tutedude.png",
-        imgTitle: "project tutedude assignment",
-        imgAlt: "project relu tutedude assignment",
-        title: "Tutedude - Assignment",
-        description: `This project is about front-end development assignment I got from tutedude`,
+        imgSrc: "bil.png",
+        imgTitle: "Informative Video",
+        imgAlt: "Informative Video",
+        title: "An Informative Video on Billions Network",
+        description: `Created a beginner-focused explainer video that breaks down the core ideas and  mission of Billions Network in a simple, engaging format.`,
         skills: ["span-svg-react", "span-svg-netlify"],
-        codeLink: "https://github.com/PriDebnath/tutedude-assignment",
-        liveLink: "https://tutedudeuibypri.netlify.app/"
+        liveLink: "https://x.com/Pranshu_rana_/status/1907517580832645424"
     }
 ];
 
@@ -170,20 +168,7 @@ projects.forEach(project => {
               a powerful Angular UI library, to ensure modern and consistent styling throughout the application.
             </p>
           </div>
-          <div class="project-card-footer">
-            <div class="project-skills animation-project-card-link-slide">
-              <div class="skill-icon">
-                <span style="display: flex; align-items: center; aspect-ratio:1;"
-                      class="span-svg-angular"> </span>
-              </div>
-              <div class="skill-icon">
-                <span style="display: flex; align-items: center; aspect-ratio:1;"
-                      class="span-svg-ant-design"> </span>
-              </div>
-              <div class="skill-icon">
-                <span style="display: flex; align-items: center; aspect-ratio:1;"
-                      class="span-svg-netlify"> </span>
-              </div>
+         
             </div>
             <div class="project-card-action animation-project-card-link-slide">
               <a href="https://github.com/PriDebnath/fylehq-clone"

@@ -1,9 +1,11 @@
 //
 let aboutMe = `
-    I'm Pritam Debnath a Front-End Developer with over 2 years of fulltime work experience,
- specializing in web application development. 
-I'm passionate about crafting engaging user experiences 
-and leveraging cutting-edge technologies to bring ideas to life.`
+    I’m Pranshu—a community builder with over 3 years in the crypto space
+    and 1+ year of full-time experience in  growing Web3 communities.
+    I’m passionate about helping innovative projects connect with real people, 
+    both online and on the ground. 
+    Outside of work, I love traveling, trekking, running, and getting lost in a good book.
+    Whether it’s climbing mountains or building ecosystems, I’m all about meaningful journeys.`
 let aboutMeSection = document.getElementById('about-me-section')
 
 const observer = new IntersectionObserver(entries => {

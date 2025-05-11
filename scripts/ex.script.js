@@ -2,33 +2,34 @@
 
 const companies = [
     {
-        name: "Omicron Technologies",
-        img_src: "assets/images/company-omicron-logo.jpg",
+        name: "Refine Studio",
+        img_src: "logos/ref.jpg",
         roles: [{
-            name: "Frontend Developer", type: "Internship", length: 'Nov 2022 - Jan 2023 · 3 mos'
+            name: "QA Engineer ", type: "Working towards mantaining the UI/UX Quality of the partner projects  ", length: '(Curvance,Symphony.Haiku)'
         }],
         skills: [
-            { link: 'https://react.dev/', className: "span-svg-react" },
-            { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', className: "span-svg-js" },
-            { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-ts" },
+            {  },
+            { },
+            {  },
+            { },
+            {  },
 
         ]
     },
     {
-        name: "GroRapid Labs",
-        img_src: "assets/images/company-hsv-digital-logo.jpeg",
+        name: "Billions Network",
+        img_src: "logos/billions.jpg",
         roles: [{
-            name: "Frontend Developer", type: "Internship", length: 'Jul 2022 - Oct 2022 · 4 mos'
+            name: "OG", type: "Early and active contributor, helping grow communities by leading engagement efforts across Web3 spaces.", length: ''
         }],
         skills: [
             { link: 'https://react.dev/', className: "span-svg-react" },
             { link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', className: "span-svg-js" },
             { link: 'https://www.typescriptlang.org/docs/', className: "span-svg-ts" },
-            { link: 'https://redux.js.org/', className: "span-svg-redux" },
-            { link: 'https://www.tailwind.com/', className: "span-svg-tailwind" },
 
         ]
-    },
+    }
+    
 ];
 
 
@@ -143,31 +144,13 @@ companies.forEach(company => {
     skillBox.className = "company-accured-skill-box flex-wrap";
 
     const skillTitle = document.createElement("p");
-    skillTitle.classList.add("white-space-nowrap")
-    skillTitle.textContent = "Acquired tech skills";
-    skillBox.appendChild(skillTitle);
+    
+   
+    
     //
-    const skillIcons = document.createElement("div");
-    skillIcons.classList.add('flex')
-    skillIcons.classList.add('align-items-center')
-    skillIcons.classList.add('flex-wrap')
+   
+    
 
-    company.skills.forEach(s => {
-        const skill = document.createElement("a");
-        skill.href = s.link
-        skill.target = "_blank"
-        skill.classList.add("skill-icon")
-        //
-        const spanSvg = document.createElement("span");
-        spanSvg.style.display = "flex"
-        spanSvg.style.alignItems = "center"
-        spanSvg.style.aspectRatio = "1"
-        spanSvg.classList.add(s.className)
-        //
-        skill.appendChild(spanSvg);
-        skillIcons.appendChild(skill)
-    });
-    skillBox.appendChild(skillIcons);
     //
     companyContainer.appendChild(skillBox);
     card.appendChild(companyContainer);

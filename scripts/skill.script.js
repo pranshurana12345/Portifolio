@@ -8,8 +8,7 @@ let backendSkillsElement = document.getElementById('backend-skills');
 let testingSkillsElement = document.getElementById('testing-skills');
 let frontendSkills = [
   {
-    title: "Next.js", color: "snow",
-    link: "https://nextjs.org/docs",
+    title: "Discord & Telegram Management", color: "snow",
     icon: `
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vscode-icons:file-type-next">
@@ -31,8 +30,7 @@ let frontendSkills = [
     `
   },
   {
-    title: "React", color: "#0081A3",
-    link: "https://react.dev/",
+    title: "Community Engagement & Retention", color: "#0081A3",
     icon: `
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="vscode-icons:file-type-reactjs">
@@ -46,8 +44,7 @@ let frontendSkills = [
   },
   { breakSkill: true },
   {
-    title: "RxJS", color: "#B7178C",
-    link: "https://rxjs.dev/",
+    title: "Event Hosting & Moderation", color: "#B7178C",
     icon: `
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="devicon:rxjs" clip-path="url(#clip0_15_19)">
@@ -90,8 +87,7 @@ let frontendSkills = [
 
   },
   {
-    title: "Redux", color: "#764ABC",
-    link: "https://redux.js.org/",
+    title: "Hosting AMAs", color: "#764ABC",
     icon: `
       <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="logos:redux" clip-path="url(#clip0_15_24)">
@@ -110,8 +106,7 @@ let frontendSkills = [
   },
   { breakSkill: true },
   {
-    title: "Tailwind CSS", color: "#06B6D4",
-    link: "https://tailwindcss.com/",
+    title: "IRL Community Meetups", color: "#06B6D4",
 
     icon: `
     
@@ -130,8 +125,7 @@ let frontendSkills = [
 
   },
   {
-    title: "Bootstrap", color: "#7952B3",
-    link: "https://getbootstrap.com/",
+    title: "Support & Conflict Resolution", color: "#7952B3",
     icon: `
     
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,8 +161,7 @@ let frontendSkills = [
   },
   { breakSkill: true },
   {
-    title: "HTML", color: "#E44D26",
-    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    title: "Fluent Communication", color: "#E44D26",
     icon: `
     
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,8 +183,7 @@ let frontendSkills = [
 
   },
   {
-    title: "CSS", color: "#264DE4",
-    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    title: "Cross-Project Collaboration", color: "#264DE4",
     icon: `
  
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,8 +208,120 @@ let frontendSkills = [
 
 let backendSkills = [
   {
-    title: "Node.js", color: "#83CD29",
-    link: "https://nodejs.org/en/docs/",
+    title: "Content Creation & Localization", color: "#83CD29",
+    icon: `
+    
+      <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="logos:nodejs-icon-alt" clip-path="url(#clip0_16_58)">
+      <path id="Vector" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="url(#paint0_linear_16_58)"/>
+      <g id="Mask group">
+      <mask id="mask0_16_58" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="16" height="19">
+      <g id="Group">
+      <path id="Vector_2" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="white"/>
+      </g>
+      </mask>
+      <g mask="url(#mask0_16_58)">
+      <path id="Vector_3" d="M15.5928 4.17947L8.41562 0.113009C8.34774 0.0795976 8.26293 0.046125 8.19506 0.0293579L0.152679 13.6179C0.220554 13.7015 0.305429 13.7685 0.390179 13.8187L7.5673 17.8852C7.77093 18.0024 8.00849 18.0358 8.22905 17.9689L15.7794 4.34683C15.7284 4.27989 15.6606 4.22971 15.5927 4.17953" fill="url(#paint1_linear_16_58)"/>
+      </g>
+      </g>
+      <g id="Mask group_2">
+      <mask id="mask1_16_58" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="16" height="19">
+      <g id="Group_2">
+      <path id="Vector_4" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="white"/>
+      </g>
+      </mask>
+      <g mask="url(#mask1_16_58)">
+      <path id="Vector_5" d="M15.6098 13.8019C15.8134 13.6848 15.9661 13.484 16.0339 13.2664L8.1612 0.0125811C7.95757 -0.0208915 7.73701 -0.00418598 7.55038 0.112937L0.424133 4.16281L8.11032 17.9857C8.21207 17.9689 8.33088 17.9355 8.4327 17.8852L15.6098 13.8019Z" fill="url(#paint2_linear_16_58)"/>
+      </g>
+      </g>
+      </g>
+      <defs>
+      <linearGradient id="paint0_linear_16_58" x1="1091.01" y1="314.442" x2="323.314" y2="1537.44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#41873F"/>
+      <stop offset="0.3288" stop-color="#418B3D"/>
+      <stop offset="0.6352" stop-color="#419637"/>
+      <stop offset="0.9319" stop-color="#3FA92D"/>
+      <stop offset="1" stop-color="#3FAE2A"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_16_58" x1="676.429" y1="991.618" x2="2624.86" y2="-81.6738" gradientUnits="userSpaceOnUse">
+      <stop offset="0.1376" stop-color="#41873F"/>
+      <stop offset="0.4032" stop-color="#54A044"/>
+      <stop offset="0.7136" stop-color="#66B848"/>
+      <stop offset="0.9081" stop-color="#6CC04A"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear_16_58" x1="-68.0873" y1="899.361" x2="1584.8" y2="899.361" gradientUnits="userSpaceOnUse">
+      <stop offset="0.09192" stop-color="#6CC04A"/>
+      <stop offset="0.2864" stop-color="#66B848"/>
+      <stop offset="0.5968" stop-color="#54A044"/>
+      <stop offset="0.8624" stop-color="#41873F"/>
+      </linearGradient>
+      <clipPath id="clip0_16_58">
+      <rect width="16" height="18" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+
+    `
+
+  },{
+    title: "Ecosystem Promotion", color: "#83CD29",
+    
+    icon: `
+    
+      <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="logos:nodejs-icon-alt" clip-path="url(#clip0_16_58)">
+      <path id="Vector" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="url(#paint0_linear_16_58)"/>
+      <g id="Mask group">
+      <mask id="mask0_16_58" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="16" height="19">
+      <g id="Group">
+      <path id="Vector_2" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="white"/>
+      </g>
+      </mask>
+      <g mask="url(#mask0_16_58)">
+      <path id="Vector_3" d="M15.5928 4.17947L8.41562 0.113009C8.34774 0.0795976 8.26293 0.046125 8.19506 0.0293579L0.152679 13.6179C0.220554 13.7015 0.305429 13.7685 0.390179 13.8187L7.5673 17.8852C7.77093 18.0024 8.00849 18.0358 8.22905 17.9689L15.7794 4.34683C15.7284 4.27989 15.6606 4.22971 15.5927 4.17953" fill="url(#paint1_linear_16_58)"/>
+      </g>
+      </g>
+      <g id="Mask group_2">
+      <mask id="mask1_16_58" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="16" height="19">
+      <g id="Group_2">
+      <path id="Vector_4" d="M8.43269 0.112703C8.16119 -0.0378931 7.83881 -0.0378931 7.56731 0.112703L0.424188 4.17929C0.152688 4.32988 0 4.61437 0 4.91556V13.0654C0 13.3666 0.169688 13.6511 0.424188 13.8017L7.56731 17.8682C7.83881 18.0189 8.16119 18.0189 8.43269 17.8682L15.5758 13.8017C15.8473 13.6511 16 13.3666 16 13.0654V4.91556C16 4.61437 15.8303 4.32988 15.5758 4.17929L8.43269 0.112703Z" fill="white"/>
+      </g>
+      </mask>
+      <g mask="url(#mask1_16_58)">
+      <path id="Vector_5" d="M15.6098 13.8019C15.8134 13.6848 15.9661 13.484 16.0339 13.2664L8.1612 0.0125811C7.95757 -0.0208915 7.73701 -0.00418598 7.55038 0.112937L0.424133 4.16281L8.11032 17.9857C8.21207 17.9689 8.33088 17.9355 8.4327 17.8852L15.6098 13.8019Z" fill="url(#paint2_linear_16_58)"/>
+      </g>
+      </g>
+      </g>
+      <defs>
+      <linearGradient id="paint0_linear_16_58" x1="1091.01" y1="314.442" x2="323.314" y2="1537.44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#41873F"/>
+      <stop offset="0.3288" stop-color="#418B3D"/>
+      <stop offset="0.6352" stop-color="#419637"/>
+      <stop offset="0.9319" stop-color="#3FA92D"/>
+      <stop offset="1" stop-color="#3FAE2A"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_16_58" x1="676.429" y1="991.618" x2="2624.86" y2="-81.6738" gradientUnits="userSpaceOnUse">
+      <stop offset="0.1376" stop-color="#41873F"/>
+      <stop offset="0.4032" stop-color="#54A044"/>
+      <stop offset="0.7136" stop-color="#66B848"/>
+      <stop offset="0.9081" stop-color="#6CC04A"/>
+      </linearGradient>
+      <linearGradient id="paint2_linear_16_58" x1="-68.0873" y1="899.361" x2="1584.8" y2="899.361" gradientUnits="userSpaceOnUse">
+      <stop offset="0.09192" stop-color="#6CC04A"/>
+      <stop offset="0.2864" stop-color="#66B848"/>
+      <stop offset="0.5968" stop-color="#54A044"/>
+      <stop offset="0.8624" stop-color="#41873F"/>
+      </linearGradient>
+      <clipPath id="clip0_16_58">
+      <rect width="16" height="18" fill="white"/>
+      </clipPath>
+      </defs>
+      </svg>
+
+    `
+
+  },{
+    title: "Cross-Platform Promotion", color: "#83CD29",
     icon: `
     
       <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,8 +378,7 @@ let backendSkills = [
 
   },
   {
-    title: "Django", color: "#092E20",
-    link: "https://docs.djangoproject.com/en/4.0/",
+    title: "Brand Representation at IRL Events", color: "#092E20",
     icon: `
     
  
@@ -301,8 +404,7 @@ let backendSkills = [
 
 let testingSkills = [
   {
-    title: "Jasmine", color: "#8A4182",
-    link: "https://jasmine.github.io/",
+    title: "Infographic Creation", color: "#8A4182",
     icon: `
     
           
@@ -319,8 +421,40 @@ let testingSkills = [
 
   },
   {
-    title: "Cypress", color: "#58D09E",
-    link: "https://www.cypress.io/",
+    title: "Informative Video Production", color: "#8A4182",
+    icon: `
+    
+          
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="vscode-icons:file-type-jasmine">
+      <path id="Vector" d="M8.50199 6.73601H7.44649L7.16099 6.36951V3.49301H8.76949V6.36951L8.50199 6.73601ZM7.07399 7.00451L6.74749 8.00901L6.31099 8.16651L3.57449 7.27751L4.07199 5.74851L6.80799 6.63651L7.07399 7.00451ZM6.88599 8.41851L7.74049 9.03901L7.75499 9.50201L6.06499 11.8305L4.76349 10.8855L6.45549 8.55701L6.88599 8.41851ZM8.19699 9.04351L9.05249 8.42301L9.49749 8.55251L11.1885 10.88L9.88799 11.825L8.19699 9.49751V9.04351ZM9.21249 8.02551L8.88599 7.02051L9.14649 6.63651L11.882 5.74851L12.3795 7.27751L9.64299 8.16651L9.21249 8.02551Z" fill="#8A4182"/>
+      <path id="Vector_2" d="M8 1C6.61553 1 5.26216 1.41054 4.11101 2.17971C2.95987 2.94888 2.06266 4.04213 1.53285 5.32122C1.00303 6.6003 0.86441 8.00777 1.13451 9.36563C1.4046 10.7235 2.07129 11.9708 3.05026 12.9497C4.02922 13.9287 5.2765 14.5954 6.63437 14.8655C7.99224 15.1356 9.3997 14.997 10.6788 14.4672C11.9579 13.9373 13.0511 13.0401 13.8203 11.889C14.5895 10.7378 15 9.38447 15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1ZM7.962 13.47C6.86717 13.4696 5.79704 13.1446 4.88691 12.536C3.97678 11.9275 3.26753 11.0628 2.84883 10.0512C2.43013 9.03954 2.32079 7.9265 2.53462 6.85275C2.74845 5.77901 3.27586 4.79277 4.05017 4.01875C4.82447 3.24473 5.81089 2.71767 6.88472 2.50423C7.95854 2.29078 9.07155 2.40053 10.083 2.81959C11.0945 3.23866 11.9589 3.94822 12.5672 4.85857C13.1754 5.76892 13.5 6.83917 13.5 7.934C13.5001 8.6612 13.357 9.3813 13.0787 10.0532C12.8004 10.725 12.3924 11.3354 11.8781 11.8495C11.3638 12.3637 10.7533 12.7714 10.0813 13.0494C9.40936 13.3275 8.68921 13.4704 7.962 13.47Z" fill="#8A4182"/>
+      <path id="Vector_3" d="M7.7295 10.124H8.168V12.306H7.7295V10.124ZM10.107 8.77699L10.2425 8.35999L12.3175 9.03399L12.1825 9.45099L10.107 8.77699ZM9.1825 5.84849L10.4655 4.08349L10.8205 4.34099L9.5375 6.10599L9.1825 5.84849ZM5.172 4.33999L5.527 4.08249L6.8095 5.84749L6.4545 6.10549L5.172 4.33999ZM3.62 9.03499L5.695 8.35999L5.831 8.77749L3.756 9.45199L3.62 9.03499Z" fill="#8A4182"/>
+      </g>
+      </svg>
+
+
+    `
+
+  },{
+    title: "Article & Blog Writing", color: "#8A4182",
+    icon: `
+    
+          
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="vscode-icons:file-type-jasmine">
+      <path id="Vector" d="M8.50199 6.73601H7.44649L7.16099 6.36951V3.49301H8.76949V6.36951L8.50199 6.73601ZM7.07399 7.00451L6.74749 8.00901L6.31099 8.16651L3.57449 7.27751L4.07199 5.74851L6.80799 6.63651L7.07399 7.00451ZM6.88599 8.41851L7.74049 9.03901L7.75499 9.50201L6.06499 11.8305L4.76349 10.8855L6.45549 8.55701L6.88599 8.41851ZM8.19699 9.04351L9.05249 8.42301L9.49749 8.55251L11.1885 10.88L9.88799 11.825L8.19699 9.49751V9.04351ZM9.21249 8.02551L8.88599 7.02051L9.14649 6.63651L11.882 5.74851L12.3795 7.27751L9.64299 8.16651L9.21249 8.02551Z" fill="#8A4182"/>
+      <path id="Vector_2" d="M8 1C6.61553 1 5.26216 1.41054 4.11101 2.17971C2.95987 2.94888 2.06266 4.04213 1.53285 5.32122C1.00303 6.6003 0.86441 8.00777 1.13451 9.36563C1.4046 10.7235 2.07129 11.9708 3.05026 12.9497C4.02922 13.9287 5.2765 14.5954 6.63437 14.8655C7.99224 15.1356 9.3997 14.997 10.6788 14.4672C11.9579 13.9373 13.0511 13.0401 13.8203 11.889C14.5895 10.7378 15 9.38447 15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1ZM7.962 13.47C6.86717 13.4696 5.79704 13.1446 4.88691 12.536C3.97678 11.9275 3.26753 11.0628 2.84883 10.0512C2.43013 9.03954 2.32079 7.9265 2.53462 6.85275C2.74845 5.77901 3.27586 4.79277 4.05017 4.01875C4.82447 3.24473 5.81089 2.71767 6.88472 2.50423C7.95854 2.29078 9.07155 2.40053 10.083 2.81959C11.0945 3.23866 11.9589 3.94822 12.5672 4.85857C13.1754 5.76892 13.5 6.83917 13.5 7.934C13.5001 8.6612 13.357 9.3813 13.0787 10.0532C12.8004 10.725 12.3924 11.3354 11.8781 11.8495C11.3638 12.3637 10.7533 12.7714 10.0813 13.0494C9.40936 13.3275 8.68921 13.4704 7.962 13.47Z" fill="#8A4182"/>
+      <path id="Vector_3" d="M7.7295 10.124H8.168V12.306H7.7295V10.124ZM10.107 8.77699L10.2425 8.35999L12.3175 9.03399L12.1825 9.45099L10.107 8.77699ZM9.1825 5.84849L10.4655 4.08349L10.8205 4.34099L9.5375 6.10599L9.1825 5.84849ZM5.172 4.33999L5.527 4.08249L6.8095 5.84749L6.4545 6.10549L5.172 4.33999ZM3.62 9.03499L5.695 8.35999L5.831 8.77749L3.756 9.45199L3.62 9.03499Z" fill="#8A4182"/>
+      </g>
+      </svg>
+
+
+    `
+
+  },
+  {
+    title: "Social Thread Writing", color: "#58D09E",
     icon: `
     
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -349,7 +483,7 @@ let testingSkills = [
 
   },
   {
-    title: "Karma", color: "#56C5A8",
+    title: "Art Creation ", color: "#56C5A8",
     link: "https://karma-runner.github.io/",
     icon: `
     

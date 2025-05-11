@@ -80,7 +80,7 @@
 
 .angular:hover {
     background: linear-gradient(var(--skill-bg-color) 0 0) padding-box,
-        linear-gradient(to right, red, var(--skill-border-color)) border-box;
+        linear-gradient(to right, yellow, var(--skill-border-color)) border-box;
 }
 
 

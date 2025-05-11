@@ -10,23 +10,13 @@ let frontendSkills = [
   {
     title: "Discord & Telegram Management", color: "snow",
     icon: `
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="vscode-icons:file-type-next">
-        <path id="Vector" d="M8 14.75C11.7279 14.75 14.75 11.7279 14.75 8C14.75 4.27208 11.7279 1.25 8 1.25C4.27208 1.25 1.25 4.27208 1.25 8C1.25 11.7279 4.27208 14.75 8 14.75Z" fill="black" stroke="white" stroke-width="0.5"/>
-        <path id="Vector_2" d="M12.63 13.25L6.38001 5.2H5.20001V10.8H6.14501V6.4L11.89 13.82C12.15 13.645 12.39 13.46 12.63 13.255V13.25Z" fill="url(#paint0_linear_14_15)"/>
-        <path id="Vector_3" d="M9.94501 5.2H10.875V10.8H9.95001L9.94501 5.2Z" fill="url(#paint1_linear_14_15)"/>
-        </g>
-        <defs>
-        <linearGradient id="paint0_linear_14_15" x1="5.21276" y1="13.8387" x2="7.35776" y2="17.4165" gradientUnits="userSpaceOnUse">
-        <stop stop-color="white"/>
-        <stop offset="1" stop-color="white" stop-opacity="0"/>
-        </linearGradient>
-        <linearGradient id="paint1_linear_14_15" x1="10.0253" y1="5.23125" x2="10.0253" y2="9.36725" gradientUnits="userSpaceOnUse">
-        <stop stop-color="white"/>
-        <stop offset="1" stop-color="white" stop-opacity="0"/>
-        </linearGradient>
-        </defs>
-      </svg>
+    <svg class="w-[16px] h-[16px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" viewBox="0 0 24 24">
+  <path d="M11 9a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+  <path fill-rule="evenodd" d="M9.896 3.051a2.681 2.681 0 0 1 4.208 0c.147.186.38.282.615.255a2.681 2.681 0 0 1 2.976 2.975.681.681 0 0 0 .254.615 2.681 2.681 0 0 1 0 4.208.682.682 0 0 0-.254.615 2.681 2.681 0 0 1-2.976 2.976.681.681 0 0 0-.615.254 2.682 2.682 0 0 1-4.208 0 .681.681 0 0 0-.614-.255 2.681 2.681 0 0 1-2.976-2.975.681.681 0 0 0-.255-.615 2.681 2.681 0 0 1 0-4.208.681.681 0 0 0 .255-.615 2.681 2.681 0 0 1 2.976-2.975.681.681 0 0 0 .614-.255ZM12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" clip-rule="evenodd"/>
+  <path d="M5.395 15.055 4.07 19a1 1 0 0 0 1.264 1.267l1.95-.65 1.144 1.707A1 1 0 0 0 10.2 21.1l1.12-3.18a4.641 4.641 0 0 1-2.515-1.208 4.667 4.667 0 0 1-3.411-1.656Zm7.269 2.867 1.12 3.177a1 1 0 0 0 1.773.224l1.144-1.707 1.95.65A1 1 0 0 0 19.915 19l-1.32-3.93a4.667 4.667 0 0 1-3.4 1.642 4.643 4.643 0 0 1-2.53 1.21Z"/>
+</svg>
+
+
     `
   },
   {
@@ -263,9 +253,9 @@ let backendSkills = [
 
     `
 
-  },{
+  }, {
     title: "Ecosystem Promotion", color: "#83CD29",
-    
+
     icon: `
     
       <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -320,7 +310,7 @@ let backendSkills = [
 
     `
 
-  },{
+  }, {
     title: "Cross-Platform Promotion", color: "#83CD29",
     icon: `
     
@@ -436,7 +426,7 @@ let testingSkills = [
 
     `
 
-  },{
+  }, {
     title: "Article & Blog Writing", color: "#8A4182",
     icon: `
     

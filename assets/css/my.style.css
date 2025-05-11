@@ -13,6 +13,7 @@
     align-items: end;
     font-family: "Gabriela", serif;
     color: snow;
+    font-size: 16px;
 }
 
 
@@ -20,9 +21,9 @@
 .message-box {
     position: absolute;
     left: 0;
-    left: calc(var(--me-height) / -8);
+    left: calc(var(--me-height) / -6);
     /* width: 120%; */
-    bottom: calc(var(--me-height) / 2);
+    bottom: 120;
 }
 
 
@@ -36,11 +37,11 @@
 
 .message {
     position: relative;
-    right: calc(var(--me-height) * 0.7);
+    right: calc(var(--me-height) * 2);
     padding: 0.4rem 0.8rem;
     border-radius: 0.4rem;
     z-index: 40;
-    font-size: 0.7rem;
+    font-size: 1 rem;
     font-weight: 500;
     background: var(--cloud-color-2);
     transform-origin: bottom;
@@ -137,9 +138,9 @@
     }
 
     .message-box {
-        left: calc(var(--me-height) / 3);
+        left: calc(var(--me-height) / 6);
         /* width: 80%; */
         position: absolute;
-        bottom: calc(var(--me-height) / 2);
+        bottom: calc(var(--me-height) / 1);
     }
 }

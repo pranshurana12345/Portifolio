@@ -14,7 +14,7 @@ const observer = new IntersectionObserver(entries => {
 
             fadeTypingAnimation(aboutMeSection,
                 aboutMe
-                , 100);
+                , 50);
             observer.unobserve(entry.target); // Stop observing once animated
         }
     });

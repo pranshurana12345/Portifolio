@@ -93,19 +93,7 @@
 }
 
 
-.project-skills {
-    display: flex;
-    align-items: center;
-    /* margin: 0 var(--project-space); */
-    padding: calc(var(--project-space));
-    background-color: var(--project-border-color);
-    /* margin-left: calc(var(--project-space) * 1); */
-    border-radius: 0 0.5rem 0 0.5rem;
-    position: absolute;
-    left: -1px;
-    bottom: -1px;
 
-}
 
 
 
@@ -141,10 +129,7 @@
     gap: calc(var(--project-space)* 1);
 }
 
-.animation-project-card-link-slide {
-    animation: project-card-link-slide ease-in-out var(--project-footer-animation-time);
 
-}
 
 
 @keyframes project-card-link-slide {
